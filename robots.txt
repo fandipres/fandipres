@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fandipres.my.id/sitemap.xml
