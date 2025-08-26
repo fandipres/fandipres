@@ -22,13 +22,13 @@ const experience = [
 const education = [
     {
         year: "September 2022 - Oktober 2024",
-        title: "Magister Teknologi Informasi (M.Kom)",
+        title: "Magister Teknologi Informasi (M.Kom.)",
         subtitle: "Universitas Mikroskil, Medan",
         description: "Tesis: Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham"
     },
     {
         year: "September 2018 - Oktober 2022",
-        title: "Sarjana Teknik Informatika (S.Kom)",
+        title: "Sarjana Teknik Informatika (S.Kom.)",
         subtitle: "Universitas Mikroskil, Medan",
         description: "Skripsi: Pengembangan Aplikasi Pemantauan Aktivitas pada Ruangan Menggunakan Algoritma Improved Mask R CNN Berbasis Web"
     }
