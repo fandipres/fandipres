@@ -138,35 +138,14 @@ function renderProjects(containerId, data, limit) {
 
     let html = '';
     itemsToRender.forEach(item => {
-        let tagsHtml = '';
-        if (item.tags && item.tags.length > 0) {
-            const firstTag = item.tags[0];
-            const otherTags = item.tags.slice(1);
+        const tagsHtml = item.tags && item.tags.length > 0
+            ? `<div class="mt-3 mb-3 flex flex-wrap gap-2">
+                ${item.tags.map(tag => `<span class="bg-gray-700 text-gray-300 text-xs font-semibold px-2.5 py-1 rounded-full">${tag}</span>`).join('')}
+            </div>`
+            : '';
 
-            const otherTagsHtml = otherTags.map(tag =>
-                `<span class="bg-gray-700 text-gray-300 text-xs font-semibold px-2.5 py-1 rounded-full">${tag}</span>`
-            ).join('');
-
-            tagsHtml = `
-                <div class="relative flex items-center gap-2 group">
-                    <span class="bg-gray-700 text-gray-300 text-xs font-semibold px-2.5 py-1 rounded-full">${firstTag}</span>
-                    
-                    ${otherTags.length > 0 ? `<span class="text-xs text-gray-400 font-bold cursor-pointer">+${otherTags.length}</span>` : ''}
-                    
-                    ${otherTags.length > 0 ? `
-                        <div class="absolute top-full left-0 mt-2 w-max p-2 bg-gray-600 rounded-lg shadow-lg 
-                                    flex flex-wrap gap-2 z-10
-                                    opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                                    transition-all duration-300 transform scale-95 group-hover:scale-100">
-                            ${otherTagsHtml}
-                        </div>
-                    ` : ''}
-                </div>
-            `;
-        }
-
-        const linksHtml = item.links.map(link =>
-            `<a href="${link.url}" target="_blank" class="text-sm text-blue-400 hover:underline mr-4">${link.label}</a>`
+        const linksHtml = item.links.map(link => 
+            `<a href="${link.url}" target="_blank" class="text-sm text-blue-400 hover:underline">${link.label}</a>`
         ).join('');
 
         html += `
@@ -175,11 +154,9 @@ function renderProjects(containerId, data, limit) {
                     <h3 class="text-xl font-semibold text-white">${item.title}</h3>
                     ${tagsHtml}
                 </div>
-
                 <p class="mt-3 text-gray-400 text-sm leading-relaxed flex-grow">${item.description}</p>
-                
                 <div class="mt-auto pt-4">
-                    <div class="mt-4 border-t border-gray-700 pt-4">
+                    <div class="mt-4 border-t border-gray-700 pt-4 flex flex-wrap gap-x-4 gap-y-2">
                         ${linksHtml}
                     </div>
                 </div>
@@ -213,9 +190,9 @@ document.addEventListener('DOMContentLoaded', () => {
     renderGroupedItems('all-teaching', teaching, 'year');
     renderGroupedResearch('all-research', research, 'year');
     renderGroupedResearch('all-community_service', community_service, 'year');
-    renderGroupedResearch('all-publication', publication, 'year');
-    renderGroupedResearch('all-book', book, 'year');
-    renderGroupedResearch('all-speaker', speaker, 'year');
+    renderGroupedResearch('all-publications', publications, 'year');
+    renderGroupedResearch('all-books', books, 'year');
+    renderGroupedResearch('all-talks', talks, 'year');
     const featuredProjects = [...projects].sort((a, b) => (a.id || 999) - (b.id || 999));
     const sortedProjects = [...projects].sort((a, b) => {
         const aHasId = a.id !== undefined && a.id !== null;

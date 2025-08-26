@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll('.fade-in-section');
 
-    if (sections.length === 0) return; // Hentikan jika tidak ada section untuk dianimasikan
+    if (sections.length === 0) return;
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target); // Hentikan observasi setelah animasi berjalan
+                observer.unobserve(entry.target);
             }
         });
     }, {
