@@ -279,40 +279,46 @@ const academicActivities = {
 const projects = [
     {
         title: "Fandi's Blog",
-        description: "",
+        description: "Tempatku berbagi cerita. Fokus utama pada kehidupan kampus, riset, dan pengabdian. Ditambah obrolan santai seputar finansial, travelling, dan pengembangan diri.",
         links: [{ url: "https://blog.fandipres.my.id/", label: "Website" }],
         tags: ["Blog"]
     },
     {
         id: 3,
         title: "Gudank Review",
-        description: "",
+        description: "Gudank Review. Kami menguji gadget. Memberikan ulasan yang lugas dan jujur. Membantu Anda membuat keputusan yang lebih baik. Titik. ",
         links: [{ url: "https://www.youtube.com/@gudankreviewin", label: "YouTube" }, { url: "https://www.facebooks.com/gudankreview", label: "Facebooks" }, { url: "https://www.instagram.com/gudankreview", label: "Instagram" }, { url: "https://www.tiktok.com/@gudankreview", label: "Tiktok" }],
         tags: ["Video"]
     },
     {
         id: 1,
         title: "Hobi Ngoding",
-        description: "",
+        description: "Catatan hobi ngoding dari nol, oprek Unity dan Blogger. Berbagi trik jitu Adsense, tips Office, dan info tekno terbaru.",
         links: [{ url: "https://www.hobingoding.com/", label: "Website" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }, { url: "https://www.facebooks.com/hobingodingcom", label: "Facebooks" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }],
         tags: ["Blog", "Video"]
     },
     {
         id: 2,
         title: "Jurnalpedia",
-        description: "",
+        description: "Pusat referensi jurnal ilmiah terakreditasi SINTA dan Scopus. Hub utama bagi mahasiswa, dosen, dan peneliti untuk publikasi ilmiah terpercaya.",
         links: [{ url: "https://jurnal.fandipres.my.id/", label: "Website" }, { url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://www.facebooks.com/jurnalpediaofc", label: "Facebooks" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }],
         tags: ["Blog", "Video"]
     },
     {
         title: "Lyricspedia",
-        description: "",
+        description: "Jelajahi ribuan lirik lagu, mulai dari hits Indonesia dan Barat, hingga alunan merdu lagu-lagu daerah.",
         links: [{ url: "https://www.lyricspedia.my.id/", label: "Website" }],
         tags: ["Blog"]
     },
     {
+        title: "To-Do List",
+        description: "Aplikasi web sederhana untuk mengatur daftar tugas personal. Terdapat fitur otentikasi pengguna yang menjamin setiap daftar tugas tetap pribadi dan hanya bisa diakses oleh pemiliknya.",
+        links: [{ url: "https://github.com/fandipres/to-do-list", label: "GitHub" }],
+        tags: ["Web"]
+    },
+    {
         title: "Worshipedia",
-        description: "",
+        description: "Semua lirik pujian dan penyembahan Kristen ada di sini. Dari lagu sekolah minggu hingga hits terbaru, untuk mendukung ibadah dan imanmu.",
         links: [{ url: "https://www.worshipedia.my.id/", label: "Website" }],
         tags: ["Blog"]
     },
