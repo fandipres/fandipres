@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Riwayat Pengalaman Kerja - Fandi Presly Simamora</title>
-    <meta name="description" content="Lihat riwayat pengalaman kerja Fandi Presly Simamora, dari perannya sebagai asisten lab hingga menjadi dosen di Universitas Mikroskil.">
+    <meta name="description"
+        content="Lihat riwayat pengalaman kerja Fandi Presly Simamora, dari perannya sebagai asisten lab hingga menjadi dosen di Universitas Mikroskil.">
     <meta name="keywords" content="Fandi Presly Simamora, Fandi Presly, Fandi Simamora, fandipres">
 
     <meta property="og:title" content="Fandi Presly Simamora">
-    <meta property="og:description" content="Lihat riwayat pengalaman kerja Fandi Presly Simamora, dari perannya sebagai asisten lab hingga menjadi dosen di Universitas Mikroskil.">
+    <meta property="og:description"
+        content="Lihat riwayat pengalaman kerja Fandi Presly Simamora, dari perannya sebagai asisten lab hingga menjadi dosen di Universitas Mikroskil.">
     <meta property="og:url" content="https://fandipres.my.id">
     <meta name="twitter:title" content="Fandi Presly Simamora">
-    <meta name="twitter:description" content="Lihat riwayat pengalaman kerja Fandi Presly Simamora, dari perannya sebagai asisten lab hingga menjadi dosen di Universitas Mikroskil.">
+    <meta name="twitter:description"
+        content="Lihat riwayat pengalaman kerja Fandi Presly Simamora, dari perannya sebagai asisten lab hingga menjadi dosen di Universitas Mikroskil.">
     <meta property="og:image"
         content="https://yt3.googleusercontent.com/ytc/AIdro_nwK6LasXc5CwFsGfd1sKR8m9H6ibAoykjqg5gu2Q=s176-c-k-c0x00ffffff-no-rj">
     <meta name="twitter:card" content="summary_large_image">
@@ -60,12 +63,13 @@
         <section class="bg-gray-900 py-16 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
                 <h1 class="text-4xl font-bold mb-10 border-b-2 border-gray-700 pb-4">Pengalaman Kerja</h1>
-                
+
                 <div id="all-experience" class="space-y-8 max-w-4xl">
-                    </div>
+                </div>
 
                 <div class="mt-12">
-                    <a href="/" class="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300">← Kembali ke Halaman Utama</a>
+                    <a href="/" class="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300">←
+                        Kembali ke Halaman Utama</a>
                 </div>
             </div>
         </section>
@@ -110,6 +114,13 @@
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/scripts.js"></script>
     <script src="../assets/js/animations.js"></script>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGroupedItems('all-experience', experience, 'year');
+            renderSocialMedia('social-media', socialMedia);
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
+
 </html>

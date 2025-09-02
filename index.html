@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Fandi Presly Simamora</title>
-    <meta name="description" content="Fandi Presly Simamora: Dosen, peneliti, dan pengembang web. Temukan portofolio proyek, publikasi akademis, dan pemikiran saya seputar teknologi dan pendidikan.">
+    <meta name="description"
+        content="Fandi Presly Simamora: Dosen, peneliti, dan pengembang web. Temukan portofolio proyek, publikasi akademis, dan pemikiran saya seputar teknologi dan pendidikan.">
     <meta name="keywords" content="Fandi Presly Simamora, Fandi Presly, Fandi Simamora, fandipres">
 
     <meta property="og:title" content="Fandi Presly Simamora">
-    <meta property="og:description" content="Fandi Presly Simamora: Dosen, peneliti, dan pengembang web. Temukan portofolio proyek, publikasi akademis, dan pemikiran saya seputar teknologi dan pendidikan.">
+    <meta property="og:description"
+        content="Fandi Presly Simamora: Dosen, peneliti, dan pengembang web. Temukan portofolio proyek, publikasi akademis, dan pemikiran saya seputar teknologi dan pendidikan.">
     <meta property="og:url" content="https://fandipres.my.id">
     <meta name="twitter:title" content="Fandi Presly Simamora">
-    <meta name="twitter:description" content="Fandi Presly Simamora: Dosen, peneliti, dan pengembang web. Temukan portofolio proyek, publikasi akademis, dan pemikiran saya seputar teknologi dan pendidikan.">
+    <meta name="twitter:description"
+        content="Fandi Presly Simamora: Dosen, peneliti, dan pengembang web. Temukan portofolio proyek, publikasi akademis, dan pemikiran saya seputar teknologi dan pendidikan.">
     <meta property="og:image"
         content="https://yt3.googleusercontent.com/ytc/AIdro_nwK6LasXc5CwFsGfd1sKR8m9H6ibAoykjqg5gu2Q=s176-c-k-c0x00ffffff-no-rj">
     <meta name="twitter:card" content="summary_large_image">
@@ -154,6 +157,17 @@
     <script src="assets/js/data.js"></script>
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/animations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const featuredProjects = [...projects].sort((a, b) => (a.id || 999) - (b.id || 999));
+            renderItems('recent-experience', experience, 2);
+            renderItems('recent-education', education, 2);
+            renderAcademicActivities('academic-activities-container', academicActivities);
+            renderProjects('recent-projects', featuredProjects, 3);
+            renderSocialMedia('social-media', socialMedia);
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 
 </html>

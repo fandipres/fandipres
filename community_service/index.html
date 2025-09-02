@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Daftar Pengabdian Masyarakat - Fandi Presly Simamora</title>
-    <meta name="description" content="Kumpulan kegiatan pengabdian masyarakat oleh Fandi Presly Simamora, termasuk workshop koding dan pelatihan literasi digital untuk komunitas.">
+    <meta name="description"
+        content="Kumpulan kegiatan pengabdian masyarakat oleh Fandi Presly Simamora, termasuk workshop koding dan pelatihan literasi digital untuk komunitas.">
     <meta name="keywords" content="Fandi Presly Simamora, Fandi Presly, Fandi Simamora, fandipres">
 
     <meta property="og:title" content="Fandi Presly Simamora">
-    <meta property="og:description" content="Kumpulan kegiatan pengabdian masyarakat oleh Fandi Presly Simamora, termasuk workshop koding dan pelatihan literasi digital untuk komunitas.">
+    <meta property="og:description"
+        content="Kumpulan kegiatan pengabdian masyarakat oleh Fandi Presly Simamora, termasuk workshop koding dan pelatihan literasi digital untuk komunitas.">
     <meta property="og:url" content="https://fandipres.my.id">
     <meta name="twitter:title" content="Fandi Presly Simamora">
-    <meta name="twitter:description" content="Kumpulan kegiatan pengabdian masyarakat oleh Fandi Presly Simamora, termasuk workshop koding dan pelatihan literasi digital untuk komunitas.">
+    <meta name="twitter:description"
+        content="Kumpulan kegiatan pengabdian masyarakat oleh Fandi Presly Simamora, termasuk workshop koding dan pelatihan literasi digital untuk komunitas.">
     <meta property="og:image"
         content="https://yt3.googleusercontent.com/ytc/AIdro_nwK6LasXc5CwFsGfd1sKR8m9H6ibAoykjqg5gu2Q=s176-c-k-c0x00ffffff-no-rj">
     <meta name="twitter:card" content="summary_large_image">
@@ -111,7 +114,13 @@
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/scripts.js"></script>
     <script src="../assets/js/animations.js"></script>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderGroupedResearch('all-community_service', community_service, 'year');
+            renderSocialMedia('social-media', socialMedia);
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 
 </html>
