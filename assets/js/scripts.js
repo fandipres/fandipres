@@ -141,7 +141,7 @@ function renderProjects(containerId, data, limit) {
     let html = '';
     itemsToRender.forEach(item => {
         const tagsHtml = item.tags && item.tags.length > 0 ? `<div class="mt-3 mb-3 flex flex-wrap gap-2">${item.tags.map(tag => `<span class="bg-gray-700 text-gray-300 text-xs font-semibold px-2.5 py-1 rounded-full">${tag}</span>`).join('')}</div>` : '';
-        const linksHtml = item.links.map(link => `<a href="${link.url}" target="_blank" class="text-sm text-blue-400 hover:underline mr-4">${link.label}</a>`).join('');
+        const linksHtml = item.links.map(link => `<a href="${link.url}" target="_blank" class="text-sm text-blue-400 hover:underline">${link.label}</a>`).join('');
         html += `<div class="bg-gray-800 p-6 rounded-lg shadow-lg text-left h-full flex flex-col"><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-semibold text-white">${item.title}</h3>${tagsHtml}</div><p class="mt-3 text-gray-400 text-sm leading-relaxed flex-grow">${item.description}</p><div class="mt-auto pt-4"><div class="mt-4 border-t border-gray-700 pt-4 flex flex-wrap gap-x-4 gap-y-2">${linksHtml}</div></div></div>`;
     });
     container.innerHTML = html;
