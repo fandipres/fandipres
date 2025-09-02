@@ -189,20 +189,20 @@ const publications = [
 const books = [
     {
         year: "2025",
-        title: "Chapter XX: 'XX'",
+        title: "Chapter XX: XX",
         subtitle: "Penerbit XX",
-        description: "books chapter dalam Buku ''.",
+        description: `Book chapter dalam Buku "".`,
         link: "#",
-        category: "books Chapter",
+        category: "Book Chapter",
         role: "Kontributor"
     },
     {
         year: "2025",
-        title: "Chapter XX: 'XX'",
+        title: "Chapter XX: XX",
         subtitle: "Penerbit  XX",
-        description: "books chapter dalam Buku ''.",
+        description: `Book chapter dalam Buku "".`,
         link: "#",
-        category: "books Chapter",
+        category: "Book Chapter",
         role: "Kontributor"
     }
 ];
@@ -228,7 +228,7 @@ const talks = [
     },
     {
         year: "2023",
-        title: "Workshop 'Introduction to Game Development'",
+        title: "Workshop Introduction to Game Development",
         subtitle: "Universitas Mikroskil",
         description: "",
         link: "https://mikroskilacid-my.sharepoint.com/:b:/g/personal/fandi_simamora_mikroskil_ac_id/EV39Fh6AENNNm5Ws_cCd_wwBDRVfwTEx3IkqnWaRuvjP5w?e=cMJRri",
