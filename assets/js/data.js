@@ -38,61 +38,61 @@ const teaching = [
     {
         year: "Ganjil 2025 - 2026",
         title: "Pengembangan Karakter: Kepemimpinan",
-        subtitle: "Program Sarjana Teknik Informatika",
+        subtitle: "Teknik Informatika (2 Kelas), Sistem Informasi (2 Kelas)",
         description: ""
     },
     {
         year: "Genap 2024 - 2025",
         title: "Pengembangan Aplikasi Gim",
-        subtitle: "Program Sarjana Teknik Informatika",
+        subtitle: "Teknik Informatika (2 Kelas)",
         description: ""
     },
     {
         year: "Ganjil 2024 - 2025",
         title: "Pengembangan Web Back-End",
-        subtitle: "Program Sarjana Teknik Informatika",
+        subtitle: "Teknik Informatika (1 Kelas)",
         description: ""
     },
     {
         year: "Ganjil 2024 - 2025",
         title: "Perancangan dan Pemrograman Berorientasi Objek",
-        subtitle: "Program Sarjana Teknik Informatika",
+        subtitle: "Teknik Informatika (1 Kelas)",
         description: ""
     },
     {
         year: "Genap 2023 - 2024",
         title: "Pengembangan Aplikasi Gim",
-        subtitle: "Program Sarjana Teknik Informatika",
+        subtitle: "Teknik Informatika (2 Kelas)",
         description: ""
     },
     {
         year: "Genap 2023 - 2024",
         title: "Pengembangan Aplikasi Mobile Front-End",
-        subtitle: "Program Sarjana Teknik Informatika",
+        subtitle: "Teknik Informatika (1 Kelas)",
         description: ""
     },
     {
         year: "Ganjil 2023 - 2024",
         title: "Pengembangan Web Back-End",
-        subtitle: "Program Sarjana Teknik Informatika",
+        subtitle: "Teknik Informatika (2 Kelas)",
         description: ""
     },
     {
         year: "Genap 2022 - 2023",
         title: "Pengembangan Aplikasi Gim",
-        subtitle: "Program Sarjana Teknik Informatika",
+        subtitle: "Teknik Informatika (3 Kelas)",
         description: ""
     },
     {
         year: "Ganjil 2022 - 2023",
         title: "Pengembangan Aplikasi Mobil Back-End",
-        subtitle: "Program Sarjana Teknik Informatika",
+        subtitle: "Teknik Informatika (1 Kelas)",
         description: ""
     },
     {
         year: "Ganjil 2022 - 2023",
         title: "Wawasan Informatika",
-        subtitle: "Program Sarjana Teknik Informatika",
+        subtitle: "Teknik Informatika (1 Kelas)",
         description: ""
     }
 ];
