@@ -133,37 +133,56 @@ function renderGroupedResearch(containerId, data) {
 function renderProjects(containerId, data, limit) {
     const container = document.getElementById(containerId);
     if (!container) return;
-
     const itemsToRender = limit ? data.slice(0, limit) : data;
-
+    if (itemsToRender.length === 0) {
+        container.innerHTML = `<p class="md:col-span-2 lg:col-span-3 text-gray-400">Tidak ada proyek yang cocok dengan filter ini.</p>`;
+        return;
+    }
     let html = '';
     itemsToRender.forEach(item => {
-        const tagsHtml = item.tags && item.tags.length > 0
-            ? `<div class="mt-3 mb-3 flex flex-wrap gap-2">
-                ${item.tags.map(tag => `<span class="bg-gray-700 text-gray-300 text-xs font-semibold px-2.5 py-1 rounded-full">${tag}</span>`).join('')}
-            </div>`
-            : '';
-
-        const linksHtml = item.links.map(link => 
-            `<a href="${link.url}" target="_blank" class="text-sm text-blue-400 hover:underline">${link.label}</a>`
-        ).join('');
-
-        html += `
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-left h-full flex flex-col">
-                <div class="flex items-start justify-between gap-4">
-                    <h3 class="text-xl font-semibold text-white">${item.title}</h3>
-                    ${tagsHtml}
-                </div>
-                <p class="mt-3 text-gray-400 text-sm leading-relaxed flex-grow">${item.description}</p>
-                <div class="mt-auto pt-4">
-                    <div class="mt-4 border-t border-gray-700 pt-4 flex flex-wrap gap-x-4 gap-y-2">
-                        ${linksHtml}
-                    </div>
-                </div>
-            </div>
-        `;
+        const tagsHtml = item.tags && item.tags.length > 0 ? `<div class="mt-3 mb-3 flex flex-wrap gap-2">${item.tags.map(tag => `<span class="bg-gray-700 text-gray-300 text-xs font-semibold px-2.5 py-1 rounded-full">${tag}</span>`).join('')}</div>` : '';
+        const linksHtml = item.links.map(link => `<a href="${link.url}" target="_blank" class="text-sm text-blue-400 hover:underline mr-4">${link.label}</a>`).join('');
+        html += `<div class="bg-gray-800 p-6 rounded-lg shadow-lg text-left h-full flex flex-col"><div class="flex items-start justify-between gap-4"><h3 class="text-xl font-semibold text-white">${item.title}</h3>${tagsHtml}</div><p class="mt-3 text-gray-400 text-sm leading-relaxed flex-grow">${item.description}</p><div class="mt-auto pt-4"><div class="mt-4 border-t border-gray-700 pt-4">${linksHtml}</div></div></div>`;
     });
     container.innerHTML = html;
+}
+
+function setupProjectFilters(filtersContainerId, projectsContainerId, data) {
+    const filtersContainer = document.getElementById(filtersContainerId);
+    if (!filtersContainer) return;
+    const allTags = new Set();
+    data.forEach(project => { if (project.tags) { project.tags.forEach(tag => allTags.add(tag)); } });
+    let filtersHtml = '<button class="filter-btn active bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium">Semua</button>';
+    allTags.forEach(tag => {
+        filtersHtml += `<button class="filter-btn bg-gray-700 hover:bg-gray-600 text-gray-300 px-4 py-2 rounded-md text-sm font-medium transition-colors">${tag}</button>`;
+    });
+    filtersContainer.innerHTML = filtersHtml;
+    const filterButtons = filtersContainer.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const currentActive = filtersContainer.querySelector('.active');
+            if (currentActive) {
+                currentActive.classList.remove('active', 'bg-blue-600', 'text-white');
+                currentActive.classList.add('bg-gray-700', 'text-gray-300');
+            }
+            button.classList.add('active', 'bg-blue-600', 'text-white');
+            button.classList.remove('bg-gray-700', 'text-gray-300');
+            const filterValue = button.textContent;
+            const filteredProjects = (filterValue === 'Semua') ? data : data.filter(project => project.tags && project.tags.includes(filterValue));
+            renderProjects(projectsContainerId, sortedProjects(filteredProjects));
+        });
+    });
+}
+
+function sortedProjects(projectList) {
+    return [...projectList].sort((a, b) => {
+        const aHasId = a.id !== undefined;
+        const bHasId = b.id !== undefined;
+        if (aHasId && !bHasId) return -1;
+        if (!aHasId && bHasId) return 1;
+        if (aHasId && bHasId) return a.id - b.id;
+        return a.title.localeCompare(b.title);
+    });
 }
 
 function renderSocialMedia(containerId, data) {
@@ -180,35 +199,3 @@ function renderSocialMedia(containerId, data) {
     });
     container.innerHTML = html;
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    renderItems('recent-experience', experience, 2);
-    renderItems('recent-education', education, 2);
-    renderGroupedItems('all-experience', experience, 'year');
-    renderGroupedItems('all-education', education, 'year');
-    renderAcademicActivities('academic-activities-container', academicActivities);
-    renderGroupedItems('all-teaching', teaching, 'year');
-    renderGroupedResearch('all-research', research, 'year');
-    renderGroupedResearch('all-community_service', community_service, 'year');
-    renderGroupedResearch('all-publications', publications, 'year');
-    renderGroupedResearch('all-books', books, 'year');
-    renderGroupedResearch('all-talks', talks, 'year');
-    const featuredProjects = [...projects].sort((a, b) => (a.id || 999) - (b.id || 999));
-    const sortedProjects = [...projects].sort((a, b) => {
-        const aHasId = a.id !== undefined && a.id !== null;
-        const bHasId = b.id !== undefined && b.id !== null;
-
-        if (aHasId && !bHasId) return -1;
-        if (!aHasId && bHasId) return 1;
-
-        if (aHasId && bHasId) {
-            return a.id - b.id;
-        }
-
-        return a.title.localeCompare(b.title);
-    });
-    renderProjects('recent-projects', featuredProjects, 3);
-    renderProjects('all-projects', sortedProjects);
-    renderSocialMedia('social-media', socialMedia);
-    document.getElementById('year').textContent = new Date().getFullYear();
-});
