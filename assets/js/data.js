@@ -38,62 +38,62 @@ const teaching = [
     {
         year: "Ganjil 2025 - 2026",
         title: "Pengembangan Karakter: Kepemimpinan",
-        subtitle: "Teknik Informatika (2 Kelas), Sistem Informasi (2 Kelas)",
-        description: ""
+        subtitle: "Universitas Mikroskil",
+        description: "Sistem Informasi (2 Kelas), Teknik Informatika (2 Kelas)."
     },
     {
         year: "Genap 2024 - 2025",
         title: "Pengembangan Aplikasi Gim",
-        subtitle: "Teknik Informatika (2 Kelas)",
-        description: ""
+        subtitle: "Universitas Mikroskil",
+        description: "Teknik Informatika (2 Kelas)."
     },
     {
         year: "Ganjil 2024 - 2025",
         title: "Pengembangan Web Back-End",
-        subtitle: "Teknik Informatika (1 Kelas)",
-        description: ""
+        subtitle: "Universitas Mikroskil",
+        description: "Teknik Informatika (1 Kelas)."
     },
     {
         year: "Ganjil 2024 - 2025",
         title: "Perancangan dan Pemrograman Berorientasi Objek",
-        subtitle: "Teknik Informatika (1 Kelas)",
-        description: ""
+        subtitle: "Universitas Mikroskil",
+        description: "Teknik Informatika (1 Kelas)."
     },
     {
         year: "Genap 2023 - 2024",
         title: "Pengembangan Aplikasi Gim",
-        subtitle: "Teknik Informatika (2 Kelas)",
-        description: ""
+        subtitle: "Universitas Mikroskil",
+        description: "Teknik Informatika (2 Kelas)."
     },
     {
         year: "Genap 2023 - 2024",
         title: "Pengembangan Aplikasi Mobile Front-End",
-        subtitle: "Teknik Informatika (1 Kelas)",
-        description: ""
+        subtitle: "Universitas Mikroskil",
+        description: "Teknik Informatika (1 Kelas)."
     },
     {
         year: "Ganjil 2023 - 2024",
         title: "Pengembangan Web Back-End",
-        subtitle: "Teknik Informatika (2 Kelas)",
-        description: ""
+        subtitle: "Universitas Mikroskil",
+        description: "Teknik Informatika (2 Kelas)."
     },
     {
         year: "Genap 2022 - 2023",
         title: "Pengembangan Aplikasi Gim",
-        subtitle: "Teknik Informatika (3 Kelas)",
-        description: ""
+        subtitle: "Universitas Mikroskil",
+        description: "Teknik Informatika (3 Kelas)."
     },
     {
         year: "Ganjil 2022 - 2023",
         title: "Pengembangan Aplikasi Mobil Back-End",
-        subtitle: "Teknik Informatika (1 Kelas)",
-        description: ""
+        subtitle: "Universitas Mikroskil",
+        description: "Teknik Informatika (1 Kelas)."
     },
     {
         year: "Ganjil 2022 - 2023",
         title: "Wawasan Informatika",
-        subtitle: "Teknik Informatika (1 Kelas)",
-        description: ""
+        subtitle: "Universitas Mikroskil",
+        description: "Teknik Informatika (1 Kelas)."
     }
 ];
 
@@ -101,7 +101,7 @@ const research = [
     {
         year: "2025",
         title: "Transformasi Digital Pertanian dengan Model Prediksi Cuaca Berbasis BiLSTM untuk Optimalisasi Masa Tanam Padi di Era Industri 4.0",
-        subtitle: "",
+        subtitle: "Kementerian Pendidikan Tinggi, Sains, dan Teknologi Republik Indonesia",
         description: "",
         link: "#",
         category: "Penelitian Dosen Pemula",
@@ -111,7 +111,7 @@ const research = [
     {
         year: "2024",
         title: "Optimasi Random Forest Menggunakan RFE untuk Klasifikasi Stunting pada RSU Mitra Medika",
-        subtitle: "",
+        subtitle: "Universitas Mikroskil",
         description: "",
         link: "#",
         category: "Penelitian Mandiri",
@@ -121,7 +121,7 @@ const research = [
     {
         year: "2024",
         title: "Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham",
-        subtitle: "",
+        subtitle: "Universitas Mikroskil",
         description: "",
         link: "#",
         category: "Penelitian Mandiri",
@@ -131,7 +131,7 @@ const research = [
     {
         year: "2022",
         title: "Pengembangan Aplikasi Pemantauan Aktivitas pada Ruangan Menggunakan Algoritma Improved Mask R CNN Berbasis Web",
-        subtitle: "",
+        subtitle: "Universitas Mikroskil",
         description: "",
         link: "#",
         category: "Penelitian Mandiri",
@@ -144,7 +144,7 @@ const community_service = [
     {
         year: "2025",
         title: "Pembekalan Guru SMA Panglima Polem Rantauprapat dengan Teknologi Masa Depan: Kecerdasan Artifisial",
-        subtitle: "",
+        subtitle: "Universitas Mikroskil",
         description: "",
         link: "#",
         category: "Pengabdian Internal",
@@ -154,7 +154,7 @@ const community_service = [
     {
         year: "2025",
         title: "Pengenalan Kecerdasan Artifisial pada Guru SMAS Tri Ratna Sibolga Sebagai Bekal Generasi Emas 2045",
-        subtitle: "",
+        subtitle: "Universitas Mikroskil",
         description: "",
         link: "#",
         category: "Pengabdian Internal",
@@ -190,7 +190,7 @@ const books = [
     {
         year: "2025",
         title: "Chapter XX: XX",
-        subtitle: "Penerbit XX",
+        subtitle: "XX",
         description: `Book chapter dalam Buku "".`,
         link: "#",
         category: "Book Chapter",
@@ -199,7 +199,7 @@ const books = [
     {
         year: "2025",
         title: "Chapter XX: XX",
-        subtitle: "Penerbit  XX",
+        subtitle: "XX",
         description: `Book chapter dalam Buku "".`,
         link: "#",
         category: "Book Chapter",
@@ -287,21 +287,21 @@ const projects = [
         id: 3,
         title: "Gudank Review",
         description: "Gudank Review. Kami menguji gadget. Memberikan ulasan yang lugas dan jujur. Membantu Anda membuat keputusan yang lebih baik. Titik. ",
-        links: [{ url: "https://www.youtube.com/@gudankreviewin", label: "YouTube" }, { url: "https://www.facebooks.com/gudankreview", label: "Facebooks" }, { url: "https://www.instagram.com/gudankreview", label: "Instagram" }, { url: "https://www.tiktok.com/@gudankreview", label: "Tiktok" }],
+        links: [{ url: "https://www.youtube.com/@gudankreviewin", label: "YouTube" }, { url: "https://www.facebooks.com/gudankreview", label: "Facebook" }, { url: "https://www.instagram.com/gudankreview", label: "Instagram" }, { url: "https://www.tiktok.com/@gudankreview", label: "Tiktok" }],
         tags: ["Video"]
     },
     {
         id: 1,
         title: "Hobi Ngoding",
         description: "Catatan hobi ngoding dari nol, oprek Unity dan Blogger. Berbagi trik jitu Adsense, tips Office, dan info tekno terbaru.",
-        links: [{ url: "https://www.hobingoding.com", label: "Website" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }, { url: "https://www.facebooks.com/hobingodingcom", label: "Facebooks" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }],
+        links: [{ url: "https://www.hobingoding.com", label: "Website" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }, { url: "https://www.facebooks.com/hobingodingcom", label: "Facebook" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }],
         tags: ["Blog", "Video"]
     },
     {
         id: 2,
         title: "Jurnalpedia",
         description: "Pusat referensi jurnal ilmiah terakreditasi SINTA dan Scopus. Hub utama bagi mahasiswa, dosen, dan peneliti untuk publikasi ilmiah terpercaya.",
-        links: [{ url: "https://jurnal.fandipres.my.id", label: "Website" }, { url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://www.facebooks.com/jurnalpediaofc", label: "Facebooks" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }],
+        links: [{ url: "https://jurnal.fandipres.my.id", label: "Website" }, { url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://www.facebooks.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }],
         tags: ["Blog", "Video"]
     },
     {
