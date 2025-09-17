@@ -100,6 +100,16 @@ const teaching = [
 const research = [
     {
         year: "2025",
+        title: "Analisis Sentimen Publik Terhadap Kinerja Dewan Perwakilan Rakyat Republik Indonesia Menggunakan Metode Topic Modeling dan Aspect-Based Sentiment Analysis",
+        subtitle: "Universitas Mikroskil",
+        description: "",
+        link: "#",
+        category: "Penelitian Mandiri",
+        rank: "",
+        role: "Ketua Peneliti"
+    },
+    {
+        year: "2025",
         title: "Transformasi Digital Pertanian dengan Model Prediksi Cuaca Berbasis BiLSTM untuk Optimalisasi Masa Tanam Padi di Era Industri 4.0",
         subtitle: "Kementerian Pendidikan Tinggi, Sains, dan Teknologi Republik Indonesia",
         description: "",
@@ -189,19 +199,10 @@ const publications = [
 const books = [
     {
         year: "2025",
-        title: "Chapter XX: XX",
-        subtitle: "XX",
-        description: `Book chapter dalam Buku "".`,
-        link: "#",
-        category: "Book Chapter",
-        role: "Kontributor"
-    },
-    {
-        year: "2025",
-        title: "Chapter XX: XX",
-        subtitle: "XX",
-        description: `Book chapter dalam Buku "".`,
-        link: "#",
+        title: "Chapter 14: Proyek Mini: Merancang Solusi Nyata Berbasis Komputasi",
+        subtitle: "Bukuloka Literasi Bangsa",
+        description: `Book chapter dalam Buku "Logika Digital & Algoritma Dunia Nyata: Menyelami Inti Ilmu Komputer".`,
+        link: "https://repository.bukuloka.com/pt/publications/632369/logika-digital-algoritma-dunia-nyata-menyelami-inti-ilmu-komputer",
         category: "Book Chapter",
         role: "Kontributor"
     }
