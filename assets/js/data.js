@@ -202,7 +202,7 @@ const books = [
         title: "Chapter 14: Proyek Mini: Merancang Solusi Nyata Berbasis Komputasi",
         subtitle: "Bukuloka Literasi Bangsa",
         description: `Book chapter dalam Buku "Logika Digital & Algoritma Dunia Nyata: Menyelami Inti Ilmu Komputer".`,
-        link: "https://repository.bukuloka.com/pt/publications/632369/logika-digital-algoritma-dunia-nyata-menyelami-inti-ilmu-komputer",
+        link: "https://www.bukuloka.com/books/logika-digital-algoritma-dunia-nyata-menyelami-inti-ilmu-komputer",
         category: "Book Chapter",
         role: "Kontributor"
     }
