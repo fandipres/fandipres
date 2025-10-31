@@ -103,96 +103,152 @@ const research = [
         title: "Analisis Sentimen Publik Terhadap Kinerja Dewan Perwakilan Rakyat Republik Indonesia Menggunakan Metode Topic Modeling dan Aspect-Based Sentiment Analysis",
         subtitle: "Universitas Mikroskil",
         description: "",
-        link: "#",
         category: "Penelitian Mandiri",
-        rank: "",
-        role: "Ketua Peneliti"
+        role: "Ketua Peneliti",
+        assets: {
+            folder: "",
+            dataset: "",
+            documentation: "",
+            slides: ""
+        }
     },
     {
         year: "2025",
         title: "Transformasi Digital Pertanian dengan Model Prediksi Cuaca Berbasis BiLSTM untuk Optimalisasi Masa Tanam Padi di Era Industri 4.0",
         subtitle: "Kementerian Pendidikan Tinggi, Sains, dan Teknologi Republik Indonesia",
         description: "",
-        link: "#",
         category: "Penelitian Dosen Pemula",
-        rank: "",
-        role: "Ketua Peneliti"
+        role: "Ketua Peneliti",
+        assets: {
+            folder: "",
+            dataset: "",
+            documentation: "",
+            slides: ""
+        }
     },
     {
         year: "2024",
         title: "Optimasi Random Forest Menggunakan RFE untuk Klasifikasi Stunting pada RSU Mitra Medika",
         subtitle: "Universitas Mikroskil",
         description: "",
-        link: "#",
         category: "Penelitian Mandiri",
-        rank: "",
-        role: "Anggota Peneliti"
+        role: "Anggota Peneliti",
+        assets: {
+            folder: "",
+            dataset: "",
+            documentation: "",
+            slides: ""
+        }
     },
     {
         year: "2024",
         title: "Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham",
         subtitle: "Universitas Mikroskil",
         description: "",
-        link: "#",
         category: "Penelitian Mandiri",
-        rank: "",
-        role: "Ketua Peneliti"
+        role: "Ketua Peneliti",
+        assets: {
+            folder: "",
+            dataset: "",
+            documentation: "",
+            slides: ""
+        }
     },
     {
         year: "2022",
         title: "Pengembangan Aplikasi Pemantauan Aktivitas pada Ruangan Menggunakan Algoritma Improved Mask R CNN Berbasis Web",
         subtitle: "Universitas Mikroskil",
         description: "",
-        link: "#",
         category: "Penelitian Mandiri",
-        rank: "",
-        role: "Ketua Peneliti"
+        role: "Ketua Peneliti",
+        assets: {
+            folder: "",
+            dataset: "",
+            documentation: "",
+            slides: ""
+        }
     }
 ];
 
 const community_service = [
     {
         year: "2025",
-        title: "Pembekalan Guru SMA Panglima Polem Rantauprapat dengan Teknologi Masa Depan: Kecerdasan Artifisial",
-        subtitle: "Universitas Mikroskil",
+        title: "Pembekalan Guru SMK dalam Menghadapi Tantangan Industri Masa Depan Melalui Pelatihan Berpikir Komputasional, Analisis Data, dan Literasi Kecerdasan Artifisial",
+        subtitle: "SMK 6 Medan dan SMK 13 Medan",
         description: "",
-        link: "#",
         category: "Pengabdian Internal",
-        role: "Anggota Pengabdian",
-        rank: ""
+        role: "Ketua Pengabdian",
+        assets: {
+            folder: "",
+            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EkvJm8pJk85GlM4yAJZMlMABUbKtwWbnZZgu6wkRXnD8gQ?e=vmPfod",
+            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EuW0NgaL98ZIspL_cP0463oBIiZ81EdVFLtyjsSQKbU_bw?e=S2ze05"
+        }
     },
     {
         year: "2025",
-        title: "Pengenalan Kecerdasan Artifisial pada Guru SMAS Tri Ratna Sibolga Sebagai Bekal Generasi Emas 2045",
-        subtitle: "Universitas Mikroskil",
+        title: "Transformasi Peran Guru dalam Mendorong Partisipasi Siswa melalui Integrasi Mentimeter untuk Mendukung Active Learning",
+        subtitle: "SMK Methodist Tg. Morawa",
         description: "",
-        link: "#",
         category: "Pengabdian Internal",
         role: "Anggota Pengabdian",
-        rank: ""
+        assets: {
+            folder: "",
+            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EqcFVDqGZT5Gvs8IIvjvwzQBVlUC2KprcEhushRw_7iRBA?e=MP4aFY",
+            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EroVv-bA5ElAg519jeXCId0B3WygFz_A9bxVQcf6hcOzmg?e=f1zJQL"
+        }
+    },
+    {
+        year: "2025",
+        title: "Pengenalan Kecerdasan Artifisial pada Guru SMA Tri Ratna Sibolga Sebagai Bekal Generasi Emas 2045",
+        subtitle: "SMA Tri Ratna Sibolga",
+        description: "",
+        category: "Pengabdian Internal",
+        role: "Anggota Pengabdian",
+        assets: {
+            folder: "",
+            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/Eni0jfKAHNNFgsm9GtXcaOwBJQrhrHVlNEsWaPtH2sFjGw?e=ynFTmA",
+            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/El09Gt7n9mhGhhZwFgHE2gEBPcM3p7apFBnUa_FmPPLcEw?e=PjJMdx"
+        }
+    },
+    {
+        year: "2025",
+        title: "Pembekalan Guru SMA Panglima Polem Rantauprapat dengan Teknologi Masa Depan: Kecerdasan Artifisial",
+        subtitle: "SMA Panglima Polem Rantauprapat",
+        description: "",
+        category: "Pengabdian Internal",
+        role: "Anggota Pengabdian",
+        assets: {
+            folder: "",
+            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EuK7MwB8rthFozdvzsErlSgB6HgE5Ykl62soWWj9f3Lp6A",
+            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/Em1jS-SkN5xAgQ0XS6CDBPsBQFHgLBhMzQKw8FKdrNfmwg?e=7LZklA"
+        }
     }
 ];
 
 const publications = [
     {
         year: "2025",
-        title: "Optimisasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham",
-        subtitle: "Jambura Journal of Mathematics",
-        description: `Luaran dari Penelitian "Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham".`,
-        link: "https://ejurnal.ung.ac.id/index.php/jjom/article/view/27166/0",
-        category: "Penelitian Mandiri",
-        rank: "Sinta 3",
-        role: "Ketua Peneliti"
-    },
-    {
-        year: "2025",
         title: "Random Forest Optimization Using Recursive Feature Elimination for Stunting Classification",
         subtitle: "Indonesian Journal of Artificial Intelligence and Data Mining",
         description: `Luaran dari Penelitian "Optimasi Random Forest Menggunakan RFE untuk Klasifikasi Stunting pada RSU Mitra Medika".`,
-        link: "https://ejournal.uin-suska.ac.id/index.php/IJAIDM/article/view/35295",
         category: "Penelitian Mandiri",
+        role: "Anggota Peneliti",
         rank: "Sinta 3",
-        role: "Anggota Peneliti"
+        assets: {
+            article: "https://ejournal.uin-suska.ac.id/index.php/IJAIDM/article/view/35295"
+        }
+    },
+    {
+        year: "2025",
+        title: "Optimisasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham",
+        subtitle: "Jambura Journal of Mathematics",
+        description: `Luaran dari Penelitian "Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham".`,
+        category: "Penelitian Mandiri",
+        role: "Ketua Peneliti",
+        rank: "Sinta 3",
+        assets: {
+            article: "https://ejurnal.ung.ac.id/index.php/jjom/article/view/27166/0"
+        }
     }
 ];
 
@@ -202,9 +258,11 @@ const books = [
         title: "Chapter 14: Proyek Mini: Merancang Solusi Nyata Berbasis Komputasi",
         subtitle: "Bukuloka Literasi Bangsa",
         description: `Book chapter dalam Buku "Logika Digital & Algoritma Dunia Nyata: Menyelami Inti Ilmu Komputer".`,
-        link: "https://www.bukuloka.com/books/logika-digital-algoritma-dunia-nyata-menyelami-inti-ilmu-komputer",
         category: "Book Chapter",
-        role: "Kontributor"
+        role: "Kontributor",
+        assets: {
+            book: "https://www.bukuloka.com/books/logika-digital-algoritma-dunia-nyata-menyelami-inti-ilmu-komputer"
+        }
     }
 ];
 
@@ -214,27 +272,36 @@ const talks = [
         title: "Workshop Mikroskil e-Xploration: Python",
         subtitle: "Universitas Mikroskil",
         description: "",
-        link: "https://mikroskilacid-my.sharepoint.com/:b:/g/personal/fandi_simamora_mikroskil_ac_id/EQczsXUWTZNHtzkvEU1xnIgB3tROs1OJdPYB7eCbU1hwhg?e=P7h5nP",
         category: "Event Internal",
-        role: "Narasumber"
+        role: "Narasumber",
+        assets: {
+            documentation: "",
+            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/ElyWskrCsINKj9shki07PhoBwxjkqr1Jfcx7l-JSZMSapQ?e=fMSr3F"
+        }
     },
     {
         year: "2025",
         title: "Coaching Clinic PKM",
         subtitle: "Mikroskil Student Union",
         description: "",
-        link: "https://mikroskilacid-my.sharepoint.com/:p:/g/personal/fandi_simamora_mikroskil_ac_id/ESaHvO5ls4ZFkNJoqKoxi-8BZxrKHv68J-1ZJvmcIUqXwg?e=xymmF8",
         category: "Event Internal",
-        role: "Narasumber"
+        role: "Narasumber",
+        assets: {
+            documentation: "",
+            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EodB2SJmdVJHsBNfpKeglpgBA3q06eAxoweGkz9zQq7vzQ?e=ujJ1Un"
+        }
     },
     {
         year: "2023",
         title: "Workshop Introduction to Game Development",
         subtitle: "Universitas Mikroskil",
         description: "",
-        link: "https://mikroskilacid-my.sharepoint.com/:b:/g/personal/fandi_simamora_mikroskil_ac_id/EV39Fh6AENNNm5Ws_cCd_wwBDRVfwTEx3IkqnWaRuvjP5w?e=cMJRri",
         category: "Event Internal",
-        role: "Narasumber"
+        role: "Narasumber",
+        assets: {
+            documentation: "",
+            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EvxQoi94nppPonYFczritrcBC3EikMuPv_-RIagb9__hrA?e=7a6UQa"
+        }
     }
 ];
 
@@ -288,21 +355,21 @@ const projects = [
         id: 3,
         title: "Gudank Review",
         description: "Gudank Review. Kami menguji gadget. Memberikan ulasan yang lugas dan jujur. Membantu Anda membuat keputusan yang lebih baik. Titik. ",
-        links: [{ url: "https://www.youtube.com/@gudankreviewin", label: "YouTube" }, { url: "https://www.facebooks.com/gudankreview", label: "Facebook" }, { url: "https://www.instagram.com/gudankreview", label: "Instagram" }, { url: "https://www.tiktok.com/@gudankreview", label: "Tiktok" }],
+        links: [{ url: "https://www.facebooks.com/gudankreview", label: "Facebook" }, { url: "https://www.instagram.com/gudankreview", label: "Instagram" }, { url: "https://www.tiktok.com/@gudankreview", label: "Tiktok" }, { url: "https://www.youtube.com/@gudankreviewin", label: "YouTube" }],
         tags: ["Video"]
     },
     {
         id: 1,
         title: "Hobi Ngoding",
         description: "Catatan hobi ngoding dari nol, oprek Unity dan Blogger. Berbagi trik jitu Adsense, tips Office, dan info tekno terbaru.",
-        links: [{ url: "https://www.hobingoding.com", label: "Website" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }, { url: "https://www.facebooks.com/hobingodingcom", label: "Facebook" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }],
+        links: [{ url: "https://www.facebooks.com/hobingodingcom", label: "Facebook" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }, { url: "https://www.hobingoding.com", label: "Website" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }],
         tags: ["Blog", "Video"]
     },
     {
         id: 2,
         title: "Jurnalpedia",
         description: "Pusat referensi jurnal ilmiah terakreditasi SINTA dan Scopus. Hub utama bagi mahasiswa, dosen, dan peneliti untuk publikasi ilmiah terpercaya.",
-        links: [{ url: "https://jurnal.fandipres.my.id", label: "Website" }, { url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://www.facebooks.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }],
+        links: [{ url: "https://www.facebooks.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://jurnal.fandipres.my.id", label: "Website" }],
         tags: ["Blog", "Video"]
     },
     {
