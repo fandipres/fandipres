@@ -1,21 +1,89 @@
 function renderItems(containerId, data, limit) {
     const container = document.getElementById(containerId);
     if (!container) return;
-
     const itemsToRender = limit ? data.slice(0, limit) : data;
-
     let html = '';
     itemsToRender.forEach(item => {
-        html += `
-            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                <div class="flex-shrink-0 sm:w-48 text-gray-400 font-medium">${item.year}</div>
-                <div class="border-l-4 border-gray-700 pl-4 sm:pl-6 flex-grow">
-                    <h3 class="text-xl font-semibold text-white">${item.title}</h3>
-                    <p class="mt-1 text-base text-gray-300">${item.subtitle || ''}</p>
-                    <p class="mt-2 text-gray-400 text-sm leading-relaxed">${item.description}</p>
+        html += `<div class="flex flex-col sm:flex-row gap-4 sm:gap-6"><div class="flex-shrink-0 sm:w-48 text-gray-400 font-medium">${item.year}</div><div class="border-l-4 border-gray-700 pl-4 sm:pl-6 flex-grow"><h3 class="text-xl font-semibold text-white">${item.title}</h3><p class="mt-1 text-base text-gray-300">${item.subtitle || ''}</p><p class="mt-2 text-gray-400 text-sm leading-relaxed">${item.description}</p></div></div>`;
+    });
+    container.innerHTML = html;
+}
+
+function renderDetailItems(containerId, data) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const groupedData = data.reduce((acc, item) => {
+        const key = item.year;
+        if (!acc[key]) { acc[key] = []; }
+        acc[key].push(item);
+        return acc;
+    }, {});
+
+    const sortedYears = Object.keys(groupedData).sort((a, b) => b - a);
+    let html = '';
+
+    sortedYears.forEach(year => {
+        const itemsInGroup = groupedData[year];
+        // itemsInGroup.sort((a, b) => a.title.localeCompare(b.title));
+
+        const itemsHtml = itemsInGroup.map(item => {
+            const titleHtml = `<h3 class="text-xl font-semibold text-white">${item.title}</h3>`;
+
+            const subtitleHtml = item.rank
+                ? `<p class="mt-1 text-base text-gray-300">${item.subtitle || ''} &bull; <span class="font-semibold text-green-400">${item.rank}</span></p>`
+                : `<p class="mt-1 text-base text-gray-300">${item.subtitle || ''}</p>`;
+
+            const tags = [];
+            if (item.category) tags.push(item.category);
+            if (item.role) tags.push(item.role);
+            const tagsHtml = tags.length > 0 ? `<p class="mt-2 text-sm text-gray-400">${tags.join(' &bull; ')}</p>` : '';
+
+            const descriptionHtml = (item.description && item.description.trim() !== '')
+                ? `<p class="mt-3 text-gray-400 text-sm leading-relaxed">${item.description}</p>`
+                : '';
+
+            let assetsHtml = '';
+            if (item.assets) {
+                const assetLinks = [];
+
+                if (item.assets.article === "") { assetLinks.push({ label: "Artikel", html: '<span class="text-gray-500">Artikel</span>' }); }
+                else if (item.assets.article) { assetLinks.push({ label: "Artikel", html: `<a href="${item.assets.article}" target="_blank" class="text-blue-400 hover:underline">Artikel</a>` }); }
+
+                if (item.assets.book === "") { assetLinks.push({ label: "Buku", html: '<span class="text-gray-500">Buku</span>' }); }
+                else if (item.assets.book) { assetLinks.push({ label: "Buku", html: `<a href="${item.assets.book}" target="_blank" class="text-blue-400 hover:underline">Buku</a>` }); }
+
+                if (item.assets.dataset === "") { assetLinks.push({ label: "Dataset", html: '<span class="text-gray-500">Dataset</span>' }); }
+                else if (item.assets.dataset) { assetLinks.push({ label: "Dataset", html: `<a href="${item.assets.dataset}" target="_blank" class="text-blue-400 hover:underline">Dataset</a>` }); }
+
+                if (item.assets.documentation === "") { assetLinks.push({ label: "Dokumentasi", html: '<span class="text-gray-500">Dokumentasi</span>' }); }
+                else if (item.assets.documentation) { assetLinks.push({ label: "Dokumentasi", html: `<a href="${item.assets.documentation}" target="_blank" class="text-blue-400 hover:underline">Dokumentasi</a>` }); }
+
+                if (item.assets.folder === "") { assetLinks.push({ label: "Folder", html: '<span class="text-gray-500">Folder</span>' }); }
+                else if (item.assets.folder) { assetLinks.push({ label: "Folder", html: `<a href="${item.assets.folder}" target="_blank" class="text-blue-400 hover:underline">Folder</a>` }); }
+
+                if (item.assets.slides === "") { assetLinks.push({ label: "Slide", html: '<span class="text-gray-500">Slide</span>' }); }
+                else if (item.assets.slides) { assetLinks.push({ label: "Slide", html: `<a href="${item.assets.slides}" target="_blank" class="text-blue-400 hover:underline">Slide</a>` }); }
+
+                assetLinks.sort((a, b) => a.label.localeCompare(b.label));
+
+                if (assetLinks.length > 0) {
+                    assetsHtml = `<p class="mt-3 text-sm text-gray-400"><span class="font-medium text-gray-300">Aset Terkait:</span> ${assetLinks.map(link => link.html).join(' &bull; ')}</p>`;
+                }
+            }
+
+            return `
+                <div>
+                    ${titleHtml}
+                    ${subtitleHtml}
+                    ${tagsHtml}
+                    ${descriptionHtml}
+                    ${assetsHtml}
                 </div>
-            </div>
-        `;
+            `;
+        }).join('');
+
+        html += `<div class="flex flex-col sm:flex-row gap-4 sm:gap-6"><div class="flex-shrink-0 sm:w-48 text-gray-400 font-medium">${year}</div><div class="border-l-4 border-gray-700 pl-4 sm:pl-6 flex-grow space-y-6">${itemsHtml}</div></div>`;
     });
     container.innerHTML = html;
 }
@@ -35,98 +103,6 @@ function renderAcademicActivities(containerId, activities) {
             </a>
         `;
     }
-    container.innerHTML = html;
-}
-
-function renderGroupedItems(containerId, data, groupByProperty) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-
-    const groupedData = data.reduce((acc, item) => {
-        const key = item[groupByProperty];
-        if (!acc[key]) {
-            acc[key] = [];
-        }
-        acc[key].push(item);
-        return acc;
-    }, {});
-
-    let html = '';
-    for (const key in groupedData) {
-        const itemsInGroup = groupedData[key];
-
-        itemsInGroup.sort((a, b) => a.title.localeCompare(b.title));
-
-        const itemsHtml = itemsInGroup.map(item => `
-            <div>
-                <h3 class="text-xl font-semibold text-white">${item.title}</h3>
-                <p class="mt-1 text-base text-gray-300">${item.subtitle || ''}</p>
-                <p class="mt-2 text-gray-400 text-sm leading-relaxed">${item.description}</p>
-            </div>
-        `).join('');
-
-        html += `
-            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                <div class="flex-shrink-0 sm:w-48 text-gray-400 font-medium">${key}</div>
-                <div class="border-l-4 border-gray-700 pl-4 sm:pl-6 flex-grow space-y-6">
-                    ${itemsHtml}
-                </div>
-            </div>
-        `;
-    }
-    container.innerHTML = html;
-}
-
-function renderGroupedResearch(containerId, data) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-
-    const groupedData = data.reduce((acc, item) => {
-        const key = item.year;
-        if (!acc[key]) {
-            acc[key] = [];
-        }
-        acc[key].push(item);
-        return acc;
-    }, {});
-
-    const sortedYears = Object.keys(groupedData).sort((a, b) => b - a);
-
-    let html = '';
-    sortedYears.forEach(year => {
-        const itemsInGroup = groupedData[year];
-
-        itemsInGroup.sort((a, b) => a.title.localeCompare(b.title));
-
-        const itemsHtml = itemsInGroup.map(item => {
-            const tagsHtml = `
-                <div class="mt-3 flex items-center flex-wrap gap-2">
-                    ${item.category ? `<span class="inline-block bg-blue-700/80 text-blue-200 text-xs font-semibold px-3 py-1 rounded-md">${item.category}</span>` : ''}
-                    ${item.role ? `<span class="inline-block bg-purple-700/80 text-purple-200 text-xs font-semibold px-3 py-1 rounded-md">${item.role}</span>` : ''}
-                    ${item.rank ? `<span class="inline-block bg-green-700/80 text-green-200 text-xs font-semibold px-3 py-1 rounded-md">${item.rank}</span>` : ''}
-                </div>
-            `;
-            return `
-                <div>
-                    <a href="${item.link || '#'}" target="_blank" class="text-xl font-semibold text-white hover:text-blue-400 transition-colors duration-300">
-                        ${item.title}
-                    </a>
-                    <p class="mt-1 text-base text-gray-300">${item.subtitle || ''}</p>
-                    ${tagsHtml}
-                    <p class="mt-3 text-gray-400 text-sm leading-relaxed">${item.description}</p>
-                </div>
-            `;
-        }).join('');
-
-        html += `
-            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                <div class="flex-shrink-0 sm:w-48 text-gray-400 font-medium">${year}</div>
-                <div class="border-l-4 border-gray-700 pl-4 sm:pl-6 flex-grow space-y-6">
-                    ${itemsHtml}
-                </div>
-            </div>
-        `;
-    });
     container.innerHTML = html;
 }
 
