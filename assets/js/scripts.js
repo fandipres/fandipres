@@ -62,8 +62,8 @@ function renderDetailItems(containerId, data) {
                 if (item.assets.folder === "") { assetLinks.push({ label: "Folder", html: '<span class="text-gray-500">Folder</span>' }); }
                 else if (item.assets.folder) { assetLinks.push({ label: "Folder", html: `<a href="${item.assets.folder}" target="_blank" class="text-blue-400 hover:underline">Folder</a>` }); }
 
-                if (item.assets.slides === "") { assetLinks.push({ label: "Slide", html: '<span class="text-gray-500">Slide</span>' }); }
-                else if (item.assets.slides) { assetLinks.push({ label: "Slide", html: `<a href="${item.assets.slides}" target="_blank" class="text-blue-400 hover:underline">Slide</a>` }); }
+                if (item.assets.slides === "") { assetLinks.push({ label: "Materi", html: '<span class="text-gray-500">Materi</span>' }); }
+                else if (item.assets.slides) { assetLinks.push({ label: "Materi", html: `<a href="${item.assets.slides}" target="_blank" class="text-blue-400 hover:underline">Materi</a>` }); }
 
                 assetLinks.sort((a, b) => a.label.localeCompare(b.label));
 

@@ -108,8 +108,7 @@ const research = [
         assets: {
             folder: "",
             dataset: "",
-            documentation: "",
-            slides: ""
+            documentation: ""
         }
     },
     {
@@ -122,8 +121,7 @@ const research = [
         assets: {
             folder: "",
             dataset: "",
-            documentation: "",
-            slides: ""
+            documentation: ""
         }
     },
     {
@@ -136,8 +134,7 @@ const research = [
         assets: {
             folder: "",
             dataset: "",
-            documentation: "",
-            slides: ""
+            documentation: ""
         }
     },
     {
@@ -150,8 +147,7 @@ const research = [
         assets: {
             folder: "",
             dataset: "",
-            documentation: "",
-            slides: ""
+            documentation: ""
         }
     },
     {
@@ -164,8 +160,7 @@ const research = [
         assets: {
             folder: "",
             dataset: "",
-            documentation: "",
-            slides: ""
+            documentation: ""
         }
     }
 ];
