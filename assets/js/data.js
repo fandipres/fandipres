@@ -382,7 +382,7 @@ const projects = [
     {
         title: "Monitoring",
         description: "Monitoring adalah aplikasi web yang dibuat untuk memantau aktivitas di dalam ruangan lewat video real-time dari kamera menggunakan Detectron2.",
-        links: [{ url: "https://github.com/fandipres/to-do-list", label: "GitHub" }],
+        links: [{ url: "https://github.com/fandipres/monitoring", label: "GitHub" }],
         tags: ["Web"]
     },
     {
