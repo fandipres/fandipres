@@ -355,21 +355,21 @@ const projects = [
         id: 3,
         title: "Gudank Review",
         description: "Gudank Review. Kami menguji gadget. Memberikan ulasan yang lugas dan jujur. Membantu Anda membuat keputusan yang lebih baik. Titik. ",
-        links: [{ url: "https://www.facebooks.com/gudankreview", label: "Facebook" }, { url: "https://www.instagram.com/gudankreview", label: "Instagram" }, { url: "https://www.tiktok.com/@gudankreview", label: "Tiktok" }, { url: "https://www.youtube.com/@gudankreviewin", label: "YouTube" }],
+        links: [{ url: "https://www.facebook.com/gudankreview", label: "Facebook" }, { url: "https://www.instagram.com/gudankreview", label: "Instagram" }, { url: "https://www.tiktok.com/@gudankreview", label: "Tiktok" }, { url: "https://www.youtube.com/@gudankreviewin", label: "YouTube" }],
         tags: ["Video"]
     },
     {
         id: 1,
         title: "Hobi Ngoding",
         description: "Catatan hobi ngoding dari nol, oprek Unity dan Blogger. Berbagi trik jitu Adsense, tips Office, dan info tekno terbaru.",
-        links: [{ url: "https://www.facebooks.com/hobingodingcom", label: "Facebook" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }, { url: "https://www.hobingoding.com", label: "Website" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }],
+        links: [{ url: "https://www.facebook.com/hobingodingcom", label: "Facebook" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }, { url: "https://www.hobingoding.com", label: "Website" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }],
         tags: ["Blog", "Video"]
     },
     {
         id: 2,
         title: "Jurnalpedia",
         description: "Pusat referensi jurnal ilmiah terakreditasi SINTA dan Scopus. Hub utama bagi mahasiswa, dosen, dan peneliti untuk publikasi ilmiah terpercaya.",
-        links: [{ url: "https://www.facebooks.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://jurnal.fandipres.my.id", label: "Website" }],
+        links: [{ url: "https://www.facebook.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://jurnal.fandipres.my.id", label: "Website" }],
         tags: ["Blog", "Video"]
     },
     {
@@ -383,6 +383,12 @@ const projects = [
         description: "Jelajahi ribuan lirik lagu, mulai dari hits Indonesia dan Barat, hingga alunan merdu lagu-lagu daerah.",
         links: [{ url: "https://www.lyricspedia.my.id", label: "Website" }],
         tags: ["Blog"]
+    },
+    {
+        title: "Monitoring",
+        description: "Monitoring adalah aplikasi web yang dibuat untuk memantau aktivitas di dalam ruangan lewat video real-time dari kamera. Video yang masuk kemudian diproses menggunakan library Detectron2 untuk mengenali jenis aktivitas yang sedang berlangsung.",
+        links: [{ url: "https://github.com/fandipres/to-do-list", label: "Monitoring" }],
+        tags: ["Web"]
     },
     {
         title: "To-Do List",
@@ -400,7 +406,7 @@ const projects = [
 ];
 
 const socialMedia = [
-    { name: "Facebooks", url: "https://facebooks.com/fandipres", icon: '<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"> <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /> </svg>' },
+    { name: "Facebook", url: "https://facebook.com/fandipres", icon: '<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"> <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /> </svg>' },
     { name: "Github", url: "https://github.com/fandipres", icon: '<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"> <path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.1 7 9.4.5.1.7-.2.7-.5v-2c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.9.1-.7.4-1.1.7-1.3-2.2-.2-4.5-1.1-4.5-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.5-1.3.1-2.8 0 0 .8-.2 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.2 2.7-1 2.7-1 .6 1.5.2 2.5.1 2.8a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.8-4.5 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5 4.1-1.3 7-5 7-9.4 0-5.5-4.5-10-10-10z" /> </svg>' },
     { name: "Instagram", url: "https://instagram.com/fandipres", icon: '<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"> <path d="M12 2c2.7 0 3 0 4 .1 1 .1 1.5.2 2.1.4.6.2 1.1.5 1.6.9.4.4.7.9.9 1.6.2.6.3 1.1.4 2.1.1 1 .1 1.3.1 4s0 3-.1 4c-.1 1-.2 1.5-.4 2.1-.2.6-.5 1.1-.9 1.6-.4.4-.9.7-1.6.9-.6.2-1.1.3-2.1.4-1 .1-1.3.1-4 .1s-3 0-4-.1c-1-.1-1.5-.2-2.1-.4-.6-.2-1.1-.5-1.6-.9-.4-.4-.7-.9-.9-1.6-.2-.6-.3-1.1-.4-2.1-.1-1-.1-1.3-.1-4s0-3 .1-4c.1-1 .2-1.5 .4-2.1.2-.6 .5-1.1 .9-1.6.4-.4 .9-.7 1.6-.9 .6-.2 1.1-.3 2.1-.4 1-.1 1.3-.1 4-.1zm0-2c-2.8 0-3.1 0-4.1.1-1.1.1-1.9.2-2.8.5-.9.3-1.7.7-2.5 1.5-.8.8-1.2 1.6-1.5 2.5-.3.9-.4 1.7-.5 2.8-.1 1-.1 1.3-.1 4.1s0 3.1 .1 4.1c.1 1.1 .2 1.9 .5 2.8 .3 .9 .7 1.7 1.5 2.5 .8 .8 1.6 1.2 2.5 1.5 .9 .3 1.7 .4 2.8 .5 1 .1 1.3 .1 4.1 .1s3.1 0 4.1-.1c1.1-.1 1.9-.2 2.8-.5 .9-.3 1.7-.7 2.5-1.5 .8-.8 1.2-1.6 1.5-2.5 .3-.9 .4-1.7 .5-2.8 .1-1 .1-1.3 .1-4.1s0-3.1-.1-4.1c-.1-1.1-.2-1.9-.5-2.8-.3-.9-.7-1.7-1.5-2.5-.8-.8-1.6-1.2-2.5-1.5-.9-.3-1.7-.4-2.8-.5-1-.1-1.3-.1-4.1-.1zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-10a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" /> </svg>' },
     { name: "LinkedIn", url: "https://linkedin.com/in/fandipres", icon: '<svg class="w-10 h-10" fill="currentColor"viewBox="0 0 16 16"> <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/> </svg>' },
