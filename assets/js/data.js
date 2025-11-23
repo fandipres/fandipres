@@ -343,7 +343,7 @@ const projects = [
     {
         title: "Fandi's Blog",
         description: "Tempatku berbagi cerita. Fokus utama pada kehidupan kampus, riset, dan pengabdian. Ditambah obrolan santai seputar finansial, travelling, dan pengembangan diri.",
-        links: [{ url: "https://blog.fandipres.my.id", label: "Website" }],
+        links: [{ url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://blog.fandipres.my.id", label: "Website" }],
         tags: ["Blog"]
     },
     {
@@ -364,7 +364,7 @@ const projects = [
         id: 2,
         title: "Jurnalpedia",
         description: "Pusat referensi jurnal ilmiah terakreditasi SINTA dan Scopus. Hub utama bagi mahasiswa, dosen, dan peneliti untuk publikasi ilmiah terpercaya.",
-        links: [{ url: "https://www.facebook.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://jurnal.fandipres.my.id", label: "Website" }, { url: "https://www.youtube.com/@jurnalpediaofc", label: "YouTube" }],
+        links: [{ url: "https://www.facebook.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://jurnal.fandipres.my.id", label: "Website" }, { url: "https://www.youtube.com/@jurnalpediaofc", label: "YouTube" }],
         tags: ["Blog", "Video"]
     },
     {
