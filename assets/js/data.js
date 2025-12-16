@@ -250,6 +250,17 @@ const publications = [
 const books = [
     {
         year: "2025",
+        title: "Chapter 6: Bahasa Pemrograman",
+        subtitle: "MMFast Publishinga",
+        description: `Book chapter dalam Buku "Pengenalan Dasar Informatika dan Peranannya di Era Digital".`,
+        category: "Book Chapter",
+        role: "Kontributor",
+        assets: {
+            book: "https://mmfast.id/pengenalan-dasar-informatika-danperanannya-di-era-digital"
+        }
+    },
+    {
+        year: "2025",
         title: "Chapter 14: Proyek Mini: Merancang Solusi Nyata Berbasis Komputasi",
         subtitle: "Bukuloka Literasi Bangsa",
         description: `Book chapter dalam Buku "Logika Digital & Algoritma Dunia Nyata: Menyelami Inti Ilmu Komputer".`,
