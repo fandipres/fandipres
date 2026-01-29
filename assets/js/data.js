@@ -425,37 +425,37 @@ const privateTeaching = [
 
 const academicActivities = {
     teaching: {
-        title: { id: "Pengajaran", en: "" },
+        title: { id: "Pengajaran", en: "Teaching" },
         description: { id: "Daftar mata kuliah dan kelas yang saya ampu di universitas.", en: "List of courses and classes I teach at the university." },
         link: "/teaching",
         data: teaching
     },
     research: {
-        title: { id: "Penelitian", en: "" },
+        title: { id: "Penelitian", en: "Research" },
         description: { id: "Proyek penelitian yang saya kerjakan sebagai ketua maupun anggota tim.", en: "Research projects conducted as a lead or co-researcher." },
         link: "/research",
         data: research
     },
     community_service: {
-        title: { id: "Pengabdian Masyarakat", en: "" },
+        title: { id: "Pengabdian Masyarakat", en: "Community Service" },
         description: { id: "Berbagi ilmu dan keahlian kepada masyarakat untuk dampak yang lebih luas.", en: "Sharing knowledge and expertise with the community to create a broader impact." },
         link: "/community_service",
         data: community_service
     },
     publications: {
-        title: { id: "Publikasi", en: "X" },
+        title: { id: "Publikasi", en: "Publications" },
         description: { id: "Publikasi artikel ilmiah dalam jurnal maupun konferensi.", en: "Scientific articles published in journals and conferences." },
         link: "/publications",
         data: publications
     },
     books: {
-        title: { id: "Penulisan", en: "" },
+        title: { id: "Penulisan", en: "Books" },
         description: { id: "Kontribusi buku dan bab buku sesuai bidang keahlian saya.", en: "Books and book chapters written within my field of expertise." },
         link: "/books",
         data: books
     },
     talks: {
-        title: { id: "Pembicara", en: "" },
+        title: { id: "Pembicara", en: "Talks" },
         description: { id: "Berbagi wawasan dan pengalaman sebagai pembicara di berbagai forum.", en: "Sharing insights and experiences as a speaker at seminars and workshops." },
         link: "/talks",
         data: talks
@@ -488,7 +488,7 @@ const projects = [
     },
     {
         id: 1,
-        title: { id: "Hobi Ngoding", en: "X" },
+        title: { id: "Hobi Ngoding", en: "" },
         description: { id: "Catatan hobi ngoding dari nol, oprek Unity dan Blogger. Berbagi trik jitu Adsense, tips Office, dan info tekno terbaru.", en: "Coding notes from scratch, tinkering with Unity and Blogger. Sharing AdSense tricks, Office tips, and the latest tech info." },
         links: [{ url: "https://www.facebook.com/hobingodingcom", label: "Facebook" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }, { url: "https://www.hobingoding.com", label: "Website" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }],
         tags: ["Blog", "Video"]
