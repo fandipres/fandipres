@@ -44,8 +44,90 @@
 
 <body class="bg-black text-white antialiased">
 
-    <header class="bg-gradient-to-b from-gray-900 to-black text-white w-full fade-in-section">
-        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <nav
+        class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <div class="flex-shrink-0">
+                    <a href="#"
+                        class="text-xl font-bold text-white tracking-wider hover:text-blue-400 transition-colors">
+                        FANDIPRES
+                    </a>
+                </div>
+
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            data-i18n="navbar.home">Beranda</a>
+                        <a href="#sect-experience"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            data-i18n="navbar.experience">Pengalaman</a>
+                        <a href="#sect-education"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            data-i18n="navbar.education">Pendidikan</a>
+                        <a href="#sect-academic"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            data-i18n="sectionTitles.academicActivities">Aktivitas Akademik</a>
+                        <a href="#sect-projects"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            data-i18n="navbar.projects">Proyek</a>
+                        <a href="#sect-contact"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                            data-i18n="navbar.contact">Hubungi Saya</a>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <button id="lang-toggle"
+                        class="hidden md:inline-flex px-3 py-1 border border-gray-600 rounded text-xs font-bold text-gray-300 hover:text-white hover:border-white transition-colors">
+                        <span id="lang-text">EN</span>
+                    </button>
+
+                    <div class="-mr-2 flex md:hidden">
+                        <button id="mobile-menu-btn" type="button"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden md:hidden bg-gray-900 border-b border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="navbar.home">Beranda</a>
+                <a href="#sect-experience"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="navbar.experience">Pengalaman</a>
+                <a href="#sect-education"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="navbar.education">Pendidikan</a>
+                <a href="#sect-academic"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="sectionTitles.academicActivities">Aktivitas Akademik</a>
+                <a href="#sect-projects"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="navbar.projects">Proyek</a>
+                <a href="#sect-contact"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    data-i18n="navbar.contact">Hubungi Saya</a>
+
+                <button id="lang-toggle-mobile"
+                    class="w-full text-left text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium border-t border-gray-700 mt-2">
+                    Switch Language (ID/EN)
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-b from-gray-900 to-black text-white w-full fade-in-section pt-24 pb-16">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row items-center gap-8 text-center sm:text-left">
                 <div class="flex-shrink-0">
                     <img src="https://yt3.googleusercontent.com/ytc/AIdro_nwK6LasXc5CwFsGfd1sKR8m9H6ibAoykjqg5gu2Q=s176-c-k-c0x00ffffff-no-rj"
@@ -67,81 +149,84 @@
             </div>
         </div>
     </header>
+
     <main>
-        <section class="bg-gray-900 py-16 fade-in-section">
+        <section id="sect-experience" class="bg-gray-900 py-16 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-                <h2 class="text-3xl font-bold mb-10 border-b-2 border-gray-800 pb-4">Pengalaman Kerja</h2>
-                <div id="recent-experience" class="space-y-8 max-w-4xl"></div>
+                <h2 class="text-3xl font-bold mb-10 border-b-2 border-gray-800 pb-4"
+                    data-i18n="sectionTitles.latestWork">Pengalaman Kerja</h2>
+                <div id="pekerjaan-terbaru" class="space-y-8 max-w-4xl"></div>
                 <div class="mt-12">
                     <a href="/experience/"
-                        class="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300">Lihat
-                        Riwayat
-                        Pengalaman Kerja →</a>
+                        class="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300"
+                        data-i18n="buttons.viewAll">Lihat Semua</a>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 fade-in-section">
+        <section id="sect-education" class="py-16 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-                <h2 class="text-3xl font-bold mb-10 border-b-2 border-gray-800 pb-4">Pendidikan</h2>
-                <div id="recent-education" class="space-y-8 max-w-4xl"></div>
+                <h2 class="text-3xl font-bold mb-10 border-b-2 border-gray-800 pb-4"
+                    data-i18n="sectionTitles.latestEdu">Pendidikan</h2>
+                <div id="pendidikan-terbaru" class="space-y-8 max-w-4xl"></div>
                 <div class="mt-12">
                     <a href="/education/"
-                        class="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300">Lihat
-                        Riwayat Pendidikan →</a>
+                        class="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300"
+                        data-i18n="buttons.viewAll">Lihat Semua</a>
                 </div>
             </div>
         </section>
 
-        <section class="bg-gray-900 py-16 fade-in-section">
+        <section id="sect-academic" class="bg-gray-900 py-16 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-                <h2 class="text-3xl font-bold mb-4">Aktivitas Akademik</h2>
+                <h2 class="text-3xl font-bold mb-4" data-i18n="sectionTitles.academicActivities">Aktivitas Akademik</h2>
                 <p class="text-gray-400 mb-10">Di bagian ini, Anda bisa melihat lebih dalam kegiatan saya sebagai
                     seorang akademisi.</p>
+
                 <div class="flex items-center gap-4 mb-10">
                     <a href="https://scholar.google.com/citations?user=TwIuVJYAAAAJ" target="_blank"
                         class="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-5 rounded-lg transition-colors duration-300">
                         Google Scholar</a>
                     <a href="https://sinta.kemdiktisaintek.go.id/authors/profile/6857557" target="_blank"
                         class="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-5 rounded-lg transition-colors duration-300">
+                        Research Gate</a>
+                    <a href="https://sinta.kemdiktisaintek.go.id/authors/profile/6857557" target="_blank"
+                        class="bg-gray-800 hover:bg-gray-700 text-white font-medium py-2 px-5 rounded-lg transition-colors duration-300">
                         Sinta</a>
                 </div>
-                <div id="academic-activities-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div id="aktivitas-akademik-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 </div>
-            </div>
             </div>
         </section>
 
-        <section class="py-16 fade-in-section">
+        <section id="sect-projects" class="py-16 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-                <h2 class="text-3xl font-bold mb-10 border-b-2 border-gray-800 pb-4">Proyek Pilihan</h2>
-                <div id="recent-projects" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                </div>
+                <h2 class="text-3xl font-bold mb-10 border-b-2 border-gray-800 pb-4"
+                    data-i18n="sectionTitles.featuredProjects">Proyek Pilihan</h2>
+                <div id="proyek-terbaru" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
                 <div class="mt-12">
                     <a href="/projects/"
-                        class="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300">Lihat Semua
-                        Proyek →</a>
+                        class="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300"
+                        data-i18n="buttons.viewAll">Lihat Semua</a>
                 </div>
             </div>
         </section>
 
-        <section class="bg-gray-900 py-20 fade-in-section">
+        <section id="sect-contact" class="bg-gray-900 py-20 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
                 <div>
-                    <h2 class="text-3xl font-bold">Hubungi Saya</h2>
+                    <h2 class="text-3xl font-bold" data-i18n="sectionTitles.connect">Hubungi Saya</h2>
                     <p class="mt-2 text-gray-400 max-w-2xl">Jika Anda memiliki pertanyaan atau ingin berkolaborasi,
                         jangan ragu untuk menghubungi saya.</p>
                 </div>
 
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-
                     <div>
-                        <h3 class="text-xl font-semibold text-white">Media Sosial</h3>
+                        <h3 class="text-xl font-semibold text-white" data-i18n="navbar.contact">Media Sosial</h3>
                         <p class="mt-2 text-gray-400 text-sm">Anda bisa terhubung dengan saya melalui platform berikut.
-                            Jangan lupa follow!
                         </p>
-                        <div id="social-media" class="mt-6 flex flex-wrap items-center gap-6">
-                        </div>
+                        <div id="social-links-footer" class="mt-6 flex flex-wrap items-center gap-6"></div>
                     </div>
 
                     <div>
@@ -153,7 +238,6 @@
                             fandi.simamora@gmail.com
                         </a>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -162,20 +246,10 @@
     <footer class="bg-gray-900 text-white text-center py-6 fade-in-section">
         <p>Copyright © <span id="year"></span> - Fandi Presly Simamora</p>
     </footer>
+
     <script src="assets/js/data.js"></script>
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/animations.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const featuredProjects = [...projects].sort((a, b) => (a.id || 999) - (b.id || 999));
-            renderItems('recent-experience', experience, 2);
-            renderItems('recent-education', education, 2);
-            renderAcademicActivities('academic-activities-container', academicActivities);
-            renderProjects('recent-projects', featuredProjects, 3);
-            renderSocialMedia('social-media', socialMedia);
-            document.getElementById('year').textContent = new Date().getFullYear();
-        });
-    </script>
 </body>
 
 </html>
