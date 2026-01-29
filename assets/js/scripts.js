@@ -170,9 +170,9 @@ function renderDetailItems(containerId, data) {
             let assetsHtml = '';
             if (item.assets) {
                 const assetLinks = [];
-                for (const [key, labelObj] of Object.entries(siteTranslations.assetLabels)) {
+                for (const [key, labelObj] of Object.entries(siteTranslations.asset)) {
                     const link = item.assets[key];
-                    const label = t(`assetLabels.${key}`);
+                    const label = t(`asset.${key}`);
                     if (link === "") {
                         assetLinks.push({ label: label, html: `<span class="text-gray-600 cursor-default text-xs uppercase tracking-wide font-semibold">${label}</span>` });
                     } else if (link) {
