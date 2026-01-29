@@ -1,4 +1,54 @@
 const siteTranslations = {
+    pageTitles: {
+        home: {
+            id: "Fandi Presly Simamora",
+            en: "Fandi Presly Simamora"
+        },
+        experience: {
+            id: "Pengalaman - Fandi Presly Simamora",
+            en: "Experience - Fandi Presly Simamora"
+        },
+        education: {
+            id: "Pendidikan - Fandi Presly Simamora",
+            en: "Education - Fandi Presly Simamora"
+        },
+        teaching: {
+            id: "Pengajaran - Fandi Presly Simamora",
+            en: "Teaching - Fandi Presly Simamora"
+        },
+        research: {
+            id: "Penelitian - Fandi Presly Simamora",
+            en: "Research - Fandi Presly Simamora"
+        },
+        community: {
+            id: "Pengabdian Masyarakat - Fandi Presly Simamora",
+            en: "Community Service - Fandi Presly Simamora"
+        },
+        publications: {
+            id: "Publikasi - Fandi Presly Simamora",
+            en: "Publications - Fandi Presly Simamora"
+        },
+        books: {
+            id: "Penulisan - Fandi Presly Simamora",
+            en: "Books - Fandi Presly Simamora"
+        },
+        talks: {
+            id: "Pembicara - Fandi Presly Simamora",
+            en: "Talks - Fandi Presly Simamora"
+        },
+        thesis: {
+            id: "Bimbingan Tugas Akhir - Fandi Presly Simamora",
+            en: "Thesis Supervision - Fandi Presly Simamora"
+        },
+        tutoring: {
+            id: "Tutor Privat - Fandi Presly Simamora",
+            en: "Private Tutoring - Fandi Presly Simamora"
+        },
+        projects: {
+            id: "Proyek - Fandi Presly Simamora",
+            en: "Projects - Fandi Presly Simamora"
+        },
+    },
     navbar: {
         home: { id: "Beranda", en: "Home" },
         experience: { id: "Pengalaman", en: "Experience" },
@@ -6,17 +56,26 @@ const siteTranslations = {
         teaching: { id: "Pengajaran", en: "Teaching" },
         research: { id: "Penelitian", en: "Research" },
         projects: { id: "Proyek", en: "Projects" },
-        contact: { id: "Kontak", en: "Contact" }
+        contact: { id: "Kontak", en: "Contact" },
+        academic: { id: "Aktivitas Akademik", en: "Academic Activities" },
+        teaching: { id: "Pengajaran", en: "Teaching" },
+        research: { id: "Penelitian", en: "Research" },
+        community: { id: "Pengabdian Masyarakat", en: "Community Service" },
+        publications: { id: "Publikasi", en: "Publications" },
+        books: { id: "Penulisan", en: "Books" },
+        talks: { id: "Pembicara", en: "Talks" },
+        thesis: { id: "Bimbingan Tugas Akhir", en: "Thesis Supervision" },
+        tutoring: { id: "Tutor Privat", en: "Private Tutoring" }
     },
     sections: {
         latestWork: { id: "Pekerjaan Terbaru", en: "Latest Experience" },
         latestEdu: { id: "Pendidikan Terbaru", en: "Latest Education" },
-        academicActivities: { id: "Aktivitas Akademik", en: "Academic Activities" },
+        academic: { id: "Aktivitas Akademik", en: "Academic Activities" },
         featuredProjects: { id: "Proyek Unggulan", en: "Featured Projects" },
         connect: { id: "Mari Terhubung", en: "Let's Connect" }
     },
     descriptions: {
-        academicActivities: {
+        academic: {
             id: "Di bagian ini, Anda bisa melihat lebih dalam kegiatan saya sebagai seorang akademisi.",
             en: "In this section, you can take a deeper look at my activities as an academic."
         },
@@ -47,7 +106,7 @@ const siteTranslations = {
         file: { id: "File", en: "File" },
         slides: { id: "Slide", en: "Slides" }
     }
-};
+}
 
 const experience = [
     {
