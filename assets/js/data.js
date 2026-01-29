@@ -1,78 +1,31 @@
 const siteTranslations = {
     pageTitles: {
-        home: {
-            id: "Fandi Presly Simamora",
-            en: "Fandi Presly Simamora"
-        },
-        experience: {
-            id: "Pengalaman - Fandi Presly Simamora",
-            en: "Experience - Fandi Presly Simamora"
-        },
-        education: {
-            id: "Pendidikan - Fandi Presly Simamora",
-            en: "Education - Fandi Presly Simamora"
-        },
-        teaching: {
-            id: "Pengajaran - Fandi Presly Simamora",
-            en: "Teaching - Fandi Presly Simamora"
-        },
-        research: {
-            id: "Penelitian - Fandi Presly Simamora",
-            en: "Research - Fandi Presly Simamora"
-        },
-        community: {
-            id: "Pengabdian Masyarakat - Fandi Presly Simamora",
-            en: "Community Service - Fandi Presly Simamora"
-        },
-        publications: {
-            id: "Publikasi - Fandi Presly Simamora",
-            en: "Publications - Fandi Presly Simamora"
-        },
-        books: {
-            id: "Penulisan - Fandi Presly Simamora",
-            en: "Books - Fandi Presly Simamora"
-        },
-        talks: {
-            id: "Pembicara - Fandi Presly Simamora",
-            en: "Talks - Fandi Presly Simamora"
-        },
-        thesis: {
-            id: "Bimbingan Tugas Akhir - Fandi Presly Simamora",
-            en: "Thesis Supervision - Fandi Presly Simamora"
-        },
-        tutoring: {
-            id: "Tutor Privat - Fandi Presly Simamora",
-            en: "Private Tutoring - Fandi Presly Simamora"
-        },
-        projects: {
-            id: "Proyek - Fandi Presly Simamora",
-            en: "Projects - Fandi Presly Simamora"
-        },
+        books: { id: "Penulisan - Fandi Presly Simamora", en: "Books - Fandi Presly Simamora" },
+        community: { id: "Pengabdian Masyarakat - Fandi Presly Simamora", en: "Community Service - Fandi Presly Simamora" },
+        education: { id: "Pendidikan - Fandi Presly Simamora", en: "Education - Fandi Presly Simamora" },
+        experience: { id: "Pengalaman - Fandi Presly Simamora", en: "Experience - Fandi Presly Simamora" },
+        home: { id: "Fandi Presly Simamora", en: "Fandi Presly Simamora" },
+        research: { id: "Penelitian - Fandi Presly Simamora", en: "Research - Fandi Presly Simamora" },
+        projects: { id: "Proyek - Fandi Presly Simamora", en: "Projects - Fandi Presly Simamora" },
+        publications: { id: "Publikasi - Fandi Presly Simamora", en: "Publications - Fandi Presly Simamora" },
+        talks: { id: "Pembicara - Fandi Presly Simamora", en: "Talks - Fandi Presly Simamora" },
+        teaching: { id: "Pengajaran - Fandi Presly Simamora", en: "Teaching - Fandi Presly Simamora" },
+        thesis: { id: "Bimbingan Tugas Akhir - Fandi Presly Simamora", en: "Thesis Supervision - Fandi Presly Simamora" },
+        tutoring: { id: "Tutor Privat - Fandi Presly Simamora", en: "Private Tutoring - Fandi Presly Simamora" }
     },
     navbar: {
-        home: { id: "Beranda", en: "Home" },
-        experience: { id: "Pengalaman", en: "Experience" },
-        education: { id: "Pendidikan", en: "Education" },
-        teaching: { id: "Pengajaran", en: "Teaching" },
-        research: { id: "Penelitian", en: "Research" },
-        projects: { id: "Proyek", en: "Projects" },
-        contact: { id: "Kontak", en: "Contact" },
         academic: { id: "Aktivitas Akademik", en: "Academic Activities" },
-        teaching: { id: "Pengajaran", en: "Teaching" },
-        research: { id: "Penelitian", en: "Research" },
-        community: { id: "Pengabdian Masyarakat", en: "Community Service" },
-        publications: { id: "Publikasi", en: "Publications" },
-        books: { id: "Penulisan", en: "Books" },
-        talks: { id: "Pembicara", en: "Talks" },
-        thesis: { id: "Bimbingan Tugas Akhir", en: "Thesis Supervision" },
-        tutoring: { id: "Tutor Privat", en: "Private Tutoring" }
+        contact: { id: "Kontak", en: "Contact" },
+        education: { id: "Pendidikan", en: "Education" },
+        experience: { id: "Pengalaman", en: "Experience" },
+        projects: { id: "Proyek", en: "Projects" }
     },
     sections: {
-        latestWork: { id: "Pekerjaan Terbaru", en: "Latest Experience" },
-        latestEdu: { id: "Pendidikan Terbaru", en: "Latest Education" },
         academic: { id: "Aktivitas Akademik", en: "Academic Activities" },
+        connect: { id: "Mari Terhubung", en: "Let's Connect" },
         featuredProjects: { id: "Proyek Unggulan", en: "Featured Projects" },
-        connect: { id: "Mari Terhubung", en: "Let's Connect" }
+        latestEdu: { id: "Pendidikan Terbaru", en: "Latest Education" },
+        latestWork: { id: "Pekerjaan Terbaru", en: "Latest Experience" }
     },
     descriptions: {
         academic: {
@@ -83,41 +36,53 @@ const siteTranslations = {
             id: "Jika Anda memiliki pertanyaan atau ingin berkolaborasi, jangan ragu untuk menghubungi saya.",
             en: "If you have any questions or would like to collaborate, please do not hesitate to contact me."
         },
-        social: {
-            id: "Anda bisa terhubung dengan saya melalui platform berikut.",
-            en: "You can connect with me through the following platforms."
-        },
         email: {
             id: "Untuk diskusi atau pertanyaan lebih lanjut, silakan kirim pesan ke alamat di bawah ini.",
             en: "For further discussion or inquiries, please send a message to the address below."
+        },
+        social: {
+            id: "Anda bisa terhubung dengan saya melalui platform berikut.",
+            en: "You can connect with me through the following platforms."
         }
     },
-    buttons: {
-        assets: { id: "Aset Terkait:", en: "Related Assets:" },
-        back: { id: "Kembali", en: "Back" },
-        filterAll: { id: "Semua", en: "All" },
-        viewAll: { id: "Lihat Semua", en: "View All" },
+    page: {
+        books: { id: "Penulisan", en: "Book" },
+        community: { id: "Pengabdian Masyarakat", en: "Community Service" },
+        education: { id: "Pendidikan", en: "Education" },
+        experience: { id: "Pengalaman", en: "Experience" },
+        research: { id: "Penelitian", en: "Research" },
+        projects: { id: "Proyek", en: "Projects" },
+        publications: { id: "Publikasi", en: "Publications" },
+        talks: { id: "Pembicara", en: "Talks" },
+        teaching: { id: "Pengajaran", en: "Teaching" },
+        thesis: { id: "Bimbingan Tugas Akhir", en: "Thesis Supervision" },
+        tutoring: { id: "Tutor Privat", en: "Private Tutoring" }
     },
-    assetLabels: {
+    asset: {
         article: { id: "Artikel", en: "Article" },
         book: { id: "Buku", en: "Book" },
         dataset: { id: "Dataset", en: "Dataset" },
         documentation: { id: "Dokumentasi", en: "Documentation" },
         file: { id: "File", en: "File" },
         slides: { id: "Slide", en: "Slides" }
-    }
+    },
+    buttons: {
+        back: { id: "Kembali", en: "Back" },
+        filterAll: { id: "Semua", en: "All" },
+        viewAll: { id: "Lihat Semua", en: "View All" }
+    },
 }
 
 const experience = [
     {
         year: { id: "Oktober 2024 - Sekarang", en: "October 2024 - Present" },
-        title: { id: "Sekretaris Program Studi S-1 Teknik Informatika", en: "Secretary of Undergraduate Program in Informatics Engineering" },
+        title: { id: "Sekretaris Program Studi Sarjana Teknik Informatika", en: "Secretary of Undergraduate Program in Informatics Engineering" },
         subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
         description: { id: "", en: "" }
     },
     {
         year: { id: "September 2022 - Sekarang", en: "September 2022 - Present" },
-        title: { id: "Dosen Program Studi S-1 Teknik Informatika", en: "Lecturer of Undergraduate Program in Informatics Engineering" },
+        title: { id: "Dosen Program Studi Sarjana Teknik Informatika", en: "Lecturer of Undergraduate Program in Informatics Engineering" },
         subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
         description: { id: "", en: "" }
     },
@@ -484,48 +449,48 @@ const privateTeaching = [
 
 const academicActivities = {
     teaching: {
-        title: { id: "Pengajaran", en: "Teaching" },
+        title: siteTranslations.page.teaching,
         description: { id: "Daftar mata kuliah dan kelas yang saya ampu di universitas.", en: "List of courses and classes I teach at the university." },
         link: "/teaching",
         data: teaching
     },
     research: {
-        title: { id: "Penelitian", en: "Research" },
+        title: siteTranslations.page.research,
         description: { id: "Proyek penelitian yang saya kerjakan sebagai ketua maupun anggota tim.", en: "Research projects conducted as a lead or co-researcher." },
         link: "/research",
         data: research
     },
     community_service: {
-        title: { id: "Pengabdian Masyarakat", en: "Community Service" },
+        title: siteTranslations.page.community,
         description: { id: "Berbagi ilmu dan keahlian kepada masyarakat untuk dampak yang lebih luas.", en: "Sharing knowledge and expertise with the community to create a broader impact." },
         link: "/community_service",
         data: community_service
     },
     publications: {
-        title: { id: "Publikasi", en: "Publications" },
+        title: siteTranslations.page.publications,
         description: { id: "Publikasi artikel ilmiah dalam jurnal maupun konferensi.", en: "Scientific articles published in journals and conferences." },
         link: "/publications",
         data: publications
     },
     books: {
-        title: { id: "Penulisan", en: "Books" },
+        title: siteTranslations.page.books,
         description: { id: "Kontribusi buku dan bab buku sesuai bidang keahlian saya.", en: "Books and book chapters written within my field of expertise." },
         link: "/books",
         data: books
     },
     talks: {
-        title: { id: "Pembicara", en: "Talks" },
+        title: siteTranslations.page.talks,
         description: { id: "Berbagi wawasan dan pengalaman sebagai pembicara di berbagai forum.", en: "Sharing insights and experiences as a speaker at seminars and workshops." },
         link: "/talks",
         data: talks
     },
     thesis: {
-        title: { id: "Bimbingan Tugas Akhir", en: "Thesis Supervision" },
+        title: siteTranslations.page.thesis,
         description: { id: "Bimbingan tugas akhir mahasiswa dimana saya berperan sebagai pembimbing.", en: "Final year projects where I serve as a supervisor." },
         link: "/thesis/"
     },
     tutoring: {
-        title: { id: "Tutor Privat", en: "Private Tutoring" },
+        title: siteTranslations.page.tutoring,
         description: { id: "Layanan mentoring dan pengajaran teknis secara privat/personal.", en: "Personalized technical mentoring and private teaching services." },
         link: "/tutoring/"
     }
