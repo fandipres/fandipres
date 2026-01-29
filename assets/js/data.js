@@ -8,19 +8,36 @@ const siteTranslations = {
         projects: { id: "Proyek", en: "Projects" },
         contact: { id: "Kontak", en: "Contact" }
     },
-    sectionTitles: {
+    sections: {
         latestWork: { id: "Pekerjaan Terbaru", en: "Latest Experience" },
         latestEdu: { id: "Pendidikan Terbaru", en: "Latest Education" },
         academicActivities: { id: "Aktivitas Akademik", en: "Academic Activities" },
         featuredProjects: { id: "Proyek Unggulan", en: "Featured Projects" },
         connect: { id: "Mari Terhubung", en: "Let's Connect" }
     },
+    descriptions: {
+        academicActivities: {
+            id: "Di bagian ini, Anda bisa melihat lebih dalam kegiatan saya sebagai seorang akademisi.",
+            en: "In this section, you can take a deeper look at my activities as an academic."
+        },
+        contact: {
+            id: "Jika Anda memiliki pertanyaan atau ingin berkolaborasi, jangan ragu untuk menghubungi saya.",
+            en: "If you have any questions or would like to collaborate, please do not hesitate to contact me."
+        },
+        social: {
+            id: "Anda bisa terhubung dengan saya melalui platform berikut.",
+            en: "You can connect with me through the following platforms."
+        },
+        email: {
+            id: "Untuk diskusi atau pertanyaan lebih lanjut, silakan kirim pesan ke alamat di bawah ini.",
+            en: "For further discussion or inquiries, please send a message to the address below."
+        }
+    },
     buttons: {
-        viewAll: { id: "Lihat Semua", en: "View All" },
+        assets: { id: "Aset Terkait:", en: "Related Assets:" },
         back: { id: "Kembali", en: "Back" },
         filterAll: { id: "Semua", en: "All" },
-        assets: { id: "Aset Terkait:", en: "Related Assets:" },
-        byRequest: { id: "(By Request)", en: "(By Request)" }
+        viewAll: { id: "Lihat Semua", en: "View All" },
     },
     assetLabels: {
         article: { id: "Artikel", en: "Article" },
@@ -36,19 +53,19 @@ const experience = [
     {
         year: { id: "Oktober 2024 - Sekarang", en: "October 2024 - Present" },
         title: { id: "Sekretaris Program Studi S-1 Teknik Informatika", en: "Secretary of Undergraduate Program in Informatics Engineering" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
-        description: { id: "xx", en: "" }
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" }
     },
     {
         year: { id: "September 2022 - Sekarang", en: "September 2022 - Present" },
         title: { id: "Dosen Program Studi S-1 Teknik Informatika", en: "Lecturer of Undergraduate Program in Informatics Engineering" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
         description: { id: "", en: "" }
     },
     {
         year: { id: "September 2019 - September 2022", en: "September 2019 - September 2022" },
         title: { id: "Asisten Lab Komputer", en: "Computer Lab Assistant" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
         description: { id: "", en: "" }
     }
 ];
@@ -57,14 +74,14 @@ const education = [
     {
         year: { id: "September 2022 - Oktober 2024", en: "September 2022 - October 2024" },
         title: { id: "Magister Teknologi Informasi (M.Kom.)", en: "Master of Information Technology (M.Kom.)" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
         description: { id: "Tesis: Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham", en: "Thesis: Hyperparameter Tuning of BiLSTM Using Bayesian Optimization for Stock Price Prediction" }
     },
     {
         year: { id: "September 2018 - Oktober 2022", en: "September 2018 - October 2022" },
         title: { id: "Sarjana Teknik Informatika (S.Kom.)", en: "Bachelor of Informatics Engineering (S.Kom.)" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
-        description: { id: "Skripsi: Pengembangan Aplikasi Pemantauan Aktivitas pada Ruangan Menggunakan Algoritma Improved Mask R CNN Berbasis Web", en: "Final Research: Web Based Activity Monitoring Applications Development Using Improved Mask R CNN Algorithm" }
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "Undergraduate Thesis: Pengembangan Aplikasi Pemantauan Aktivitas pada Ruangan Menggunakan Algoritma Improved Mask R CNN Berbasis Web", en: "Final Research: Web Based Activity Monitoring Applications Development Using Improved Mask R CNN Algorithm" }
     }
 ];
 
@@ -72,83 +89,83 @@ const teaching = [
     {
         year: { id: "Semester Ganjil 2025 - 2026", en: "Odd Semester 2025 - 2026" },
         title: { id: "Pengembangan Karakter: Kepemimpinan", en: " Character Development: Leadership" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
-        description: { id: "xx", end: "" },
-        classes: [{ id: "Teknik Informasi (2 Kelas), Sistem Informasi (2 Kelas), Teknik Informatika (2 Kelas).", en: "Information Systems (2 Classes), Informatics Engineering (2 Classes)" }],
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Sistem Informasi (2 Kelas), Teknik Informatika (2 Kelas)", en: "Information Systems (2 Classes), Informatics Engineering (2 Classes)" }],
     },
     {
         year: { id: "Semester Genap 2024 - 2025", en: "Even Semester 2024 - 2025" },
         title: { id: "Pengembangan Aplikasi Gim", en: "Game Application Development" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
-        description: { id: "xx", end: "" },
-        classes: [{ id: "Teknik Informatika (2 Kelas).", en: "Informatics Engineering (2 Classes)" }],
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (2 Kelas)", en: "Informatics Engineering (2 Classes)" }],
     },
     {
-        year: { id: "Ganjil 2024 - 2025", en: "Odd Semester 2024 - 2025" },
+        year: { id: "Semester Ganjil 2024 - 2025", en: "Odd Semester 2024 - 2025" },
         title: { id: "Pengembangan Web Back-End", en: "Back End Web Development" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
-        description: { id: "xx", end: "" },
-        classes: [{ id: "Teknik Informatika (1 Kelas).", en: "Informatics Engineering (1 Classes)" }],
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
     },
     {
-        year: { id: "Ganjil 2024 - 2025", en: "Odd Semester 2024 - 2025" },
+        year: { id: "Semester Ganjil 2024 - 2025", en: "Odd Semester 2024 - 2025" },
         title: { id: "Perancangan dan Pemrograman Berorientasi Objek", en: "Object Oriented Design and Programming" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
-        description: { id: "xx", end: "" },
-        classes: [{ id: "Teknik Informatika (1 Kelas).", en: "Informatics Engineering (1 Classes)" }],
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
     },
     {
-        year: { id: "Genap 2023 - 2024", en: "Even Semester 2023 - 2024" },
+        year: { id: "Semester Genap 2023 - 2024", en: "Even Semester 2023 - 2024" },
         title: { id: "Pengembangan Aplikasi Gim", en: "Game Application Development" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
-        description: { id: "xx", end: "" },
-        classes: [{ id: "Teknik Informatika (2 Kelas).", en: "Informatics Engineering (2 Classes)" }],
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (2 Kelas)", en: "Informatics Engineering (2 Classes)" }],
     },
     {
-        year: { id: "Genap 2023 - 2024", en: "Even Semester 2023 - 2024" },
+        year: { id: "Semester Genap 2023 - 2024", en: "Even Semester 2023 - 2024" },
         title: { id: "Pengembangan Aplikasi Mobile Front-End", en: "Front End Mobile Applications Development" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
-        description: { id: "xx", end: "" },
-        classes: [{ id: "Teknik Informatika (1 Kelas).", en: "Informatics Engineering (1 Classes)" }],
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
     },
     {
-        year: { id: "Ganjil 2023 - 2024", en: "Odd Semester 2023 - 2024" },
+        year: { id: "Semester Ganjil 2023 - 2024", en: "Odd Semester 2023 - 2024" },
         title: { id: "Pengembangan Web Back-End", en: "Back End Web Development" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
-        description: { id: "xx", end: "" },
-        classes: [{ id: "Teknik Informatika (2 Kelas).", en: "Informatics Engineering (2 Classes)" }],
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (2 Kelas)", en: "Informatics Engineering (2 Classes)" }],
     },
     {
-        year: { id: "Genap 2022 - 2023", en: "Even Semester 2022 - 2023" },
+        year: { id: "Semester Genap 2022 - 2023", en: "Even Semester 2022 - 2023" },
         title: { id: "Pengembangan Aplikasi Gim", en: "Game Application Development" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
-        description: { id: "xx", end: "" },
-        classes: [{ id: "Teknik Informatika (3 Kelas).", en: "Informatics Engineering (3 Classes)" }],
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (3 Kelas)", en: "Informatics Engineering (3 Classes)" }],
     },
     {
-        year: { id: "Ganjil 2022 - 2023", en: "Odd Semester 2022 - 2023" },
+        year: { id: "Semester Ganjil 2022 - 2023", en: "Odd Semester 2022 - 2023" },
         title: { id: "Pengembangan Aplikasi Mobile Back-End", en: "Back End Mobile Applications Development" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
-        description: { id: "xx", end: "" },
-        classes: [{ id: "Teknik Informatika (1 Kelas).", en: "Informatics Engineering (1 Classes)" }],
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
     },
     {
-        year: { id: "Ganjil 2022 - 2023", en: "Odd Semester 2022 - 2023" },
+        year: { id: "Semester Ganjil 2022 - 2023", en: "Odd Semester 2022 - 2023" },
         title: { id: "Wawasan Informatika", en: "Informatics Insight" },
-        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroksil University, Medan" },
-        description: { id: "xx", end: "" },
-        classes: [{ id: "Teknik Informatika (1 Kelas).", en: "Informatics Engineering (1 Classes)" }],
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
     }
 ];
 
 const research = [
     {
         year: "2025",
-        title: { id: "Analisis Sentimen Publik Terhadap Kinerja Dewan Perwakilan Rakyat Republik Indonesia Menggunakan Metode Topic Modeling dan Aspect-Based Sentiment Analysis", en: "" },
+        title: { id: "Analisis Sentimen Publik Terhadap Kinerja Dewan Perwakilan Rakyat Republik Indonesia Menggunakan Metode Topic Modeling dan Aspect-Based Sentiment Analysis", en: "Public Sentiment Analysis on the Performance of the Indonesian House of Representatives Using Topic Modeling and Aspect-Based Sentiment Analysis" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
         role: { id: "Ketua Peneliti", en: "Lead Researcher" },
-        description: { id: "xx", en: "" },
+        description: { id: "", en: "" },
         assets: {
             dataset: "",
             documentation: "",
@@ -157,11 +174,11 @@ const research = [
     },
     {
         year: "2025",
-        title: { id: "Transformasi Digital Pertanian dengan Model Prediksi Cuaca Berbasis BiLSTM untuk Optimalisasi Masa Tanam Padi di Era Industri 4.0", en: "" },
-        subtitle: { id: "Kementerian Pendidikan Tinggi, Sains, dan Teknologi Republik Indonesia", en: "" },
-        category: { id: "Penelitian Dosen Pemula", en: "" },
+        title: { id: "Transformasi Digital Pertanian dengan Model Prediksi Cuaca Berbasis BiLSTM untuk Optimalisasi Masa Tanam Padi di Era Industri 4.0", en: "Agricultural Digital Transformation via BiLSTM-Based Weather Prediction Models for Optimizing Rice Planting Seasons in the Industry 4.0 Era" },
+        subtitle: { id: "Kementerian Pendidikan Tinggi, Sains, dan Teknologi Republik Indonesia", en: "Ministry of Higher Education, Science, and Technology" },
+        category: { id: "Penelitian Dosen Pemula", en: "Novice Lecturer Research Grant" },
         role: { id: "Ketua Peneliti", en: "Lead Researcher" },
-        description: { id: "xx", en: "" },
+        description: { id: "", en: "" },
         assets: {
             dataset: "",
             documentation: "",
@@ -170,11 +187,11 @@ const research = [
     },
     {
         year: "2024",
-        title: { id: "Optimasi Random Forest Menggunakan RFE untuk Klasifikasi Stunting pada RSU Mitra Medika", en: "" },
+        title: { id: "Optimasi Random Forest Menggunakan RFE untuk Klasifikasi Stunting pada RSU Mitra Medika", en: "Random Forest Optimization Using RFE for Stunting Classification at RSU Mitra Medika" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
-        role: { id: "Anggota Peneliti", en: "" },
-        description: { id: "xx", en: "" },
+        role: { id: "Anggota Peneliti", en: "Co-Researcher" },
+        description: { id: "", en: "" },
         assets: {
             dataset: "",
             documentation: "",
@@ -187,7 +204,7 @@ const research = [
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
         role: { id: "Ketua Peneliti", en: "Lead Researcher" },
-        description: { id: "xx", en: "" },
+        description: { id: "", en: "" },
         assets: {
             dataset: "",
             documentation: "",
@@ -200,7 +217,7 @@ const research = [
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
         role: { id: "Ketua Peneliti", en: "Lead Researcher" },
-        description: { id: "xx", en: "" },
+        description: { id: "", en: "" },
         assets: {
             dataset: "",
             documentation: "",
@@ -212,11 +229,11 @@ const research = [
 const community_service = [
     {
         year: "2025",
-        title: { id: "Pembekalan Guru SMK dalam Menghadapi Tantangan Industri Masa Depan Melalui Pelatihan Berpikir Komputasional, Analisis Data, dan Literasi Kecerdasan Artifisial", en: "" },
-        subtitle: { id: "SMK 6 Medan dan SMK 13 Medan", en: "SMK 6 Medan dan SMK 13 Medan" },
-        category: { id: "Pengabdian Internal", en: "" },
-        role: { id: "Ketua Pengabdian", en: "" },
-        description: { id: "xx", en: "" },
+        title: { id: "Pembekalan Guru SMK dalam Menghadapi Tantangan Industri Masa Depan Melalui Pelatihan Berpikir Komputasional, Analisis Data, dan Literasi Kecerdasan Artifisial", en: "Empowering Vocational Teachers for Future Industrial Challenges through Computational Thinking, Data Analysis, and AI Literacy Training" },
+        subtitle: { id: "SMK 6 Medan dan SMK 13 Medan", en: "SMK 6 Medan and SMK 13 Medan" },
+        category: { id: "Pengabdian Internal", en: "Internal Community Service" },
+        role: { id: "Ketua Pengabdian", en: "Project Leader" },
+        description: { id: "", en: "" },
         assets: {
             documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EkvJm8pJk85GlM4yAJZMlMABUbKtwWbnZZgu6wkRXnD8gQ?e=vmPfod",
             file: "",
@@ -225,11 +242,11 @@ const community_service = [
     },
     {
         year: "2025",
-        title: { id: "Transformasi Peran Guru dalam Mendorong Partisipasi Siswa melalui Integrasi Mentimeter untuk Mendukung Active Learning", en: "" },
-        subtitle: { id: "SMK Methodist Tg. Morawa", en: "" },
-        category: { id: "Pengabdian Internal", en: "" },
-        role: { id: "Anggota Pengabdian", en: "" },
-        description: { id: "xx", en: "" },
+        title: { id: "Transformasi Peran Guru dalam Mendorong Partisipasi Siswa melalui Integrasi Mentimeter untuk Mendukung Active Learning", en: "Transforming Teacher Roles to Boost Student Participation via Mentimeter Integration for Supporting Active Learning" },
+        subtitle: { id: "SMK Methodist Tanjung Morawa", en: "SMK Methodist Tanjung Morawa" },
+        category: { id: "Pengabdian Internal", en: "Internal Community Service" },
+        role: { id: "Anggota Pengabdian", en: "Team Member" },
+        description: { id: "", en: "" },
         assets: {
             documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EqcFVDqGZT5Gvs8IIvjvwzQBVlUC2KprcEhushRw_7iRBA?e=MP4aFY",
             file: "",
@@ -238,11 +255,11 @@ const community_service = [
     },
     {
         year: "2025",
-        title: { id: "Pengenalan Kecerdasan Artifisial pada Guru SMA Tri Ratna Sibolga Sebagai Bekal Generasi Emas 2045", en: "" },
-        subtitle: { id: "SMA Tri Ratna Sibolga", en: "" },
-        category: { id: "Pengabdian Internal", en: "" },
-        role: { id: "Anggota Pengabdian", en: "" },
-        description: { id: "xx", en: "" },
+        title: { id: "Pengenalan Kecerdasan Artifisial pada Guru SMA Tri Ratna Sibolga Sebagai Bekal Generasi Emas 2045", en: "Introduction to AI for Teachers at SMA Tri Ratna Sibolga: Preparing for the Golden Generation 2045" },
+        subtitle: { id: "SMA Tri Ratna Sibolga", en: "SMA Tri Ratna Sibolga" },
+        category: { id: "Pengabdian Internal", en: "Internal Community Service" },
+        role: { id: "Anggota Pengabdian", en: "Team Member" },
+        description: { id: "", en: "" },
         assets: {
             documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/Eni0jfKAHNNFgsm9GtXcaOwBJQrhrHVlNEsWaPtH2sFjGw?e=ynFTmA",
             file: "",
@@ -251,11 +268,11 @@ const community_service = [
     },
     {
         year: "2025",
-        title: { id: "Pembekalan Guru SMA Panglima Polem Rantauprapat dengan Teknologi Masa Depan: Kecerdasan Artifisial", en: "" },
-        subtitle: { id: "SMA Panglima Polem Rantauprapat", en: "" },
-        category: { id: "Pengabdian Internal", en: "" },
-        role: { id: "Anggota Pengabdian", en: "" },
-        description: { id: "xx", en: "" },
+        title: { id: "Pembekalan Guru SMA Panglima Polem Rantauprapat dengan Teknologi Masa Depan: Kecerdasan Artifisial", en: "Equipping Teachers at SMA Panglima Polem Rantauprapat with Future Technologies: Artificial Intelligence" },
+        subtitle: { id: "SMA Panglima Polem Rantauprapat", en: "SMA Panglima Polem Rantauprapat" },
+        category: { id: "Pengabdian Internal", en: "Internal Community Service" },
+        role: { id: "Anggota Pengabdian", en: "Team Member" },
+        description: { id: "", en: "" },
         assets: {
             documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EuK7MwB8rthFozdvzsErlSgB6HgE5Ykl62soWWj9f3Lp6A",
             file: "",
@@ -270,9 +287,9 @@ const publications = [
         title: { id: "Random Forest Optimization Using Recursive Feature Elimination for Stunting Classification", en: "" },
         subtitle: { id: "Indonesian Journal of Artificial Intelligence and Data Mining", en: "" },
         rank: { id: "Sinta 3", en: "" },
-        category: { id: "Penelitian Mandiri", en: "" },
-        role: { id: "Anggota Peneliti", en: "" },
-        description: { id: `Luaran dari Penelitian "Optimasi Random Forest Menggunakan RFE untuk Klasifikasi Stunting pada RSU Mitra Medika".`, en: "" },
+        category: { id: "Penelitian Mandiri", en: "Independent Research" },
+        role: { id: "Penulis Keempat", en: "4th Author" },
+        description: { id: `Luaran dari Penelitian "Optimasi Random Forest Menggunakan RFE untuk Klasifikasi Stunting pada RSU Mitra Medika".`, en: `Research Output "Random Forest Optimization Using RFE for Stunting Classification at RSU Mitra Medika"` },
         assets: {
             article: "https://ejournal.uin-suska.ac.id/index.php/IJAIDM/article/view/35295"
         }
@@ -282,9 +299,9 @@ const publications = [
         title: { id: "Optimisasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham", en: "" },
         subtitle: { id: "Jambura Journal of Mathematics", en: "" },
         rank: { id: "Sinta 3", en: "" },
-        category: { id: "Penelitian Mandiri", en: "" },
-        role: { id: "Ketua Peneliti", en: "" },
-        description: { id: `Luaran dari Penelitian "Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham".`, en: "" },
+        category: { id: "Penelitian Mandiri", en: "Independent Research" },
+        role: { id: "Penulis Pertama", en: "First Author" },
+        description: { id: `Luaran dari Penelitian "Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham".`, en: `Research Output "Hyperparameter Tuning of BiLSTM Using Bayesian Optimization for Stock Price Prediction""` },
         assets: {
             article: "https://ejurnal.ung.ac.id/index.php/jjom/article/view/27166/0"
         }
@@ -294,22 +311,22 @@ const publications = [
 const books = [
     {
         year: "2025",
-        title: { id: "Chapter 6: Bahasa Pemrograman", en: "" },
+        title: { id: "Chapter 6: Bahasa Pemrograman", en: "Chapter 6: Programming Languages" },
         subtitle: { id: "MMFast Publishing", en: "" },
-        category: { id: "Book Chapter", en: "" },
-        role: { id: "Kontributor", en: "" },
-        description: { id: `Book chapter dalam Buku "Pengenalan Dasar Informatika dan Peranannya di Era Digital".`, en: "" },
+        category: { id: "Bab Buku", en: "Book Chapter" },
+        role: { id: "Kontributor", en: "Contributor" },
+        description: { id: `Bab buku dalam Buku "Pengenalan Dasar Informatika dan Peranannya di Era Digital".`, en: `Book chapter in "Introduction to Basic Informatics and Its Role in the Digital Era"` },
         assets: {
             book: "https://mmfast.id/pengenalan-dasar-informatika-danperanannya-di-era-digital"
         }
     },
     {
         year: "2025",
-        title: { id: "Chapter 14: Proyek Mini: Merancang Solusi Nyata Berbasis Komputasi", en: "" },
+        title: { id: "Chapter 14: Proyek Mini: Merancang Solusi Nyata Berbasis Komputasi", en: "Chapter 14: Mini Project: Designing Real-World Computational Solutions" },
         subtitle: { id: "Bukuloka Literasi Bangsa", en: "" },
-        category: { id: "Book Chapter", en: "" },
-        role: { id: "Kontributor", en: "" },
-        description: { id: `Book chapter dalam Buku "Logika Digital & Algoritma Dunia Nyata: Menyelami Inti Ilmu Komputer".`, en: "" },
+        category: { id: "Bab Buku", en: "Book Chapter" },
+        role: { id: "Kontributor", en: "Contributor" },
+        description: { id: `Bab buku dalam Buku "Logika Digital & Algoritma Dunia Nyata: Menyelami Inti Ilmu Komputer".`, en: `Book chapter in "Digital Logic & Real-World Algorithms: Diving into the Core of Computer Science"` },
         assets: {
             book: "https://www.bukuloka.com/books/logika-digital-algoritma-dunia-nyata-menyelami-inti-ilmu-komputer"
         }
@@ -320,9 +337,9 @@ const talks = [
     {
         year: "2025",
         title: { id: "Workshop Mikroskil e-Xploration: Python", en: "" },
-        subtitle: { id: "Universitas Mikroskil", en: "" },
-        category: { id: "Event Internal", en: "" },
-        role: { id: "Narasumber", en: "" },
+        subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
+        category: { id: "Event Internal", en: "Internal Event" },
+        role: { id: "Narasumber", en: "Speaker" },
         description: { id: "", en: "" },
         assets: {
             documentation: "",
@@ -333,8 +350,8 @@ const talks = [
         year: "2025",
         title: { id: "Coaching Clinic PKM", en: "" },
         subtitle: { id: "Mikroskil Student Union", en: "" },
-        category: { id: "Event Internal", en: "" },
-        role: { id: "Narasumber", en: "" },
+        category: { id: "Event Internal", en: "Internal Event" },
+        role: { id: "Narasumber", en: "Speaker" },
         description: { id: "", en: "" },
         assets: {
             documentation: "",
@@ -344,9 +361,9 @@ const talks = [
     {
         year: "2023",
         title: { id: "Workshop Introduction to Game Development", en: "" },
-        subtitle: { id: "Universitas Mikroskil", en: "" },
-        category: { id: "Event Internal", en: "" },
-        role: { id: "Narasumber", en: "" },
+        subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
+        category: { id: "Event Internal", en: "Internal Event" },
+        role: { id: "Narasumber", en: "Speaker" },
         description: { id: "", en: "" },
         assets: {
             documentation: "",
@@ -357,73 +374,100 @@ const talks = [
 
 const thesisSupervision = [
     {
-        year: { id: "2024", en: "2024" },
-        title: { id: "Analisis Sentimen Pemilu 2024 Menggunakan Naive Bayes", en: "2024 Election Sentiment Analysis Using Naive Bayes" },
-        subtitle: { id: "Pembimbing Utama", en: "Main Supervisor" },
-        category: { id: "Penelitian Mandiri", en: "Independent Research" },
-        description: { id: "Skripsi S-1. Fokus pada preprocessing data Twitter...", en: "Undergraduate Thesis..." },
-        students: ["Budi Santoso", "Andi Wijaya", "Siti Aminah"],
-        assets: { file: "xx", documentation: "" }
+        year: "2023",
+        title: { id: "Analisis dan Perancangan Sistem Akademik Universitas berbasis Mobile", en: "" },
+        subtitle: { id: "Pendamping Pembimbing", en: "Co-Supervisor" },
+        category: { id: "Skripsi", en: "Undergraduate Thesis" },
+        description: { id: "", en: "" },
+        students: ["Angel Kornella Simamora", "Anthony Chandra", "Muhammad Fariz Dzuhreza"],
+        assets: { file: "", documentation: "" }
     },
+    {
+        year: "2023",
+        title: { id: "Analisis dan Perancangan Sistem Informasi Pemasaran Universitas dan Pendaftaran Calon Mahasiswa Baru berbasis Mobile", en: "" },
+        subtitle: { id: "Pendamping Pembimbing", en: "Co-Supervisor" },
+        category: { id: "Skripsi", en: "Undergraduate Thesis" },
+        description: { id: "", en: "" },
+        students: ["Anggiat Maju Siregar", "Dina Elishabet Manalu", "Yosua Hutabarat"],
+        assets: { file: "", documentation: "" }
+    },
+    {
+        year: "2023",
+        title: { id: "Evaluasi Usability dan Rekomendasi Perbaikan Portal Resmi Merdeka Belajar Kampus Merdeka (MBKM) dengan menggunakan WEBUSE (Web Usability Evaluation) dan IPA (Importance Performance Analysis)", en: "" },
+        subtitle: { id: "Pendamping Pembimbing", en: "Co-Supervisor" },
+        category: { id: "Skripsi", en: "Undergraduate Thesis" },
+        description: { id: "", en: "" },
+        students: ["Dessy Karmila Shandy", "Jestiven"],
+        assets: { file: "", documentation: "" }
+    }
 ];
 
 const privateTeaching = [
     {
-        year: { id: "2023", en: "2023" },
-        title: { id: "Bootcamp Intensif: Fullstack JavaScript", en: "Intensive Bootcamp: Fullstack JavaScript" },
-        subtitle: { id: "Instruktur Privat • Freelance", en: "Private Instructor • Freelance" },
-        category: { id: "Penelitian Mandiri", en: "Independent Research" },
-        description: { id: "Mengajar materi React & Node.js...", en: "Teaching React & Node.js..." },
-        students: ["PT. Maju Mundur (Corporate Training)", "John Doe (Personal)"],
-        assets: { file: "xx", documentation: "" }
+        year: "2025",
+        title: { id: "Pengembangan Aplikasi IoT - Arduino", en: "IoT Application Development - Arduino" },
+        subtitle: { id: "", en: "" },
+        category: { id: "", en: "" },
+        description: { id: "", en: "" },
+        students: ["K****"],
+        assets: { file: "", documentation: "" }
+    },
+    {
+        year: "2025",
+        title: { id: "Pengembangan Aplikasi Mobile - Flutter", en: "Mobile Application Development - Flutter" },
+        subtitle: { id: "", en: "" },
+        category: { id: "", en: "" },
+        description: { id: "", en: "" },
+        students: ["K****"],
+        assets: { file: "", documentation: "" }
     }
 ];
 
 const academicActivities = {
     teaching: {
         title: { id: "Pengajaran", en: "" },
-        description: { id: "Di sini Anda bisa menemukan mata kuliah yang saya ampu dan beberapa materi pendukungnya.", en: "" },
+        description: { id: "Daftar mata kuliah dan kelas yang saya ampu di universitas.", en: "List of courses and classes I teach at the university." },
         link: "/teaching",
         data: teaching
     },
     research: {
         title: { id: "Penelitian", en: "" },
-        description: { id: "Kumpulan proyek penelitian yang saya kerjakan, baik secara mandiri maupun dalam tim.", en: "" },
+        description: { id: "Proyek penelitian yang saya kerjakan sebagai ketua maupun anggota tim.", en: "Research projects conducted as a lead or co-researcher." },
         link: "/research",
         data: research
     },
     community_service: {
         title: { id: "Pengabdian Masyarakat", en: "" },
-        description: { id: "Berbagi ilmu dan keahlian dengan masyarakat melalui berbagai program dan pelatihan.", en: "" },
+        description: { id: "Berbagi ilmu dan keahlian kepada masyarakat untuk dampak yang lebih luas.", en: "Sharing knowledge and expertise with the community to create a broader impact." },
         link: "/community_service",
         data: community_service
     },
     publications: {
         title: { id: "Publikasi", en: "X" },
-        description: { id: "Kumpulan artikel ilmiah saya yang telah terbit di berbagai jurnal dan prosiding konferensi.", en: "" },
+        description: { id: "Publikasi artikel ilmiah dalam jurnal maupun konferensi.", en: "Scientific articles published in journals and conferences." },
         link: "/publications",
         data: publications
     },
     books: {
         title: { id: "Penulisan", en: "" },
-        description: { id: "Daftar buku dan kontribusi bab buku yang telah saya tulis untuk dunia pendidikan.", en: "" },
+        description: { id: "Kontribusi buku dan bab buku sesuai bidang keahlian saya.", en: "Books and book chapters written within my field of expertise." },
         link: "/books",
         data: books
     },
     talks: {
         title: { id: "Pembicara", en: "" },
-        description: { id: "Pengalaman saya berbagi wawasan dan ide sebagai pembicara di berbagai forum dan acara.", en: "" },
+        description: { id: "Berbagi wawasan dan pengalaman sebagai pembicara di berbagai forum.", en: "Sharing insights and experiences as a speaker at seminars and workshops." },
         link: "/talks",
         data: talks
     },
     thesis: {
-        title: { id: "Bimbingan", en: "Supervision" },
-        description: { id: "Bimbingan skripsi dan tesis mahasiswa.", en: "Thesis and dissertation supervision." },
+        title: { id: "Bimbingan Tugas Akhir", en: "Thesis Supervision" },
+        description: { id: "Bimbingan tugas akhir mahasiswa dimana saya berperan sebagai pembimbing.", en: "Final year projects where I serve as a supervisor." },
         link: "/thesis/"
     },
     tutoring: {
         title: { id: "Tutor Privat", en: "Private Tutoring" },
-        description: { id: "Mentoring coding dan skill teknis.", en: "Coding mentoring and technical skills." },
+        description: { id: "Layanan mentoring dan pengajaran teknis secara privat/personal.", en: "Personalized technical mentoring and private teaching services." },
         link: "/tutoring/"
     }
 };
@@ -431,58 +475,58 @@ const academicActivities = {
 const projects = [
     {
         title: { id: "Fandi's Blog", en: "" },
-        description: { id: "Tempatku berbagi cerita. Fokus utama pada kehidupan kampus, riset, dan pengabdian. Ditambah obrolan santai seputar finansial, travelling, dan pengembangan diri.", en: "" },
+        description: { id: "Tempatku berbagi cerita. Fokus utama pada kehidupan kampus, riset, dan pengabdian. Ditambah obrolan santai seputar finansial, travelling, dan pengembangan diri.", en: "My storytelling space. Focusing on campus life, research, and service, mixed with casual chats on finance, travel, and self-development." },
         links: [{ url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://blog.fandipres.my.id", label: "Website" }],
         tags: ["Blog"]
     },
     {
         id: 3,
         title: { id: "Gudank Review", en: "" },
-        description: { id: "Gudank Review. Kami menguji gadget. Memberikan ulasan yang lugas dan jujur. Membantu Anda membuat keputusan yang lebih baik. Titik. ", en: "" },
+        description: { id: "Kanal visual untuk mengekspresikan kecintaan saya pada dunia teknologi.", en: "A visual outlet to express my passion for the tech world." },
         links: [{ url: "https://www.facebook.com/gudankreview", label: "Facebook" }, { url: "https://www.instagram.com/gudankreview", label: "Instagram" }, { url: "https://www.tiktok.com/@gudankreview", label: "Tiktok" }, { url: "https://www.youtube.com/@gudankreviewin", label: "YouTube" }],
         tags: ["Video"]
     },
     {
         id: 1,
         title: { id: "Hobi Ngoding", en: "X" },
-        description: { id: "Catatan hobi ngoding dari nol, oprek Unity dan Blogger. Berbagi trik jitu Adsense, tips Office, dan info tekno terbaru.", en: "" },
+        description: { id: "Catatan hobi ngoding dari nol, oprek Unity dan Blogger. Berbagi trik jitu Adsense, tips Office, dan info tekno terbaru.", en: "Coding notes from scratch, tinkering with Unity and Blogger. Sharing AdSense tricks, Office tips, and the latest tech info." },
         links: [{ url: "https://www.facebook.com/hobingodingcom", label: "Facebook" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }, { url: "https://www.hobingoding.com", label: "Website" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }],
         tags: ["Blog", "Video"]
     },
     {
         id: 2,
         title: { id: "Jurnalpedia", en: "" },
-        description: { id: "Pusat referensi jurnal ilmiah terakreditasi SINTA dan Scopus. Hub utama bagi mahasiswa, dosen, dan peneliti untuk publikasi ilmiah terpercaya.", en: "" },
+        description: { id: "Pusat referensi jurnal ilmiah terakreditasi SINTA dan Scopus. Hub utama bagi mahasiswa, dosen, dan peneliti untuk publikasi ilmiah terpercaya.", en: "Reference center for SINTA and Scopus accredited journals. The main hub for students, lecturers, and researchers for trusted scientific publishing." },
         links: [{ url: "https://www.facebook.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://jurnal.fandipres.my.id", label: "Website" }, { url: "https://www.youtube.com/@jurnalpediaofc", label: "YouTube" }],
         tags: ["Blog", "Video"]
     },
     {
         title: { id: "Kapitalin", en: "" },
-        description: { id: "Alat web gratis untuk cek dan koreksi otomatis huruf kapital pada teks Bahasa Indonesia sesuai aturan EYD Edisi Kelima.", en: "" },
+        description: { id: "Alat web gratis untuk cek dan koreksi otomatis huruf kapital pada teks Bahasa Indonesia sesuai aturan EYD Edisi Kelima.", en: "Free web tool to automatically check and correct capitalization in Indonesian text based on the latest EYD rules." },
         links: [{ url: "https://fandipres.github.io/kapitalin", label: "Demo" }, { url: "https://github.com/fandipres/kapitalin", label: "GitHub" }],
         tags: ["Web"]
     },
     {
         title: { id: "Lyricspedia", en: "" },
-        description: { id: "Jelajahi ribuan lirik lagu, mulai dari hits Indonesia dan Barat, hingga alunan merdu lagu-lagu daerah.", en: "" },
+        description: { id: "Jelajahi ribuan lirik lagu, mulai dari hits Indonesia dan Barat, hingga alunan merdu lagu-lagu daerah.", en: "Explore thousands of song lyrics, from Indonesian and Western hits to traditional local songs." },
         links: [{ url: "https://www.lyricspedia.my.id", label: "Website" }],
         tags: ["Blog"]
     },
     {
         title: { id: "Monitoring", en: "" },
-        description: { id: "Monitoring adalah aplikasi web yang dibuat untuk memantau aktivitas di dalam ruangan lewat video real-time dari kamera menggunakan Detectron2.", en: "" },
+        description: { id: "Monitoring adalah aplikasi web yang dibuat untuk memantau aktivitas di dalam ruangan lewat video real-time dari kamera menggunakan Detectron2.", en: "A web application designed to monitor indoor activities via real-time video feed using Detectron2." },
         links: [{ url: "https://github.com/fandipres/monitoring", label: "GitHub" }],
         tags: ["Web"]
     },
     {
         title: { id: "To-Do List", en: "" },
-        description: { id: "Aplikasi web sederhana untuk mengelola daftar tugas personal. Dilengkapi otentikasi pengguna yang menjaga setiap daftar tugas tetap pribadi dan aman.", en: "" },
+        description: { id: "Aplikasi web sederhana untuk mengelola daftar tugas personal. Dilengkapi otentikasi pengguna yang menjaga setiap daftar tugas tetap pribadi dan aman.", en: "A simple web app for managing personal tasks. Features user authentication to keep every task list private and secure." },
         links: [{ url: "https://github.com/fandipres/to-do-list", label: "GitHub" }],
         tags: ["Web"]
     },
     {
         title: { id: "Worshipedia", en: "" },
-        description: { id: "Semua lirik pujian dan penyembahan Kristen ada di sini. Dari lagu sekolah minggu hingga hits terbaru, untuk mendukung ibadah dan imanmu.", en: "" },
+        description: { id: "Semua lirik pujian dan penyembahan Kristen ada di sini. Dari lagu sekolah minggu hingga hits terbaru, untuk mendukung ibadah dan imanmu.", en: "A collection of Christian praise and worship lyrics. From Sunday school songs to the latest hits, supporting your worship and faith." },
         links: [{ url: "https://www.worshipedia.my.id", label: "Website" }],
         tags: ["Blog"]
     },
