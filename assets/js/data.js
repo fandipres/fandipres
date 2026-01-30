@@ -25,7 +25,8 @@ const siteTranslations = {
         connect: { id: "Mari Terhubung", en: "Let's Connect" },
         featuredProjects: { id: "Proyek Unggulan", en: "Featured Projects" },
         latestEdu: { id: "Pendidikan Terbaru", en: "Latest Education" },
-        latestWork: { id: "Pekerjaan Terbaru", en: "Latest Experience" }
+        latestWork: { id: "Pekerjaan Terbaru", en: "Latest Experience" },
+        position: { id: "Dosen di Universitas Mikroskil", en: "Lecturer at Mikroskil University" }
     },
     descriptions: {
         academic: {
