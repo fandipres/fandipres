@@ -94,26 +94,32 @@
             </div>
         </div>
 
-        <div class="hidden md:hidden bg-gray-900 border-b border-gray-800 max-h-screen overflow-y-auto"
+        <div class="hidden md:hidden bg-gray-900/95 backdrop-blur-xl border-b border-gray-800 max-h-screen overflow-y-auto shadow-2xl"
             id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div class="px-4 pt-6 pb-8 space-y-2">
+
                 <a href="/experience/"
-                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    class="block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 active:scale-95"
                     data-i18n="navbar.experience">Pengalaman</a>
+
                 <a href="/education/"
-                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    class="block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 active:scale-95"
                     data-i18n="navbar.education">Pendidikan</a>
+
                 <a href="/#sect-academic"
-                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    data-i18n="navbar.academic">Aktivitas Akademik</a>
+                    class="block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 active:scale-95"
+                    data-i18n="sections.academic">Aktivitas Akademik</a>
+
                 <a href="/projects/"
-                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium mt-2"
+                    class="block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 active:scale-95"
                     data-i18n="navbar.projects">Proyek</a>
 
-                <button id="lang-toggle-mobile"
-                    class="w-full text-left text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium border-t border-gray-700 mt-2">
-                    Switch Language (ID/EN)
-                </button>
+                <div class="pt-4 mt-2 border-t border-gray-800">
+                    <button id="lang-toggle-mobile"
+                        class="w-full flex items-center gap-2 px-4 py-3 rounded-xl text-base font-medium text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 transition-all duration-200 active:scale-95 text-left">
+                        Switch Language (ID/EN)
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -131,8 +137,61 @@
                         <a href="https://fandipres.my.id/"
                             class="hover:text-blue-400 transition-colors duration-300">Fandi Presly Simamora</a>
                     </h1>
-                    <p class="text-xl mt-2 text-gray-300" data-i18n="sections.position">Dosen di Universitas Mikroskil</p>
-                    <p class="mt-4 text-gray-400 text-m leading-relaxed max-w-4xl">Dreaming. Thinking. Doing. I'm an
+                    <p class="text-xl mt-2 text-gray-300" data-i18n="sections.position">Dosen di Universitas Mikroskil
+                    </p>
+                    <div class="mt-4 flex flex-wrap justify-center sm:justify-start gap-2 text-xs font-mono">
+
+                        <button onclick="copyNidn(this, '9901123132')"
+                            class="group bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-gray-400 flex items-center gap-2 cursor-pointer hover:bg-gray-700 hover:text-white hover:border-gray-600 transition-all duration-200 active:scale-95"
+                            title="Klik untuk menyalin NIDN">
+
+                            <span class="font-bold text-gray-200">NIDN</span>
+                            <span>9901123132</span>
+
+                            <svg id="nidn-icon"
+                                class="w-3.5 h-3.5 text-gray-500 group-hover:text-white transition-colors" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                </path>
+                            </svg>
+
+                            <svg id="nidn-check" class="hidden w-3.5 h-3.5 text-green-400" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </button>
+
+                        <a href="https://sinta.kemdiktisaintek.go.id/authors/profile/6857557" target="_blank"
+                            class="bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-blue-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-all flex items-center gap-2">
+                            <img src="https://sinta.kemdiktisaintek.go.id/public/assets/img/brand_sinta.png"
+                                class="w-3.5 h-3.5 opacity-80" alt="SINTA">
+                            <span>SINTA</span>
+                        </a>
+
+                        <a href="https://scholar.google.com/citations?user=TwIuVJYAAAAJ" target="_blank"
+                            class="bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-blue-300 hover:text-white hover:bg-blue-500 hover:border-blue-400 transition-all flex items-center gap-2">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/960px-Google_Scholar_logo.svg.png"
+                                class="w-3.5 h-3.5 opacity-80" alt="Scholar">
+                            <span>Scholar</span>
+                        </a>
+
+                        <a href="https://www.researchgate.net/profile/Fandi-Simamora" target="_blank"
+                            class="bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-teal-400 hover:text-white hover:bg-teal-600 hover:border-teal-500 transition-all flex items-center gap-2">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/ResearchGate_icon_SVG.svg/250px-ResearchGate_icon_SVG.svg.png"
+                                class="w-3.5 h-3.5 opacity-80" alt="Research Gate">
+                            <span>Research Gate</span>
+                        </a>
+
+                        <a href="https://orcid.org/0009-0005-5437-6622" target="_blank"
+                            class="bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-[#a6ce39] hover:text-white hover:bg-[#a6ce39] hover:border-[#a6ce39] transition-all flex items-center gap-2">
+                            <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg"
+                                class="w-3.5 h-3.5 opacity-80" alt="ORCID">
+                            <span>ORCID</span>
+                        </a>
+                    </div>
+                    <p class="mt-6 text-gray-400 text-m leading-relaxed max-w-4xl">Dreaming. Thinking. Doing. I'm an
                         educator, a blogger, and a lifelong learner who believes that every great journey begins with a
                         vision, shaped by reflection, realized through action, and turned into impact. I'm passionate
                         about transforming ideas into reality whether through teaching, writing, or collaboration.
@@ -146,7 +205,7 @@
         <section class="bg-gray-900 py-16 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
 
-                <h1 class="text-4xl font-bold mb-10 border-b-2 border-gray-700 pb-4"" data-i18n="page.thesis">Bimbingan
+                <h1 class="text-4xl font-bold mb-10 border-b-2 border-gray-700 pb-4"" data-i18n=" page.thesis">Bimbingan
                     Tugas Akhir</h1>
 
                 <div id="thesis-list" class="space-y-8 max-w-4xl">
