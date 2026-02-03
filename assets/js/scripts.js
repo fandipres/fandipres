@@ -374,3 +374,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function copyNidn(btn, text) {
+    navigator.clipboard.writeText(text).then(() => {
+
+        const iconCopy = btn.querySelector('#nidn-icon');
+        const iconCheck = btn.querySelector('#nidn-check');
+
+        if (iconCopy && iconCheck) {
+            iconCopy.classList.add('hidden');
+            iconCheck.classList.remove('hidden');
+
+            btn.classList.add('border-green-500/50');
+
+            setTimeout(() => {
+                iconCopy.classList.remove('hidden');
+                iconCheck.classList.add('hidden');
+                btn.classList.remove('border-green-500/50');
+            }, 2000);
+        }
+    }).catch(err => {
+        console.error('Gagal menyalin:', err);
+    });
+}
