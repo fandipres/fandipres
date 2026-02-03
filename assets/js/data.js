@@ -100,13 +100,13 @@ const education = [
         year: { id: "September 2022 - Oktober 2024", en: "September 2022 - October 2024" },
         title: { id: "Magister Teknologi Informasi (M.Kom.)", en: "Master of Information Technology (M.Kom.)" },
         subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
-        description: { id: "Tesis: Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham", en: "Thesis: Hyperparameter Tuning of BiLSTM Using Bayesian Optimization for Stock Price Prediction" }
+        description: { id: "Tesis: Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham.", en: "Thesis: Hyperparameter Tuning of BiLSTM Using Bayesian Optimization for Stock Price Prediction." }
     },
     {
         year: { id: "September 2018 - Oktober 2022", en: "September 2018 - October 2022" },
         title: { id: "Sarjana Teknik Informatika (S.Kom.)", en: "Bachelor of Informatics Engineering (S.Kom.)" },
         subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
-        description: { id: "Skripsi: Pengembangan Aplikasi Pemantauan Aktivitas pada Ruangan Menggunakan Algoritma Improved Mask R CNN Berbasis Web", en: "Undergraduate Thesis: Web Based Activity Monitoring Applications Development Using Improved Mask R CNN Algorithm" }
+        description: { id: "Skripsi: Pengembangan Aplikasi Pemantauan Aktivitas pada Ruangan Menggunakan Algoritma Improved Mask R CNN Berbasis Web.", en: "Undergraduate Thesis: Web Based Activity Monitoring Applications Development Using Improved Mask R CNN Algorithm." }
     }
 ];
 
@@ -314,7 +314,7 @@ const publications = [
         rank: { id: "Sinta 3", en: "" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
         role: { id: "Penulis Keempat", en: "4th Author" },
-        description: { id: `Luaran dari Penelitian "Optimasi Random Forest Menggunakan RFE untuk Klasifikasi Stunting pada RSU Mitra Medika".`, en: `Research Output "Random Forest Optimization Using RFE for Stunting Classification at RSU Mitra Medika"` },
+        description: { id: `Luaran dari Penelitian "Optimasi Random Forest Menggunakan RFE untuk Klasifikasi Stunting pada RSU Mitra Medika".`, en: `Research Output "Random Forest Optimization Using RFE for Stunting Classification at RSU Mitra Medika".` },
         assets: {
             article: "https://ejournal.uin-suska.ac.id/index.php/IJAIDM/article/view/35295"
         }
@@ -326,7 +326,7 @@ const publications = [
         rank: { id: "Sinta 3", en: "" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
         role: { id: "Penulis Pertama", en: "First Author" },
-        description: { id: `Luaran dari Penelitian "Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham".`, en: `Research Output "Hyperparameter Tuning of BiLSTM Using Bayesian Optimization for Stock Price Prediction""` },
+        description: { id: `Luaran dari Penelitian "Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham".`, en: `Research Output "Hyperparameter Tuning of BiLSTM Using Bayesian Optimization for Stock Price Prediction".` },
         assets: {
             article: "https://ejurnal.ung.ac.id/index.php/jjom/article/view/27166/0"
         }
@@ -340,7 +340,7 @@ const books = [
         subtitle: { id: "MMFast Publishing", en: "" },
         category: { id: "Bab Buku", en: "Book Chapter" },
         role: { id: "Kontributor", en: "Contributor" },
-        description: { id: `Bab buku dalam Buku "Pengenalan Dasar Informatika dan Peranannya di Era Digital".`, en: `Book chapter in "Introduction to Basic Informatics and Its Role in the Digital Era"` },
+        description: { id: `Bab buku dalam Buku "Pengenalan Dasar Informatika dan Peranannya di Era Digital".`, en: `Book chapter in "Introduction to Basic Informatics and Its Role in the Digital Era".` },
         assets: {
             book: "https://mmfast.id/pengenalan-dasar-informatika-danperanannya-di-era-digital"
         }
@@ -351,7 +351,7 @@ const books = [
         subtitle: { id: "Bukuloka Literasi Bangsa", en: "" },
         category: { id: "Bab Buku", en: "Book Chapter" },
         role: { id: "Kontributor", en: "Contributor" },
-        description: { id: `Bab buku dalam Buku "Logika Digital & Algoritma Dunia Nyata: Menyelami Inti Ilmu Komputer".`, en: `Book chapter in "Digital Logic & Real-World Algorithms: Diving into the Core of Computer Science"` },
+        description: { id: `Bab buku dalam Buku "Logika Digital & Algoritma Dunia Nyata: Menyelami Inti Ilmu Komputer".`, en: `Book chapter in "Digital Logic & Real-World Algorithms: Diving into the Core of Computer Science".` },
         assets: {
             book: "https://www.bukuloka.com/books/logika-digital-algoritma-dunia-nyata-menyelami-inti-ilmu-komputer"
         }
