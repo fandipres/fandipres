@@ -311,21 +311,16 @@ function initDynamicContent() {
         const featuredProjects = [...projects].sort((a, b) => (a.id || 999) - (b.id || 999));
         renderProjects('proyek-terbaru', featuredProjects, 3);
     }
-
     if (document.getElementById('education-list')) renderItems('education-list', education);
     if (document.getElementById('experience-list')) renderItems('experience-list', experience);
-
     if (document.getElementById('pengajaran-lengkap')) renderDetailItems('pengajaran-lengkap', teaching);
-
     if (document.getElementById('thesis-list')) renderDetailItems('thesis-list', thesisSupervision);
     if (document.getElementById('tutoring-list')) renderDetailItems('tutoring-list', privateTeaching);
-
     if (document.getElementById('research-list')) renderDetailItems('research-list', research);
     if (document.getElementById('community-list')) renderDetailItems('community-list', community_service);
     if (document.getElementById('publication-list')) renderDetailItems('publication-list', publications);
     if (document.getElementById('book-list')) renderDetailItems('book-list', books);
     if (document.getElementById('talk-list')) renderDetailItems('talk-list', talks);
-
     if (document.getElementById('projects-list')) {
         setupProjectFilters('project-filters', 'projects-list', projects);
         const filteredData = (activeProjectFilter === 'All')
@@ -333,10 +328,8 @@ function initDynamicContent() {
             : projects.filter(item => item.tags && item.tags.includes(activeProjectFilter));
         renderProjects('projects-list', filteredData);
     }
-
     renderSocialLinks('social-links-footer', socialMedia);
     if (document.getElementById('social-media')) renderSocialLinks('social-media', socialMedia);
-
     const yearSpan = document.getElementById('year');
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 }
