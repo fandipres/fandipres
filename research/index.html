@@ -30,7 +30,11 @@
     <link rel="icon"
         href="https://yt3.googleusercontent.com/ytc/AIdro_nwK6LasXc5CwFsGfd1sKR8m9H6ibAoykjqg5gu2Q=s176-c-k-c0x00ffffff-no-rj"
         type="image/x-icon">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCMTX81EN5"></script>
     <script>
@@ -39,11 +43,11 @@
         gtag('js', new Date());
         gtag('config', 'G-RCMTX81EN5');
     </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/animations.css">
 </head>
 
 <body class="bg-black text-white antialiased">
-
     <nav
         class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800 transition-all duration-300">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,28 +58,59 @@
                         FANDIPRES
                     </a>
                 </div>
-
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-1">
-
                         <a href="/experience/"
                             class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                             data-i18n="navbar.experience">Pengalaman</a>
-
                         <a href="/education/"
                             class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                             data-i18n="navbar.education">Pendidikan</a>
-
-                        <a href="/#sect-academic"
-                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                            data-i18n="navbar.academic">Aktivitas Akademik</a>
-
+                        <div class="relative group">
+                            <a href="#sect-academic"><button
+                                    class="text-gray-300 group-hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors inline-flex items-center gap-1 focus:outline-none">
+                                    <span data-i18n="sections.academic">Aktivitas Akademik</span>
+                                    <svg class="w-4 h-4 mt-0.5 transform group-hover:rotate-180 transition-transform duration-200"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button></a>
+                            <div
+                                class="absolute left-0 mt-0 w-56 rounded-md shadow-lg bg-gray-900 border border-gray-700 ring-1 ring-black ring-opacity-5 focus:outline-none opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50">
+                                <div class="py-1">
+                                    <a href="/teaching/"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
+                                        data-i18n="navbar.teaching">Pengajaran</a>
+                                    <a href="/research/"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
+                                        data-i18n="navbar.research">Penelitian</a>
+                                    <a href="/community_service/"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
+                                        data-i18n="navbar.community">Pengabdian Masyarakat</a>
+                                    <a href="/publications/"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
+                                        data-i18n="navbar.publications">Publikasi</a>
+                                    <a href="/books/"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
+                                        data-i18n="navbar.books">Penulisan</a>
+                                    <a href="/talks/"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
+                                        data-i18n="navbar.talks">Pembicara</a>
+                                    <a href="/thesis/"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
+                                        data-i18n="navbar.thesis">Bimbingan Tugas Akhir</a>
+                                    <a href="/tutoring/"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
+                                        data-i18n="navbar.tutoring">Tutor Privat</a>
+                                </div>
+                            </div>
+                        </div>
                         <a href="/projects/"
                             class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                             data-i18n="navbar.projects">Proyek</a>
                     </div>
                 </div>
-
                 <div class="flex items-center gap-4">
                     <button id="lang-toggle"
                         class="hidden md:inline-flex px-3 py-1 border border-gray-600 rounded text-xs font-bold text-gray-300 hover:text-white hover:border-white transition-colors">
@@ -93,27 +128,21 @@
                 </div>
             </div>
         </div>
-
         <div class="hidden md:hidden bg-gray-900/95 backdrop-blur-xl border-b border-gray-800 max-h-screen overflow-y-auto shadow-2xl"
             id="mobile-menu">
             <div class="px-4 pt-6 pb-8 space-y-2">
-
                 <a href="/experience/"
                     class="block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 active:scale-95"
                     data-i18n="navbar.experience">Pengalaman</a>
-
                 <a href="/education/"
                     class="block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 active:scale-95"
                     data-i18n="navbar.education">Pendidikan</a>
-
                 <a href="/#sect-academic"
                     class="block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 active:scale-95"
                     data-i18n="sections.academic">Aktivitas Akademik</a>
-
                 <a href="/projects/"
                     class="block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 active:scale-95"
                     data-i18n="navbar.projects">Proyek</a>
-
                 <div class="pt-4 mt-2 border-t border-gray-800">
                     <button id="lang-toggle-mobile"
                         class="w-full flex items-center gap-2 px-4 py-3 rounded-xl text-base font-medium text-blue-400 bg-blue-500/10 hover:bg-blue-500/20 transition-all duration-200 active:scale-95 text-left">
@@ -123,7 +152,6 @@
             </div>
         </div>
     </nav>
-
     <header class="bg-gradient-to-b from-gray-900 to-black text-white w-full fade-in-section pt-24 pb-16">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row items-center gap-8 text-center sm:text-left">
@@ -140,14 +168,11 @@
                     <p class="text-xl mt-2 text-gray-300" data-i18n="sections.position">Dosen di Universitas Mikroskil
                     </p>
                     <div class="mt-4 flex flex-wrap justify-center sm:justify-start gap-2 text-xs font-mono">
-
                         <button onclick="copyNidn(this, '9901123132')"
                             class="group bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-gray-400 flex items-center gap-2 cursor-pointer hover:bg-gray-700 hover:text-white hover:border-gray-600 transition-all duration-200 active:scale-95"
                             title="Klik untuk menyalin NIDN">
-
                             <span class="font-bold text-gray-200">NIDN</span>
                             <span>9901123132</span>
-
                             <svg id="nidn-icon"
                                 class="w-3.5 h-3.5 text-gray-500 group-hover:text-white transition-colors" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -155,35 +180,30 @@
                                     d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
                                 </path>
                             </svg>
-
                             <svg id="nidn-check" class="hidden w-3.5 h-3.5 text-green-400" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
                         </button>
-
                         <a href="https://sinta.kemdiktisaintek.go.id/authors/profile/6857557" target="_blank"
                             class="bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-blue-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-all flex items-center gap-2">
                             <img src="https://sinta.kemdiktisaintek.go.id/public/assets/img/brand_sinta.png"
                                 class="w-3.5 h-3.5 opacity-80" alt="SINTA">
                             <span>SINTA</span>
                         </a>
-
                         <a href="https://scholar.google.com/citations?user=TwIuVJYAAAAJ" target="_blank"
                             class="bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-blue-300 hover:text-white hover:bg-blue-500 hover:border-blue-400 transition-all flex items-center gap-2">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/960px-Google_Scholar_logo.svg.png"
                                 class="w-3.5 h-3.5 opacity-80" alt="Scholar">
                             <span>Scholar</span>
                         </a>
-
                         <a href="https://www.researchgate.net/profile/Fandi-Simamora" target="_blank"
                             class="bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-teal-400 hover:text-white hover:bg-teal-600 hover:border-teal-500 transition-all flex items-center gap-2">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/ResearchGate_icon_SVG.svg/250px-ResearchGate_icon_SVG.svg.png"
                                 class="w-3.5 h-3.5 opacity-80" alt="Research Gate">
                             <span>Research Gate</span>
                         </a>
-
                         <a href="https://orcid.org/0009-0005-5437-6622" target="_blank"
                             class="bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-[#a6ce39] hover:text-white hover:bg-[#a6ce39] hover:border-[#a6ce39] transition-all flex items-center gap-2">
                             <img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg"
@@ -200,15 +220,12 @@
             </div>
         </div>
     </header>
-
     <main>
         <section class="bg-gray-900 py-16 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
                 <h1 class="text-4xl font-bold mb-10 border-b-2 border-gray-700 pb-4" data-i18n="page.research">
                     Penelitian</h1>
-
                 <div id="research-list" class="space-y-8 max-w-4xl"></div>
-
                 <div class="mt-12 border-t border-gray-800 pt-8">
                     <a href="/"
                         class="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300 flex items-center gap-2">
@@ -217,7 +234,6 @@
                 </div>
             </div>
         </section>
-
         <section class="py-20 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
                 <div>
@@ -225,7 +241,6 @@
                     <p class="mt-2 text-gray-400 max-w-2xl" data-i18n="descriptions.contact">Jika Anda memiliki
                         pertanyaan atau ingin berkolaborasi, jangan ragu untuk menghubungi saya.</p>
                 </div>
-
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div>
                         <h3 class="text-xl font-semibold text-white" data-i18n="navbar.contact">Kontak</h3>
@@ -234,7 +249,6 @@
                         </p>
                         <div id="social-links-footer" class="mt-6 flex flex-wrap items-center gap-6"></div>
                     </div>
-
                     <div>
                         <h3 class="text-xl font-semibold text-white">Email</h3>
                         <p class="mt-2 text-gray-400 text-sm" data-i18n="descriptions.email">Untuk diskusi atau
@@ -249,11 +263,15 @@
             </div>
         </section>
     </main>
-
     <footer class="text-white text-center py-6 fade-in-section">
         <p>Copyright © <span id="year"></span> - Fandi Presly Simamora</p>
     </footer>
-
+    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg translate-y-20 opacity-0 transition-all duration-300 hover:bg-blue-700 z-40">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
     <script src="../assets/js/data.js"></script>
     <script src="../assets/js/scripts.js"></script>
     <script src="../assets/js/animations.js"></script>
