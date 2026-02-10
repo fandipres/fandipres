@@ -5,9 +5,10 @@ const siteTranslations = {
         education: { id: "Pendidikan - Fandi Presly Simamora", en: "Education - Fandi Presly Simamora" },
         experience: { id: "Pengalaman - Fandi Presly Simamora", en: "Experience - Fandi Presly Simamora" },
         home: { id: "Fandi Presly Simamora", en: "Fandi Presly Simamora" },
-        research: { id: "Penelitian - Fandi Presly Simamora", en: "Research - Fandi Presly Simamora" },
+        ipr: { id: "Hak Kekayaan Intelektual - Fandi Presly Simamora", en: "Intellectual Property Rights - Fandi Presly Simamora" },
         projects: { id: "Proyek - Fandi Presly Simamora", en: "Projects - Fandi Presly Simamora" },
         publications: { id: "Publikasi - Fandi Presly Simamora", en: "Publications - Fandi Presly Simamora" },
+        research: { id: "Penelitian - Fandi Presly Simamora", en: "Research - Fandi Presly Simamora" },
         talks: { id: "Pembicara - Fandi Presly Simamora", en: "Talks - Fandi Presly Simamora" },
         teaching: { id: "Pengajaran - Fandi Presly Simamora", en: "Teaching - Fandi Presly Simamora" },
         thesis: { id: "Bimbingan Tugas Akhir - Fandi Presly Simamora", en: "Thesis Supervision - Fandi Presly Simamora" },
@@ -15,10 +16,19 @@ const siteTranslations = {
     },
     navbar: {
         academic: { id: "Aktivitas Akademik", en: "Academic Activities" },
+        books: { id: "Penulisan", en: "Books" },
+        community: { id: "Pengabdian Masyarakat", en: "Community Service" },
         contact: { id: "Kontak", en: "Contact" },
         education: { id: "Pendidikan", en: "Education" },
         experience: { id: "Pengalaman", en: "Experience" },
-        projects: { id: "Proyek", en: "Projects" }
+        ipr: { id: "Hak Kekayaan Intelektual", en: "Intellectual Property Rights" },
+        projects: { id: "Proyek", en: "Projects" },
+        publications: { id: "Publikasi", en: "Publications" },
+        research: { id: "Penelitian", en: "Research" },
+        talks: { id: "Pembicara", en: "Talks" },
+        teaching: { id: "Pengajaran", en: "Teaching" },
+        thesis: { id: "Bimbingan Tugas Akhir", en: "Thesis Supervision" },
+        tutoring: { id: "Tutor Privat", en: "Private Tutoring" }
     },
     sections: {
         academic: { id: "Aktivitas Akademik", en: "Academic Activities" },
@@ -51,9 +61,10 @@ const siteTranslations = {
         community: { id: "Pengabdian Masyarakat", en: "Community Service" },
         education: { id: "Pendidikan", en: "Education" },
         experience: { id: "Pengalaman", en: "Experience" },
-        research: { id: "Penelitian", en: "Research" },
+        ipr: { id: "Hak Kekayaan Intelektual", en: "Intellectual Property Rights" },
         projects: { id: "Proyek", en: "Projects" },
         publications: { id: "Publikasi", en: "Publications" },
+        research: { id: "Penelitian", en: "Research" },
         talks: { id: "Pembicara", en: "Talks" },
         teaching: { id: "Pengajaran", en: "Teaching" },
         thesis: { id: "Bimbingan Tugas Akhir", en: "Thesis Supervision" },
@@ -554,6 +565,11 @@ const academicActivities = {
         title: siteTranslations.page.tutoring,
         description: { id: "Layanan mentoring dan pengajaran teknis secara privat/personal.", en: "Personalized technical mentoring and private teaching services." },
         link: "/tutoring/"
+    },
+    ipr: {
+        title: siteTranslations.page.ipr,
+        description: { id: "Perlindungan hukum terhadap karya saya pribadi maupun karya bersama.", en: "Legal protection for personal and collaborative creations." },
+        link: "/ipr/"
     }
 };
 
