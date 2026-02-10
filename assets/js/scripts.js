@@ -199,38 +199,6 @@ function renderDetailItems(containerId, data) {
     container.innerHTML = html;
 }
 
-function renderProjects(containerId, data, limit) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    const itemsToRender = limit ? data.slice(0, limit) : data;
-
-    if (itemsToRender.length === 0) {
-        container.innerHTML = `<p class="col-span-full text-center text-gray-500 italic py-10">${currentLang === 'id' ? 'Tidak ada proyek untuk kategori ini.' : 'No projects found for this category.'}</p>`;
-        return;
-    }
-
-    let html = '';
-    itemsToRender.forEach(item => {
-        const tagsHtml = item.tags && item.tags.length > 0 ? `<div class="mt-3 mb-3 flex flex-wrap gap-2">${item.tags.map(tag => `<span class="bg-gray-700 text-gray-300 text-xs font-semibold px-2.5 py-1 rounded-full">${tag}</span>`).join('')}</div>` : '';
-        const linksHtml = item.links.map(link => `<a href="${link.url}" target="_blank" class="text-sm text-blue-400 hover:underline mr-4">${link.label}</a>`).join('');
-
-        html += `
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg text-left h-full flex flex-col hover:bg-gray-750 transition-colors duration-300">
-            <div class="flex items-start justify-between gap-4">
-                <h3 class="text-xl font-semibold text-white">${getVal(item.title)}</h3>
-                ${tagsHtml}
-            </div>
-            <p class="mt-3 text-gray-400 text-sm leading-relaxed flex-grow">${getVal(item.description)}</p>
-            <div class="mt-auto pt-4">
-                <div class="mt-4 border-t border-gray-700 pt-4 flex flex-wrap gap-x-4 gap-y-2">
-                    ${linksHtml}
-                </div>
-            </div>
-        </div>`;
-    });
-    container.innerHTML = html;
-}
-
 function renderAcademicActivities(containerId, activities) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -279,60 +247,11 @@ function renderSocialLinks(containerId, data) {
     container.innerHTML = html;
 }
 
-let activeProjectFilter = 'All';
-
-function setupProjectFilters(filterContainerId, listContainerId, allProjects) {
-    const container = document.getElementById(filterContainerId);
-    if (!container) return;
-
-    const tags = new Set();
-    allProjects.forEach(p => {
-        if (p.tags) p.tags.forEach(t => tags.add(t));
-    });
-    const uniqueTags = ['All', ...Array.from(tags).sort()];
-
-    container.innerHTML = uniqueTags.map(tag => {
-        const label = tag === 'All' ? t('buttons.filterAll') : tag;
-        const activeClass = (tag === activeProjectFilter)
-            ? "bg-white text-black border-white"
-            : "bg-transparent text-gray-300 border-gray-600 hover:border-white hover:text-white";
-
-        return `<button 
-                    onclick="handleFilterClick('${tag}', '${listContainerId}')" 
-                    class="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${activeClass}"
-                    data-tag="${tag}">
-                    ${label}
-                </button>`;
-    }).join('');
-}
-
-window.handleFilterClick = function (tag, listContainerId) {
-    activeProjectFilter = tag;
-
-    const buttons = document.querySelectorAll('#project-filters button');
-    buttons.forEach(btn => {
-        const btnTag = btn.getAttribute('data-tag');
-        if (btnTag === tag) {
-            btn.className = "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border bg-white text-black border-white";
-        } else {
-            btn.className = "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border bg-transparent text-gray-300 border-gray-600 hover:border-white hover:text-white";
-        }
-    });
-
-    const filteredData = (tag === 'All')
-        ? projects
-        : projects.filter(item => item.tags && item.tags.includes(tag));
-
-    renderProjects(listContainerId, filteredData);
-};
-
 function initDynamicContent() {
     if (document.getElementById('pekerjaan-terbaru')) {
         renderItems('pekerjaan-terbaru', experience, 2);
         renderItems('pendidikan-terbaru', education, 2);
         renderAcademicActivities('aktivitas-akademik-container', academicActivities);
-        const featuredProjects = [...projects].sort((a, b) => (a.id || 999) - (b.id || 999));
-        renderProjects('proyek-terbaru', featuredProjects, 3);
     }
     if (document.getElementById('education-list')) renderItems('education-list', education);
     if (document.getElementById('experience-list')) renderItems('experience-list', experience);
@@ -344,13 +263,6 @@ function initDynamicContent() {
     if (document.getElementById('publication-list')) renderDetailItems('publication-list', publications);
     if (document.getElementById('book-list')) renderDetailItems('book-list', books);
     if (document.getElementById('talk-list')) renderDetailItems('talk-list', talks);
-    if (document.getElementById('projects-list')) {
-        setupProjectFilters('project-filters', 'projects-list', projects);
-        const filteredData = (activeProjectFilter === 'All')
-            ? projects
-            : projects.filter(item => item.tags && item.tags.includes(activeProjectFilter));
-        renderProjects('projects-list', filteredData);
-    }
     renderSocialLinks('social-links-footer', socialMedia);
     if (document.getElementById('social-media')) renderSocialLinks('social-media', socialMedia);
     const yearSpan = document.getElementById('year');
