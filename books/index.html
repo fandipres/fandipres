@@ -69,7 +69,7 @@
                         <div class="relative group">
                             <a href="#sect-academic"><button
                                     class="text-gray-300 group-hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors inline-flex items-center gap-1 focus:outline-none">
-                                    <span data-i18n="sections.academic">Aktivitas Akademik</span>
+                                    <span data-i18n="navbar.academic">Aktivitas Akademik</span>
                                     <svg class="w-4 h-4 mt-0.5 transform group-hover:rotate-180 transition-transform duration-200"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -87,19 +87,22 @@
                                         data-i18n="navbar.research">Penelitian</a>
                                     <a href="/community_service/"
                                         class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
-                                        data-i18n="navbar.community">Pengabdian Masyarakat</a>
+                                        data-i18n="navbar.communityService">Pengabdian Masyarakat</a>
+                                    <a href="/thesis/"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
+                                        data-i18n="navbar.thesis">Bimbingan Tugas Akhir</a>
                                     <a href="/publications/"
                                         class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
                                         data-i18n="navbar.publications">Publikasi</a>
                                     <a href="/books/"
                                         class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
                                         data-i18n="navbar.books">Penulisan</a>
+                                    <a href="/ipr/"
+                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
+                                        data-i18n="navbar.ipr">Hak Kekayaan Intelektual</a>
                                     <a href="/talks/"
                                         class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
                                         data-i18n="navbar.talks">Pembicara</a>
-                                    <a href="/thesis/"
-                                        class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50"
-                                        data-i18n="navbar.thesis">Bimbingan Tugas Akhir</a>
                                     <a href="/tutoring/"
                                         class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
                                         data-i18n="navbar.tutoring">Tutor Privat</a>
@@ -139,7 +142,7 @@
                     data-i18n="navbar.education">Pendidikan</a>
                 <a href="/#sect-academic"
                     class="block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 active:scale-95"
-                    data-i18n="sections.academic">Aktivitas Akademik</a>
+                    data-i18n="navbar.academic">Aktivitas Akademik</a>
                 <a href="/projects/"
                     class="block px-4 py-3 rounded-xl text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all duration-200 active:scale-95"
                     data-i18n="navbar.projects">Proyek</a>
@@ -237,21 +240,22 @@
         <section class="py-20 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
                 <div>
-                    <h2 class="text-3xl font-bold" data-i18n="sections.connect">Mari Terhubung</h2>
-                    <p class="mt-2 text-gray-400 max-w-2xl" data-i18n="descriptions.contact">Jika Anda memiliki
+                    <h2 class="text-3xl font-bold" data-i18n="sections.contact.title">Mari Terhubung</h2>
+                    <p class="mt-2 text-gray-400 max-w-2xl" data-i18n="sections.contact.description">Jika Anda memiliki
                         pertanyaan atau ingin berkolaborasi, jangan ragu untuk menghubungi saya.</p>
                 </div>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div>
                         <h3 class="text-xl font-semibold text-white" data-i18n="navbar.contact">Kontak</h3>
-                        <p class="mt-2 text-gray-400 text-sm" data-i18n="descriptions.social">Anda bisa terhubung dengan
+                        <p class="mt-2 text-gray-400 text-sm" data-i18n="sections.contact.socialMedia">Anda bisa
+                            terhubung dengan
                             saya melalui platform berikut.
                         </p>
                         <div id="social-links-footer" class="mt-6 flex flex-wrap items-center gap-6"></div>
                     </div>
                     <div>
                         <h3 class="text-xl font-semibold text-white">Email</h3>
-                        <p class="mt-2 text-gray-400 text-sm" data-i18n="descriptions.email">Untuk diskusi atau
+                        <p class="mt-2 text-gray-400 text-sm" data-i18n="sections.contact.email">Untuk diskusi atau
                             pertanyaan lebih lanjut, silakan kirim
                             pesan ke alamat di bawah ini.</p>
                         <a href="mailto:fandi.simamora@gmail.com?subject=Pesan%20dari%20Website"
@@ -272,9 +276,11 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
-    <script src="../assets/js/data.js"></script>
-    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/data/i18n.js"></script>
+    <script src="../assets/js/data/books.js"></script>
+    <script src="../assets/js/data/profile.js"></script>
     <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/scripts.js"></script>
 </body>
 
 </html>
