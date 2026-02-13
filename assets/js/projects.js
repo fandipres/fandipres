@@ -1,3 +1,5 @@
+let activeProjectFilter = 'All';
+
 function renderProjects(containerId, data, limit) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -20,12 +22,13 @@ function renderProjects(containerId, data, limit) {
                </div>`
             : '';
 
-        const linksHtml = item.links.map(link =>
-            `<a href="${link.url}" target="_blank" class="text-sm text-blue-400 hover:text-white hover:underline mr-4 flex items-center gap-1 transition-colors">
+        const linksHtml = item.links.map(link => {
+            const labelText = typeof getVal === 'function' ? getVal(link.label) : link.label;
+            return `<a href="${link.url}" target="_blank" class="text-sm text-blue-400 hover:text-white hover:underline mr-4 flex items-center gap-1 transition-colors">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                ${link.label}
-            </a>`
-        ).join('');
+                ${labelText}
+            </a>`;
+        }).join('');
 
         html += `
         <div class="bg-gray-800 border border-gray-700 p-6 rounded-xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 transition-all duration-300 group">
@@ -103,11 +106,8 @@ window.handleProjectFilterClick = function (tag, listContainerId) {
     renderProjects(listContainerId, filteredData);
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (typeof projects === 'undefined') {
-        console.warn('Data projects tidak ditemukan. Pastikan data.js dimuat sebelum projects.js');
-        return;
-    }
+window.updateProjectLanguage = function () {
+    if (typeof projects === 'undefined') return;
 
     const projectListContainer = document.getElementById('projects-list');
     if (projectListContainer) {
@@ -123,7 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const homeContainer = document.getElementById('proyek-terbaru');
     if (homeContainer) {
         const featuredProjects = [...projects].sort((a, b) => (a.id || 999) - (b.id || 999));
-
         renderProjects('proyek-terbaru', featuredProjects, 3);
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof projects === 'undefined') {
+        console.warn('Data projects tidak ditemukan. Pastikan file data projects dimuat sebelum projects.js');
+        return;
+    }
+
+    if (typeof window.updateProjectLanguage === 'function') {
+        window.updateProjectLanguage();
     }
 });
