@@ -1,0 +1,72 @@
+const teaching = [
+    {
+        year: { id: "Semester Ganjil 2025 - 2026", en: "Odd Semester 2025 - 2026" },
+        title: { id: "Pengembangan Karakter: Kepemimpinan", en: " Character Development: Leadership" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Sistem Informasi (2 Kelas), Teknik Informatika (2 Kelas)", en: "Information Systems (2 Classes), Informatics Engineering (2 Classes)" }],
+    },
+    {
+        year: { id: "Semester Genap 2024 - 2025", en: "Even Semester 2024 - 2025" },
+        title: { id: "Pengembangan Aplikasi Gim", en: "Game Application Development" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (2 Kelas)", en: "Informatics Engineering (2 Classes)" }],
+    },
+    {
+        year: { id: "Semester Ganjil 2024 - 2025", en: "Odd Semester 2024 - 2025" },
+        title: { id: "Pengembangan Web Back-End", en: "Back End Web Development" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
+    },
+    {
+        year: { id: "Semester Ganjil 2024 - 2025", en: "Odd Semester 2024 - 2025" },
+        title: { id: "Perancangan dan Pemrograman Berorientasi Objek", en: "Object Oriented Design and Programming" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
+    },
+    {
+        year: { id: "Semester Genap 2023 - 2024", en: "Even Semester 2023 - 2024" },
+        title: { id: "Pengembangan Aplikasi Gim", en: "Game Application Development" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (2 Kelas)", en: "Informatics Engineering (2 Classes)" }],
+    },
+    {
+        year: { id: "Semester Genap 2023 - 2024", en: "Even Semester 2023 - 2024" },
+        title: { id: "Pengembangan Aplikasi Mobile Front-End", en: "Front End Mobile Applications Development" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
+    },
+    {
+        year: { id: "Semester Ganjil 2023 - 2024", en: "Odd Semester 2023 - 2024" },
+        title: { id: "Pengembangan Web Back-End", en: "Back End Web Development" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (2 Kelas)", en: "Informatics Engineering (2 Classes)" }],
+    },
+    {
+        year: { id: "Semester Genap 2022 - 2023", en: "Even Semester 2022 - 2023" },
+        title: { id: "Pengembangan Aplikasi Gim", en: "Game Application Development" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (3 Kelas)", en: "Informatics Engineering (3 Classes)" }],
+    },
+    {
+        year: { id: "Semester Ganjil 2022 - 2023", en: "Odd Semester 2022 - 2023" },
+        title: { id: "Pengembangan Aplikasi Mobile Back-End", en: "Back End Mobile Applications Development" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
+    },
+    {
+        year: { id: "Semester Ganjil 2022 - 2023", en: "Odd Semester 2022 - 2023" },
+        title: { id: "Wawasan Informatika", en: "Informatics Insight" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
+    }
+];
