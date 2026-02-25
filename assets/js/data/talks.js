@@ -8,7 +8,7 @@ const talks = [
         description: { id: "", en: "" },
         assets: {
             documentation: "",
-            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/ElyWskrCsINKj9shki07PhoBwxjkqr1Jfcx7l-JSZMSapQ?e=fMSr3F"
+            slides: "https://mikroskilacid-my.sharepoint.com/:b:/g/personal/fandi_simamora_mikroskil_ac_id/IQB5T0Vtyp07QqhoweqOxKWMAT901OwR1qD0nLutLDVbCWI?e=7QYQLA"
         }
     },
     {
@@ -20,7 +20,7 @@ const talks = [
         description: { id: "", en: "" },
         assets: {
             documentation: "",
-            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EodB2SJmdVJHsBNfpKeglpgBA3q06eAxoweGkz9zQq7vzQ?e=ujJ1Un"
+            slides: "https://mikroskilacid-my.sharepoint.com/:p:/g/personal/fandi_simamora_mikroskil_ac_id/IQB-3sX4JwUoQpCgTKfkRfVpAbcea15XcWS4I1NKrj9Vbds?e=2aVTnh"
         }
     },
     {
@@ -32,7 +32,7 @@ const talks = [
         description: { id: "", en: "" },
         assets: {
             documentation: "",
-            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EvxQoi94nppPonYFczritrcBC3EikMuPv_-RIagb9__hrA?e=7a6UQa"
+            slides: "https://mikroskilacid-my.sharepoint.com/:b:/g/personal/fandi_simamora_mikroskil_ac_id/IQB5T0Vtyp07QqhoweqOxKWMAT901OwR1qD0nLutLDVbCWI?e=0vzFqR"
         }
     }
 ];

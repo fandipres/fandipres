@@ -1,5 +1,12 @@
 const teaching = [
     {
+        year: { id: "Semester Genap 2025 - 2026", en: "Even Semester 2025 - 2026" },
+        title: { id: "Pengembangan Aplikasi Gim", en: "Game Application Development" },
+        subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (2 Kelas)", en: "Informatics Engineering (2 Classes)" }],
+    },
+    {
         year: { id: "Semester Ganjil 2025 - 2026", en: "Odd Semester 2025 - 2026" },
         title: { id: "Pengembangan Karakter: Kepemimpinan", en: " Character Development: Leadership" },
         subtitle: { id: "Universitas Mikroskil, Medan", en: "Mikroskil University, Medan" },

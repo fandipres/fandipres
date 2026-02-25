@@ -7,9 +7,9 @@ const communityService = [
         role: { id: "Ketua Pengabdian", en: "Project Leader" },
         description: { id: "", en: "" },
         assets: {
-            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EkvJm8pJk85GlM4yAJZMlMABUbKtwWbnZZgu6wkRXnD8gQ?e=vmPfod",
+            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/IgD9em5ye86PRK7pMLqGBznCAQhT7bmKsGci1bQcTu1Jgn4?e=5fuyGd",
             file: "",
-            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EuW0NgaL98ZIspL_cP0463oBIiZ81EdVFLtyjsSQKbU_bw?e=S2ze05"
+            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/IgAiMhpv-RX_SbWfEmzXDrM2AS6V_QTP7MgR5kqMAdXDxpU?e=ggUfVp"
         }
     },
     {
@@ -20,9 +20,9 @@ const communityService = [
         role: { id: "Anggota Pengabdian", en: "Team Member" },
         description: { id: "", en: "" },
         assets: {
-            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EqcFVDqGZT5Gvs8IIvjvwzQBVlUC2KprcEhushRw_7iRBA?e=MP4aFY",
+            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/IgDYWhkekiPkSJsIVIOKczGeAbl33JHZ92bl78PAjli8iFY?e=x5gCDQ",
             file: "",
-            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EroVv-bA5ElAg519jeXCId0B3WygFz_A9bxVQcf6hcOzmg?e=f1zJQL"
+            slides: "https://mikroskilacid-my.sharepoint.com/:b:/g/personal/fandi_simamora_mikroskil_ac_id/IQAvAyfxs9IGQrJCfPXCW8aFATNKkjn0igHND25kL2Nn9vg?e=Fr7hb2"
         }
     },
     {
@@ -33,9 +33,9 @@ const communityService = [
         role: { id: "Anggota Pengabdian", en: "Team Member" },
         description: { id: "", en: "" },
         assets: {
-            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/Eni0jfKAHNNFgsm9GtXcaOwBJQrhrHVlNEsWaPtH2sFjGw?e=ynFTmA",
+            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/IgCAsX8H35jnTZt73oZLnhkjAaaKpANMfdPN7A9bI4OsW_U?e=Ucjcna",
             file: "",
-            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/El09Gt7n9mhGhhZwFgHE2gEBPcM3p7apFBnUa_FmPPLcEw?e=PjJMdx"
+            slides: "https://mikroskilacid-my.sharepoint.com/:p:/g/personal/fandi_simamora_mikroskil_ac_id/IQBHS--I_FBAQJIl4g85fJQFATQr8-O-DSYSL9W0f5-udXc?e=4veGwv"
         }
     },
     {
@@ -46,9 +46,9 @@ const communityService = [
         role: { id: "Anggota Pengabdian", en: "Team Member" },
         description: { id: "", en: "" },
         assets: {
-            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/EuK7MwB8rthFozdvzsErlSgB6HgE5Ykl62soWWj9f3Lp6A",
+            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/IgBaTrcywIBTTZFR3ZCz1Dn_AZpIx6U_RQ_3ccO-FjNxet4?e=VKvLaz",
             file: "",
-            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/Em1jS-SkN5xAgQ0XS6CDBPsBQFHgLBhMzQKw8FKdrNfmwg?e=7LZklA"
+            slides: "https://mikroskilacid-my.sharepoint.com/:p:/g/personal/fandi_simamora_mikroskil_ac_id/IQAqIGZQBhd1SKRWO3UsG-e4AZbZsCyTIOCNcBJPpVjE3yI?e=AZoGRK"
         }
     }
 ];
