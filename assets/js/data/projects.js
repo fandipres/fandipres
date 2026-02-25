@@ -45,6 +45,12 @@ const projects = [
         tags: ["Web"]
     },
     {
+        title: { id: "Special Day", en: "" },
+        description: { id: "Aplikasi hitung mundur berbasis web yang modern, elegan, dan sangat interaktif, dirancang untuk membantu Anda menantikan momen-momen spesial. Dilengkapi dengan animasi flip card 3D, sistem pesan personal yang dapat dibagikan, dan mode layar penuh yang memukau.", en: "A modern, elegant, and highly interactive web-based countdown timer designed to help you anticipate your special moments. Featuring 3D flip card animations, a shareable custom message system, and a stunning fullscreen mode." },
+        links: [{ url: "https://fandipres.github.io/special-day", label: "Demo" }, { url: "https://github.com/fandipres/special-day", label: "GitHub" }],
+        tags: ["Web"]
+    },
+    {
         title: { id: "To-Do List", en: "" },
         description: { id: "Aplikasi web sederhana untuk mengelola daftar tugas personal. Dilengkapi otentikasi pengguna yang menjaga setiap daftar tugas tetap pribadi dan aman.", en: "A simple web app for managing personal tasks. Features user authentication to keep every task list private and secure." },
         links: [{ url: "https://github.com/fandipres/to-do-list", label: "GitHub" }],
