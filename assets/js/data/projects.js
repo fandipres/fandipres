@@ -1,7 +1,7 @@
 const projects = [
     {
         title: { id: "Fandi's Blog", en: "" },
-        description: { id: "Tempatku berbagi cerita. Fokus utama pada kehidupan kampus, riset, dan pengabdian. Ditambah obrolan santai seputar finansial, travelling, dan pengembangan diri.", en: "My storytelling space. Focusing on campus life, research, and service, mixed with casual chats on finance, travel, and self-development." },
+        description: { id: "Tulisan pribadi tentang dunia kampus, riset, obrolan santai, jalan-jalan, sampai tips upgrade diri.", en: "Personal writings on campus life, research, casual chats, travels, and self-improvement tips." },
         links: [{ url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://blog.fandipres.my.id", label: "Website" }],
         tags: ["Blog"]
     },
@@ -23,8 +23,8 @@ const projects = [
         id: 2,
         title: { id: "Jurnalpedia", en: "" },
         description: { id: "Pusat referensi jurnal ilmiah terakreditasi SINTA dan Scopus. Hub utama bagi mahasiswa, dosen, dan peneliti untuk publikasi ilmiah terpercaya.", en: "Reference center for SINTA and Scopus accredited journals. The main hub for students, lecturers, and researchers for trusted scientific publishing." },
-        links: [{ url: "https://www.facebook.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://jurnal.fandipres.my.id", label: "Website" }, { url: "https://www.youtube.com/@jurnalpediaofc", label: "YouTube" }],
-        tags: ["Blog", "Video"]
+        links: [{ url: "https://play.google.com/store/apps/details?id=com.jurnalpedia.app", label: "Android" }, { url: "https://www.facebook.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://jurnal.fandipres.my.id", label: "Website" }, { url: "https://www.youtube.com/@jurnalpediaofc", label: "YouTube" }],
+        tags: ["Android", "Blog", "Video"]
     },
     {
         title: { id: "Kapitalin", en: "" },
@@ -46,7 +46,7 @@ const projects = [
     },
     {
         title: { id: "Special Day", en: "" },
-        description: { id: "Aplikasi hitung mundur berbasis web yang modern, elegan, dan sangat interaktif, dirancang untuk membantu Anda menantikan momen-momen spesial. Dilengkapi dengan animasi flip card 3D, sistem pesan personal yang dapat dibagikan, dan mode layar penuh yang memukau.", en: "A modern, elegant, and highly interactive web-based countdown timer designed to help you anticipate your special moments. Featuring 3D flip card animations, a shareable custom message system, and a stunning fullscreen mode." },
+        description: { id: "Aplikasi hitung mundur berbasis web yang modern, elegan, dan sangat interaktif, dirancang untuk membantu Anda menantikan momen-momen spesial.", en: "A modern, elegant, and highly interactive web-based countdown timer designed to help you anticipate your special moments." },
         links: [{ url: "https://fandipres.github.io/special-day", label: "Demo" }, { url: "https://github.com/fandipres/special-day", label: "GitHub" }],
         tags: ["Web"]
     },
