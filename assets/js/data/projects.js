@@ -46,7 +46,7 @@ const projects = [
     },
     {
         title: { id: "Special Day", en: "" },
-        description: { id: "Aplikasi hitung mundur untuk momen spesialmu.", en: "Countdown app for your special moments." },
+        description: { id: "Aplikasi hitung mundur untuk momen-momen spesialmu.", en: "A countdown app for your special moments." },
         links: [{ url: "https://fandipres.github.io/special-day", label: "Demo" }, { url: "https://github.com/fandipres/special-day", label: "GitHub" }],
         tags: ["Web"]
     },
