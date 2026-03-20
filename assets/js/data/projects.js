@@ -23,7 +23,7 @@ const projects = [
         id: 2,
         title: { id: "Jurnalpedia", en: "" },
         description: { id: "Pusat referensi jurnal ilmiah terakreditasi SINTA dan Scopus. Hub utama bagi mahasiswa, dosen, dan peneliti untuk publikasi ilmiah terpercaya.", en: "Reference center for SINTA and Scopus accredited journals. The main hub for students, lecturers, and researchers for trusted scientific publishing." },
-        links: [{ url: "https://play.google.com/store/apps/details?id=com.jurnalpedia.app", label: "Android" }, { url: "https://www.facebook.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://jurnal.fandipres.my.id", label: "Website" }, { url: "https://www.youtube.com/@jurnalpediaofc", label: "YouTube" }],
+        links: [{ url: "https://play.google.com/store/apps/details?id=com.jurnalpedia.app", label: "Android" }, { url: "https://www.facebook.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://www.jurnalpedia.my.id", label: "Website" }, { url: "https://www.youtube.com/@jurnalpediaofc", label: "YouTube" }],
         tags: ["Android", "Blog", "Video"]
     },
     {
