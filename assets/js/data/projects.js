@@ -1,28 +1,28 @@
 const projects = [
     {
         title: { id: "Fandi's Blog", en: "" },
-        description: { id: "Tulisan pribadi tentang dunia kampus, riset, obrolan santai, jalan-jalan, sampai tips upgrade diri.", en: "Personal writings on campus life, research, casual chats, travels, and self-improvement tips." },
+        description: { id: "Tulisan pribadi, review, dan info random lainnya dariku untuk kalian para pembaca.", en: "Personal thoughts, reviews, and other random tidbits from me to you." },
         links: [{ url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://blog.fandipres.my.id", label: "Website" }],
         tags: ["Blog"]
     },
     {
         id: 3,
         title: { id: "Gudank Review", en: "" },
-        description: { id: "Kanal visual untuk mengekspresikan kecintaan saya pada dunia teknologi.", en: "A visual outlet to express my passion for the tech world." },
+        description: { id: "Tukang review barang-barang di gudank.", en: "Reviewing stuff from the warehouse." },
         links: [{ url: "https://www.facebook.com/gudankreview", label: "Facebook" }, { url: "https://www.instagram.com/gudankreview", label: "Instagram" }, { url: "https://www.tiktok.com/@gudankreview", label: "Tiktok" }, { url: "https://www.youtube.com/@gudankreviewin", label: "YouTube" }],
         tags: ["Video"]
     },
     {
         id: 1,
         title: { id: "Hobi Ngoding", en: "" },
-        description: { id: "Catatan hobi ngoding dari nol, oprek Unity dan Blogger. Berbagi trik jitu Adsense, tips Office, dan info tekno terbaru.", en: "Coding notes from scratch, tinkering with Unity and Blogger. Sharing AdSense tricks, Office tips, and the latest tech info." },
+        description: { id: "Halo coders. Si paling bisa segalanya.", en: "Hello coders. The ultimate jack-of-all-trades." },
         links: [{ url: "https://www.facebook.com/hobingodingcom", label: "Facebook" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }, { url: "https://www.hobingoding.com", label: "Website" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }],
         tags: ["Blog", "Video"]
     },
     {
         id: 2,
         title: { id: "Jurnalpedia", en: "" },
-        description: { id: "Pusat referensi jurnal ilmiah terakreditasi SINTA dan Scopus. Hub utama bagi mahasiswa, dosen, dan peneliti untuk publikasi ilmiah terpercaya.", en: "Reference center for SINTA and Scopus accredited journals. The main hub for students, lecturers, and researchers for trusted scientific publishing." },
+        description: { id: "Semua yang perlu kamu tahu tentang dunia perjurnalan. Salam #PejuangJurnal.", en: "Everything you need to know about academic publishing. Cheers to all #ResearchWarriors." },
         links: [{ url: "https://play.google.com/store/apps/details?id=com.jurnalpedia.app", label: "Android" }, { url: "https://www.facebook.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://www.jurnalpedia.my.id", label: "Website" }, { url: "https://www.youtube.com/@jurnalpediaofc", label: "YouTube" }],
         tags: ["Android", "Blog", "Video"]
     },
@@ -34,7 +34,7 @@ const projects = [
     },
     {
         title: { id: "Lyricspedia", en: "" },
-        description: { id: "Jelajahi ribuan lirik lagu, mulai dari hits Indonesia dan Barat, hingga alunan merdu lagu-lagu daerah.", en: "Explore thousands of song lyrics, from Indonesian and Western hits to traditional local songs." },
+        description: { id: "Jelajahi ribuan lirik lagu, mulai dari hits Indonesia dan Barat, hingga lirik lagu lokal daerahmu.", en: "Explore thousands of lyrics, from Indonesian and Western hits to your favorite local tracks." },
         links: [{ url: "https://www.lyricspedia.my.id", label: "Website" }],
         tags: ["Blog"]
     },
@@ -58,7 +58,7 @@ const projects = [
     },
     {
         title: { id: "Worshipedia", en: "" },
-        description: { id: "Semua lirik pujian dan penyembahan Kristen ada di sini. Dari lagu sekolah minggu hingga hits terbaru, untuk mendukung ibadah dan imanmu.", en: "A collection of Christian praise and worship lyrics. From Sunday school songs to the latest hits, supporting your worship and faith." },
+        description: { id: "Kumpulan lirik lagu rohani dan pujian Kristen untuk mengiringi ibadahmu.", en: "A collection of Christian praise and worship lyrics to accompany your daily devotion." },
         links: [{ url: "https://www.worshipedia.my.id", label: "Website" }],
         tags: ["Blog"]
     },
