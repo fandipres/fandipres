@@ -1,5 +1,11 @@
 const projects = [
     {
+        title: { id: "Extra", en: "" },
+        description: { id: "Extra: Expense Tracker. Pencatatan Keuangan, Tanpa Kerumitan.", en: "Extra: Expense Tracker. Financial Tracking, Without the Hassle." },
+        links: [{ url: "", label: "Android" }, { url: "https://extra.fandipres.my.id", label: "Website" }, ],
+        tags: ["Android"]
+    },
+    {
         title: { id: "Fandi's Blog", en: "" },
         description: { id: "Tulisan pribadi, review, dan info random lainnya dariku untuk kalian para pembaca.", en: "Personal thoughts, reviews, and other random tidbits from me to you." },
         links: [{ url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://blog.fandipres.my.id", label: "Website" }],
