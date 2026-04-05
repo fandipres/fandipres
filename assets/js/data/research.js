@@ -1,5 +1,18 @@
 const research = [
     {
+        year: "2026",
+        title: { id: "Pendekatan Hibrida Topic Modeling dan IndoBERT untuk Klasifikasi Emosi Publik pada Isu Keterlibatan Indonesia di Board of Peace", en: "Hybrid Approach of Topic Modeling and IndoBERT for Public Emotion Classification on Indonesia's Involvement Issue in the Board of Peace" },
+        subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
+        category: { id: "Penelitian Mandiri", en: "Independent Research" },
+        role: { id: "Ketua Peneliti", en: "Lead Researcher" },
+        description: { id: "", en: "" },
+        assets: {
+            dataset: "",
+            documentation: "",
+            file: "",
+        }
+    },
+    {
         year: "2025",
         title: { id: "Analisis Sentimen Terhadap Respons Publik Selama Demonstrasi Dewan Perwakilan Rakyat Republik Indonesia Menggunakan Metode Topic Modeling dan Aspect-Based Sentiment Analysis", en: "Sentiment Analysis of Public Response During the Indonesian House of Representatives (DPR RI) Demonstrations Using Topic Modeling and Aspect-Based Sentiment Analysis" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
