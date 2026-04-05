@@ -1,5 +1,18 @@
 const communityService = [
     {
+        year: "2026",
+        title: { id: "Penguatan Personal Branding Digital Siswa SMK Melalui Pelatihan Pembuatan Website Portfolio Pribadi Menggunakan GitHub Pages", en: "Strengthening Digital Personal Branding of SMK Students Through Training on Creating Personal Portfolio Websites Using GitHub Pages" },
+        subtitle: { id: "SMK Multi Karya", en: "SMK Multi Karya" },
+        category: { id: "Pengabdian Internal", en: "Internal Community Service" },
+        role: { id: "Anggota Pengabdian", en: "Team Member" },
+        description: { id: "", en: "" },
+        assets: {
+            documentation: "",
+            file: "",
+            slides: ""
+        }
+    },
+    {
         year: "2025",
         title: { id: "Pembekalan Guru SMK dalam Menghadapi Tantangan Industri Masa Depan Melalui Pelatihan Berpikir Komputasional, Analisis Data, dan Literasi Kecerdasan Artifisial", en: "Empowering Vocational Teachers for Future Industrial Challenges through Computational Thinking, Data Analysis, and AI Literacy Training" },
         subtitle: { id: "SMK 6 Medan dan SMK 13 Medan", en: "SMK 6 Medan and SMK 13 Medan" },
