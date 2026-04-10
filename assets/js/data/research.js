@@ -8,8 +8,6 @@ const research = [
         description: { id: "", en: "" },
         assets: {
             dataset: "",
-            documentation: "",
-            file: "",
         }
     },
     {
@@ -21,8 +19,6 @@ const research = [
         description: { id: "", en: "" },
         assets: {
             dataset: "https://www.kaggle.com/datasets/fandipres/dpr-demonstration-sentiment-dataset-august-2025",
-            documentation: "",
-            file: "",
         }
     },
     {
@@ -34,8 +30,6 @@ const research = [
         description: { id: "", en: "" },
         assets: {
             dataset: "",
-            documentation: "",
-            file: "",
         }
     },
     {
@@ -47,8 +41,6 @@ const research = [
         description: { id: "", en: "" },
         assets: {
             dataset: "",
-            documentation: "",
-            file: "",
         }
     },
     {
@@ -60,8 +52,6 @@ const research = [
         description: { id: "", en: "" },
         assets: {
             dataset: "",
-            documentation: "",
-            file: "",
         }
     },
     {
@@ -73,8 +63,6 @@ const research = [
         description: { id: "", en: "" },
         assets: {
             dataset: "",
-            documentation: "",
-            file: "",
         }
     }
 ];
