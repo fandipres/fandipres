@@ -8,7 +8,6 @@ const communityService = [
         description: { id: "", en: "" },
         assets: {
             documentation: "",
-            file: "",
             slides: ""
         }
     },
@@ -21,7 +20,6 @@ const communityService = [
         description: { id: "", en: "" },
         assets: {
             documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/IgD9em5ye86PRK7pMLqGBznCAQhT7bmKsGci1bQcTu1Jgn4?e=5fuyGd",
-            file: "",
             slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/IgAiMhpv-RX_SbWfEmzXDrM2AS6V_QTP7MgR5kqMAdXDxpU?e=ggUfVp"
         }
     },
@@ -34,7 +32,6 @@ const communityService = [
         description: { id: "", en: "" },
         assets: {
             documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/IgDYWhkekiPkSJsIVIOKczGeAbl33JHZ92bl78PAjli8iFY?e=x5gCDQ",
-            file: "",
             slides: "https://mikroskilacid-my.sharepoint.com/:b:/g/personal/fandi_simamora_mikroskil_ac_id/IQAvAyfxs9IGQrJCfPXCW8aFATNKkjn0igHND25kL2Nn9vg?e=Fr7hb2"
         }
     },
@@ -47,7 +44,6 @@ const communityService = [
         description: { id: "", en: "" },
         assets: {
             documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/IgCAsX8H35jnTZt73oZLnhkjAaaKpANMfdPN7A9bI4OsW_U?e=Ucjcna",
-            file: "",
             slides: "https://mikroskilacid-my.sharepoint.com/:p:/g/personal/fandi_simamora_mikroskil_ac_id/IQBHS--I_FBAQJIl4g85fJQFATQr8-O-DSYSL9W0f5-udXc?e=4veGwv"
         }
     },
@@ -60,7 +56,6 @@ const communityService = [
         description: { id: "", en: "" },
         assets: {
             documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/IgBaTrcywIBTTZFR3ZCz1Dn_AZpIx6U_RQ_3ccO-FjNxet4?e=VKvLaz",
-            file: "",
             slides: "https://mikroskilacid-my.sharepoint.com/:p:/g/personal/fandi_simamora_mikroskil_ac_id/IQAqIGZQBhd1SKRWO3UsG-e4AZbZsCyTIOCNcBJPpVjE3yI?e=AZoGRK"
         }
     }
