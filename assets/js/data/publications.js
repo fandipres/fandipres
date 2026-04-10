@@ -20,7 +20,7 @@ const publications = [
         role: { id: "Penulis Pertama", en: "First Author" },
         description: { id: `Luaran dari Pengabdian kepada Masyarakat "Pembekalan Guru SMK dalam Menghadapi Tantangan Industri Masa Depan Melalui Pelatihan Berpikir Komputasional, Analisis Data, dan Literasi Kecerdasan Artifisial".`, en: `Community Service Output "Empowering Vocational Teachers for Future Industrial Challenges through Computational Thinking, Data Analysis, and AI Literacy Training".` },
         assets: {
-            article: ""
+            article: "https://ejournal.unma.ac.id/index.php/bernas/article/view/17373"
         }
     },
     {
@@ -32,7 +32,7 @@ const publications = [
         role: { id: "Penulis Ketiga", en: "Third Author" },
         description: { id: `Luaran dari Pengabdian kepada Masyarakat "Transformasi Peran Guru dalam Mendorong Partisipasi Siswa melalui Integrasi Mentimeter untuk Mendukung Active Learning".`, en: `Community Service Output "Transforming Teacher Roles to Boost Student Participation via Mentimeter Integration for Supporting Active Learning".` },
         assets: {
-            article: ""
+            article: "https://ejournal.unma.ac.id/index.php/bernas/article/view/17324"
         }
     },
     {
