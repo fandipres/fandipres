@@ -16,7 +16,7 @@ const publications = [
         title: { id: "Peningkatan Kompetensi Digital Guru SMK dalam Menghadapi Tantangan Industri Masa Depan di Kota Medan", en: "" },
         subtitle: { id: "BERNAS: Jurnal Pengabdian Kepada Masyarakat", en: "" },
         rank: { id: "Sinta 4", en: "" },
-        category: { id: "Pengabdian Internal", en: "Internal Community Service" },
+        category: { id: "Pengabdian Penugasan", en: "Assigned Community Service" },
         role: { id: "Penulis Pertama", en: "First Author" },
         description: { id: `Luaran dari Pengabdian kepada Masyarakat "Pembekalan Guru SMK dalam Menghadapi Tantangan Industri Masa Depan Melalui Pelatihan Berpikir Komputasional, Analisis Data, dan Literasi Kecerdasan Artifisial".`, en: `Community Service Output "Empowering Vocational Teachers for Future Industrial Challenges through Computational Thinking, Data Analysis, and AI Literacy Training".` },
         assets: {
@@ -28,7 +28,7 @@ const publications = [
         title: { id: "Pelatihan Pemanfaatan Mentimeter untuk Mendukung Pembelajaran Aktif pada Guru SMK Methodist Tanjung Morawa", en: "" },
         subtitle: { id: "BERNAS: Jurnal Pengabdian Kepada Masyarakat", en: "" },
         rank: { id: "Sinta 4", en: "" },
-        category: { id: "Pengabdian Internal", en: "Internal Community Service" },
+        category: { id: "Pengabdian Berbasis Kemitraan", en: "Partnership-based Community Service" },
         role: { id: "Penulis Ketiga", en: "Third Author" },
         description: { id: `Luaran dari Pengabdian kepada Masyarakat "Transformasi Peran Guru dalam Mendorong Partisipasi Siswa melalui Integrasi Mentimeter untuk Mendukung Active Learning".`, en: `Community Service Output "Transforming Teacher Roles to Boost Student Participation via Mentimeter Integration for Supporting Active Learning".` },
         assets: {
@@ -56,7 +56,7 @@ const publications = [
         role: { id: "Penulis Ketiga", en: "Third Author" },
         description: { id: `Luaran dari Penelitian "Harga Beras di Era Big Data: Prediksi Berbasis Bi-LSTM dan Analisis SHAP untuk Stabilitas Harga Pangan Nasional".`, en: `Research Output "Rice Prices in the Big Data Era: Bi-LSTM-Based Prediction and SHAP Analysis for National Food Price Stability".` },
         assets: {
-            article: ""
+            article: "https://journal.iistr.org/index.php/ESL/article/view/1360"
         }
     },
     {

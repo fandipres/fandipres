@@ -1,21 +1,21 @@
 const communityService = [
     {
         year: "2026",
-        title: { id: "Penguatan Personal Branding Digital Siswa SMK Melalui Pelatihan Pembuatan Website Portfolio Pribadi Menggunakan GitHub Pages", en: "Strengthening Digital Personal Branding of SMK Students Through Training on Creating Personal Portfolio Websites Using GitHub Pages" },
+        title: { id: "Akselerasi Daya Saing Lulusan SMK melalui Digital Portfolio dan Personal Branding Berbasis GitHub", en: "Accelerating the Competitiveness of Vocational High School Graduates through Digital Portfolios and GitHub-Based Personal Branding" },
         subtitle: { id: "SMK Multi Karya", en: "SMK Multi Karya" },
-        category: { id: "Pengabdian Internal", en: "Internal Community Service" },
+        category: { id: "Pengabdian Berbasis Kemitraan", en: "Partnership-based Community Service" },
         role: { id: "Anggota Pengabdian", en: "Team Member" },
         description: { id: "", en: "" },
         assets: {
-            documentation: "",
-            slides: ""
+            documentation: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/IgCoZfgljCLISIdeSnqk3fajAbFHPS3KTPCFZKNOGXKGAH4?e=hItXDd",
+            slides: "https://mikroskilacid-my.sharepoint.com/:f:/g/personal/fandi_simamora_mikroskil_ac_id/IgB7KC_95uP0Q433nUbA7yJSAcYCkOqDqI6Q5e-1tXbJqMM?e=Jjd4OG"
         }
     },
     {
         year: "2025",
         title: { id: "Pembekalan Guru SMK dalam Menghadapi Tantangan Industri Masa Depan Melalui Pelatihan Berpikir Komputasional, Analisis Data, dan Literasi Kecerdasan Artifisial", en: "Empowering Vocational Teachers for Future Industrial Challenges through Computational Thinking, Data Analysis, and AI Literacy Training" },
         subtitle: { id: "SMK 6 Medan dan SMK 13 Medan", en: "SMK 6 Medan and SMK 13 Medan" },
-        category: { id: "Pengabdian Internal", en: "Internal Community Service" },
+        category: { id: "Pengabdian Penugasan", en: "Assigned Community Service" },
         role: { id: "Ketua Pengabdian", en: "Project Leader" },
         description: { id: "", en: "" },
         assets: {
@@ -27,7 +27,7 @@ const communityService = [
         year: "2025",
         title: { id: "Transformasi Peran Guru dalam Mendorong Partisipasi Siswa melalui Integrasi Mentimeter untuk Mendukung Active Learning", en: "Transforming Teacher Roles to Boost Student Participation via Mentimeter Integration for Supporting Active Learning" },
         subtitle: { id: "SMK Methodist Tanjung Morawa", en: "SMK Methodist Tanjung Morawa" },
-        category: { id: "Pengabdian Internal", en: "Internal Community Service" },
+        category: { id: "Pengabdian Berbasis Kemitraan", en: "Partnership-based Community Service" },
         role: { id: "Anggota Pengabdian", en: "Team Member" },
         description: { id: "", en: "" },
         assets: {
@@ -39,7 +39,7 @@ const communityService = [
         year: "2025",
         title: { id: "Pengenalan Kecerdasan Artifisial pada Guru SMA Tri Ratna Sibolga Sebagai Bekal Generasi Emas 2045", en: "Introduction to AI for Teachers at SMA Tri Ratna Sibolga: Preparing for the Golden Generation 2045" },
         subtitle: { id: "SMA Tri Ratna Sibolga", en: "SMA Tri Ratna Sibolga" },
-        category: { id: "Pengabdian Internal", en: "Internal Community Service" },
+        category: { id: "Pengabdian Penugasan", en: "Assigned Community Service" },
         role: { id: "Anggota Pengabdian", en: "Team Member" },
         description: { id: "", en: "" },
         assets: {
@@ -51,7 +51,7 @@ const communityService = [
         year: "2025",
         title: { id: "Pembekalan Guru SMA Panglima Polem Rantauprapat dengan Teknologi Masa Depan: Kecerdasan Artifisial", en: "Equipping Teachers at SMA Panglima Polem Rantauprapat with Future Technologies: Artificial Intelligence" },
         subtitle: { id: "SMA Panglima Polem Rantauprapat", en: "SMA Panglima Polem Rantauprapat" },
-        category: { id: "Pengabdian Internal", en: "Internal Community Service" },
+        category: { id: "Pengabdian Penugasan", en: "Assigned Community Service" },
         role: { id: "Anggota Pengabdian", en: "Team Member" },
         description: { id: "", en: "" },
         assets: {
