@@ -44,7 +44,7 @@ const publications = [
         role: { id: "Penulis Pertama", en: "First Author" },
         description: { id: `Luaran dari Penelitian "Transformasi Digital Pertanian dengan Model Prediksi Cuaca Berbasis BiLSTM untuk Optimalisasi Masa Tanam Padi di Era Industri 4.0".`, en: `Research Output "Agricultural Digital Transformation via BiLSTM-Based Weather Prediction Models for Optimizing Rice Planting Seasons in the Industry 4.0 Era".` },
         assets: {
-            article: ""
+            article: "https://journal.iistr.org/index.php/JNEST/article/view/1340"
         }
     },
     {
