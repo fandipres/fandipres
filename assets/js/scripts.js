@@ -331,8 +331,20 @@ function setupMobileMenu() {
     }
 }
 
+function setActiveNavLink() {
+    const path = window.location.pathname;
+    document.querySelectorAll('nav a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href.length > 1 && href.startsWith('/') && !href.startsWith('/#') && path.startsWith(href)) {
+            link.classList.remove('text-gray-300');
+            link.classList.add('text-white', 'font-semibold');
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     setupMobileMenu();
+    setActiveNavLink();
     setLanguage(currentLang);
 
     const langBtn = document.getElementById('lang-toggle');

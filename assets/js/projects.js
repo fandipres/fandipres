@@ -60,7 +60,7 @@ function renderProjects(containerId, data, limit) {
 
         html += `
         <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
-            
+
             <div>
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     ${getVal(item.title)}
