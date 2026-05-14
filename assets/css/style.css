@@ -9,3 +9,10 @@ h4,
 .font-heading {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+
