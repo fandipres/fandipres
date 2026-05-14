@@ -60,7 +60,8 @@ function renderItems(containerId, data, limit) {
             ? `<p class="mt-1 text-base text-blue-300 font-medium tracking-wide">${subtitle}</p>`
             : '';
 
-        const isEducation = containerId.includes('education') || containerId.includes('pendidikan');
+        const educationContainers = new Set(['education-list', 'pendidikan-terbaru']);
+        const isEducation = educationContainers.has(containerId);
         const descClass = isEducation ? "text-gray-400 italic" : "text-gray-400";
 
         html += `
@@ -239,7 +240,7 @@ function renderAcademic(containerId, activities) {
                     ${icon}
                 </div>
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
-                    ${titleText}  </h3>
+                    ${titleText}</h3>
             </div>
             
             <p class="text-gray-400 text-sm leading-relaxed">${getVal(activity.description)}</p>
@@ -322,6 +323,11 @@ function setupMobileMenu() {
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
     }
 }
 
@@ -372,10 +378,12 @@ function copyNidn(btn, text) {
 }
 
 const backToTopBtn = document.getElementById('back-to-top');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTopBtn.classList.remove('translate-y-20', 'opacity-0');
-    } else {
-        backToTopBtn.classList.add('translate-y-20', 'opacity-0');
-    }
-});
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.remove('translate-y-20', 'opacity-0');
+        } else {
+            backToTopBtn.classList.add('translate-y-20', 'opacity-0');
+        }
+    });
+}
