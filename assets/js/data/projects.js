@@ -1,7 +1,7 @@
 const projects = [
     {
         title: { id: "Extra", en: "" },
-        description: { id: "Extra: Expense Tracker. Pencatatan Keuangan, Tanpa Kerumitan.", en: "Extra: Expense Tracker. Financial Tracking, Without the Hassle." },
+        description: { id: "Extra: Expense Tracker. Pencatatan keuangan, tanpa kerumitan.", en: "Extra: Expense Tracker. Financial Tracking, Without the Hassle." },
         links: [{ url: "", label: "Android" }, { url: "https://extra.fandipres.my.id", label: "Website" }, ],
         tags: ["Android"]
     },
