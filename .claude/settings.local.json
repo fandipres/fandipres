@@ -1,7 +1,36 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(New-Item -ItemType Directory -Force -Path \"d:\\\\Project Personal\\\\fandipres\\\\assets\\\\img\" | Out-Null; Invoke-WebRequest -Uri \"https://yt3.googleusercontent.com/ytc/AIdro_nwK6LasXc5CwFsGfd1sKR8m9H6ibAoykjqg5gu2Q=s176-c-k-c0x00ffffff-no-rj\" -OutFile \"d:\\\\Project Personal\\\\fandipres\\\\assets\\\\img\\\\profile.jpg\"; Write-Output \"Downloaded: $\\(\\(Get-Item 'd:\\\\Project Personal\\\\fandipres\\\\assets\\\\img\\\\profile.jpg'\\).Length\\) bytes\")"
+      "PowerShell(New-Item -ItemType Directory -Force -Path \"d:\\\\Project Personal\\\\fandipres\\\\assets\\\\img\" | Out-Null; Invoke-WebRequest -Uri \"https://yt3.googleusercontent.com/ytc/AIdro_nwK6LasXc5CwFsGfd1sKR8m9H6ibAoykjqg5gu2Q=s176-c-k-c0x00ffffff-no-rj\" -OutFile \"d:\\\\Project Personal\\\\fandipres\\\\assets\\\\img\\\\profile.jpg\"; Write-Output \"Downloaded: $\\(\\(Get-Item 'd:\\\\Project Personal\\\\fandipres\\\\assets\\\\img\\\\profile.jpg'\\).Length\\) bytes\")",
+      "Bash(ls \"C:\\\\Users\\\\Fandi Presley S\\\\.claude\\\\projects\\\\d--Project-Personal-fandipres\\\\memory\\\\\" 2>/dev/null)",
+      "Read(//c/Users/Fandi Presley S/.claude/projects/d--Project-Personal-fandipres/memory\" 2>/dev/**)",
+      "Bash(ls -la 'C:\\\\Users\\\\Fandi Presley S\\\\.claude\\\\projects\\\\d--Project-Personal-fandipres\\\\memory\\\\' 2>&1)",
+      "Read(//c/Users/Fandi Presley S/.claude/projects/d--Project-Personal-fandipres/memory/**)",
+      "Bash(gh repo *)",
+      "Bash(curl -s https://api.github.com/repos/fandipres/fandipres)",
+      "Bash(npm -v)",
+      "Bash(gh --version)",
+      "Bash(gh api *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash('#proyek-terbaru')",
+      "Bash(node -e ' *)",
+      "Bash(node \"C:\\\\Users\\\\FANDIP~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Project-Personal-fandipres\\\\25380673-3b97-48c3-9a81-ca3ab2b919c9\\\\scratchpad\\\\check.js\")",
+      "Bash(node \"C:/Users/FANDIP~1/AppData/Local/Temp/claude/d--Project-Personal-fandipres/25380673-3b97-48c3-9a81-ca3ab2b919c9/scratchpad/check.js\")",
+      "Bash(NODE_PATH=\"d:/Project Personal/fandipres/node_modules\" node \"C:/Users/FANDIP~1/AppData/Local/Temp/claude/d--Project-Personal-fandipres/25380673-3b97-48c3-9a81-ca3ab2b919c9/scratchpad/check.js\")",
+      "Bash(git add *)",
+      "Bash(git checkout *)",
+      "Bash(npm ls *)",
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "Bash(node \"C:/Users/FANDIP~1/AppData/Local/Temp/claude/d--Project-Personal-fandipres/25380673-3b97-48c3-9a81-ca3ab2b919c9/scratchpad/browsercheck.js\")",
+      "Bash(NODE_PATH=\"d:/Project Personal/fandipres/node_modules\" node \"C:/Users/FANDIP~1/AppData/Local/Temp/claude/d--Project-Personal-fandipres/25380673-3b97-48c3-9a81-ca3ab2b919c9/scratchpad/browsercheck.js\")",
+      "Bash(npm uninstall *)",
+      "Bash(NODE_PATH='d:/Project Personal/fandipres/node_modules' node -e ' *)",
+      "Bash(python3 -c \"import yaml, sys; d=yaml.safe_load\\(open\\('.github/workflows/prerender.yml'\\)\\); print\\('YAML valid'\\); print\\(d\\)\")",
+      "Bash(\"/c/Users/Fandi Presley S/AppData/Local/Programs/Python/Python311/python\" -c \"import yaml\")",
+      "Bash(\"/c/Users/Fandi Presley S/AppData/Local/Programs/Python/Python311/python\" -m pip install --quiet pyyaml)",
+      "Bash('/c/Users/Fandi Presley S/AppData/Local/Programs/Python/Python311/python' -c ' *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://api.github.com/repos/fandipres/fandipres/branches/main/protection)"
     ]
   }
 }

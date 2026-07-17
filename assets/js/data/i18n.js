@@ -1,3 +1,5 @@
+let currentLang = (typeof localStorage !== 'undefined') ? (localStorage.getItem('site_lang') || 'id') : 'id';
+
 const siteTranslations = {
     pageTitles: {
         books: { id: "Penulisan - Fandi Presly Simamora", en: "Books - Fandi Presly Simamora" },
@@ -85,6 +87,14 @@ const siteTranslations = {
         filterAll: { id: "Semua", en: "All" },
         viewAll: { id: "Lihat Semua", en: "View All" }
     },
+    notFound: {
+        title: { id: "Halaman Tidak Ditemukan", en: "Page Not Found" },
+        description: {
+            id: "Halaman yang Anda cari mungkin sudah dipindahkan atau tidak pernah ada.",
+            en: "The page you are looking for may have been moved or never existed."
+        },
+        backHome: { id: "Kembali ke Beranda", en: "Back to Home" }
+    },
     ipr: {
         filters: {
             all: { id: "Semua", en: "All" },
@@ -107,4 +117,52 @@ const siteTranslations = {
             issuer: { id: "Penerbit", en: "Issuer" }
         }
     }
+}
+
+function getVal(data) {
+    if (!data) return "";
+    if (typeof data === 'string') return data;
+    const text = data[currentLang];
+    return (text && text.trim() !== "") ? text : data.id;
+}
+
+function t(keyPath) {
+    const keys = keyPath.split('.');
+    let obj = siteTranslations;
+    for (const k of keys) {
+        if (!obj) return "";
+        obj = obj[k];
+    }
+    return getVal(obj);
+}
+
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('site_lang', lang);
+    updateToggleButtons();
+    updateStaticPageElements();
+    initDynamicContent();
+
+    if (typeof window.updateIPRLanguage === 'function') {
+        window.updateIPRLanguage();
+    }
+}
+
+function updateToggleButtons() {
+    const textNext = currentLang === 'id' ? 'EN' : 'ID';
+    const btnText = document.getElementById('lang-text');
+    if (btnText) btnText.textContent = textNext;
+
+    const btnMobile = document.getElementById('lang-toggle-mobile');
+    if (btnMobile) {
+        btnMobile.textContent = currentLang === 'id' ? 'Switch to English' : 'Ganti ke Bahasa Indonesia';
+    }
+}
+
+function updateStaticPageElements() {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        el.textContent = t(key);
+    });
 }
