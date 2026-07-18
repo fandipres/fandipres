@@ -38,15 +38,27 @@ function buildDetailItemsHtml(containerId, data) {
         groupedMap.get(key).push(item);
     });
 
+    // Order "genap" (even semester) before "ganjil" (odd semester) within a
+    // group when items carry a `semester` field (teaching.js only). Stable
+    // sort keeps everyone else's original insertion order untouched.
+    const semesterOrder = { genap: 0, ganjil: 1 };
+    groupedMap.forEach(itemsInGroup => {
+        itemsInGroup.sort((a, b) => {
+            const orderA = a.semester ? (semesterOrder[a.semester] ?? 2) : 2;
+            const orderB = b.semester ? (semesterOrder[b.semester] ?? 2) : 2;
+            return orderA - orderB;
+        });
+    });
+
     let html = '';
 
     groupedMap.forEach((itemsInGroup, year) => {
         const itemsHtml = itemsInGroup.map(item => {
             const titleHtml = `<h3 class="text-xl font-semibold text-white">${getVal(item.title)}</h3>`;
 
-            const rankText = item.rank ? getVal(item.rank) : '';
-            const subtitleHtml = rankText
-                ? `<p class="mt-1 text-base text-blue-300 font-medium tracking-wide">${getVal(item.subtitle) || ''} • <span class="text-green-400">${rankText}</span></p>`
+            const badgeText = item.rank ? getVal(item.rank) : (item.achievement ? getVal(item.achievement) : '');
+            const subtitleHtml = badgeText
+                ? `<p class="mt-1 text-base text-blue-300 font-medium tracking-wide">${getVal(item.subtitle) || ''} • <span class="text-green-400">${badgeText}</span></p>`
                 : `<p class="mt-1 text-base text-blue-300 font-medium tracking-wide">${getVal(item.subtitle) || ''}</p>`;
 
             const tags = [];
@@ -160,6 +172,7 @@ function buildAcademicHtml(activities) {
         books: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>`,
         talks: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>`,
         thesis: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>`,
+        competition: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a5 5 0 006 0m-9-4H4a2 2 0 01-2-2V8a2 2 0 012-2h2m12 7h2a2 2 0 002-2V8a2 2 0 00-2-2h-2m-10 0V4a1 1 0 011-1h6a1 1 0 011 1v2m-8 0h8m-8 0v5a4 4 0 004 4 4 4 0 004-4V5"></path></svg>`,
         tutoring: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>`,
         ipr: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>`,
     };
@@ -192,6 +205,49 @@ function buildAcademicHtml(activities) {
     return html;
 }
 
+function buildTutoringHtml(data) {
+    const groupedMap = new Map();
+    data.forEach(item => {
+        const key = item.year;
+        if (!groupedMap.has(key)) {
+            groupedMap.set(key, []);
+        }
+        groupedMap.get(key).push(item);
+    });
+
+    let html = '';
+
+    groupedMap.forEach((itemsInGroup, year) => {
+        const itemsHtml = itemsInGroup.map(item => {
+            let topicsHtml = '';
+            if (item.topics && Array.isArray(item.topics) && item.topics.length > 0) {
+                const rows = item.topics.map(topic => `
+                    <li class="flex items-start gap-2.5 py-1.5">
+                        <svg class="w-4 h-4 mt-0.5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span class="text-sm text-gray-300">${getVal(topic)}</span>
+                    </li>
+                `).join('');
+                topicsHtml = `
+                    <p class="mt-3 text-xs font-semibold uppercase tracking-wider text-gray-500">${t('tutoring.topicsLabel')}</p>
+                    <ul class="mt-1">${rows}</ul>`;
+            }
+
+            return `<div class="mb-10 last:mb-0"><h3 class="text-xl font-semibold text-white">${item.student}</h3>${topicsHtml}</div>`;
+        }).join('');
+
+        html += `
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 group">
+            <div class="flex-shrink-0 sm:w-48 text-gray-500 font-medium text-sm pt-1 sticky top-24 self-start uppercase tracking-wider">${year}</div>
+            <div class="border-l-4 border-gray-800 pl-4 sm:pl-8 flex-grow transition-colors duration-300 group-hover:border-gray-700">
+                ${itemsHtml}
+            </div>
+        </div>`;
+    });
+    return html;
+}
+
 function buildSocialLinksHtml(data) {
     let html = '';
     data.forEach(link => {
@@ -209,6 +265,68 @@ function buildProjectsHtml(data, limit) {
             : 'No projects found for this category.';
         return `<p class="col-span-full text-center text-gray-500 italic py-10">${emptyMsg}</p>`;
     }
+
+    const TYPE_META = {
+        web: {
+            badge: 'text-blue-400 bg-blue-500/10 border-blue-500/30',
+            grad: 'from-blue-950 to-black',
+            icon: `<svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="1.8"/><path stroke-width="1.6" d="M3 12h18M12 3c2.4 2.6 3.6 5.7 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.7-3.6-9s1.2-6.4 3.6-9z"/></svg>`,
+            thumb: `
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="46" y="34" width="228" height="132" rx="8" fill="#0b1b32" stroke="#2c4d80" stroke-width="1.5"/>
+                    <rect x="46" y="34" width="228" height="24" rx="8" fill="#12294a"/>
+                    <circle cx="60" cy="46" r="3" fill="#4f8dff" opacity="0.55"/>
+                    <circle cx="71" cy="46" r="3" fill="#4f8dff" opacity="0.4"/>
+                    <circle cx="82" cy="46" r="3" fill="#4f8dff" opacity="0.25"/>
+                    <rect x="62" y="76" width="140" height="10" rx="3" fill="#3b6cb8" opacity="0.75"/>
+                    <rect x="62" y="94" width="188" height="7" rx="3" fill="#1f3a63"/>
+                    <rect x="62" y="108" width="168" height="7" rx="3" fill="#1f3a63"/>
+                    <rect x="62" y="130" width="66" height="22" rx="6" fill="#4f8dff" opacity="0.85"/>
+                </svg>`
+        },
+        android: {
+            badge: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
+            grad: 'from-emerald-950 to-black',
+            icon: `<svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2" stroke-width="1.8"/><path stroke-width="1.6" stroke-linecap="round" d="M10 19h4"/></svg>`,
+            thumb: `
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="128" y="26" width="64" height="148" rx="12" fill="#0b2419" stroke="#2f8f63" stroke-width="1.5"/>
+                    <rect x="136" y="42" width="48" height="84" rx="4" fill="#123527"/>
+                    <circle cx="160" cy="138" r="7" fill="#2fbf85" opacity="0.55"/>
+                    <rect x="144" y="55" width="20" height="20" rx="5" fill="#2fbf85" opacity="0.8"/>
+                    <rect x="168" y="55" width="10" height="10" rx="3" fill="#2fbf85" opacity="0.4"/>
+                    <rect x="144" y="80" width="10" height="10" rx="3" fill="#2fbf85" opacity="0.4"/>
+                    <rect x="158" y="80" width="20" height="10" rx="3" fill="#2fbf85" opacity="0.55"/>
+                </svg>`
+        },
+        video: {
+            badge: 'text-rose-400 bg-rose-500/10 border-rose-500/30',
+            grad: 'from-rose-950 to-black',
+            icon: `<svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 7.4v9.2a.7.7 0 001.07.6l7.2-4.6a.7.7 0 000-1.2l-7.2-4.6A.7.7 0 009 7.4z"/></svg>`,
+            thumb: `
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="160" cy="100" r="36" fill="#ef5da8" opacity="0.12"/>
+                    <circle cx="160" cy="100" r="25" fill="#ef5da8" opacity="0.85"/>
+                    <path d="M152 87l22 13-22 13z" fill="#170a11"/>
+                    <rect x="40" y="168" width="28" height="4" rx="2" fill="#ef5da8" opacity="0.4"/>
+                    <rect x="74" y="168" width="48" height="4" rx="2" fill="#ef5da8" opacity="0.22"/>
+                </svg>`
+        },
+        blog: {
+            badge: 'text-amber-400 bg-amber-500/10 border-amber-500/30',
+            grad: 'from-amber-950 to-black',
+            icon: `<svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M5 3.5h10l4 4v13a.5.5 0 01-.5.5h-13a.5.5 0 01-.5-.5v-17z"/><path stroke-width="1.3" stroke-linecap="round" d="M8 10h8M8 14h8"/></svg>`,
+            thumb: `
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="94" y="32" width="132" height="136" rx="6" fill="#241a0a" stroke="#8a6224" stroke-width="1.5"/>
+                    <rect x="110" y="52" width="76" height="10" rx="3" fill="#e8a13d" opacity="0.8"/>
+                    <rect x="110" y="72" width="100" height="6" rx="2" fill="#8a6224"/>
+                    <rect x="110" y="86" width="100" height="6" rx="2" fill="#8a6224"/>
+                    <rect x="110" y="100" width="64" height="6" rx="2" fill="#8a6224"/>
+                    <rect x="110" y="124" width="30" height="18" rx="4" fill="#e8a13d" opacity="0.3"/>
+                </svg>`
+        }
+    };
 
     let html = '';
     itemsToRender.forEach(item => {
@@ -254,21 +372,40 @@ function buildProjectsHtml(data, limit) {
             </div>`;
         }
 
-        html += `
-        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+        const tags = Array.isArray(item.tags) ? item.tags : [];
+        const primaryKey = tags.length > 0 ? tags[0].toLowerCase() : '';
+        const primary = TYPE_META[primaryKey] ? primaryKey : null;
+        const secondaryTags = primary ? tags.slice(1) : [];
 
-            <div>
+        const thumbHtml = primary ? `
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${TYPE_META[primary].grad}">
+                ${TYPE_META[primary].thumb}
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border ${TYPE_META[primary].badge}">
+                    ${TYPE_META[primary].icon}${tags[0]}
+                </span>
+            </div>` : '';
+
+        const secondaryHtml = secondaryTags.length > 0
+            ? `<div class="flex flex-wrap gap-1.5 mt-2">${secondaryTags.map(t => `<span class="text-[9px] uppercase tracking-wide font-semibold text-gray-500 border border-gray-700 rounded px-1.5 py-0.5">${t}</span>`).join('')}</div>`
+            : '';
+
+        html += `
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            ${thumbHtml}
+            <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     ${getVal(item.title)}
                 </h3>
-            </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed flex-grow border-t border-gray-700/50 pt-4 mt-4">
-                ${getVal(item.description)}
-            </p>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3${primary ? '' : ' border-t border-gray-700/50 pt-4'}">
+                    ${getVal(item.description)}
+                </p>
 
-            <div class="mt-6">
-                ${linksHtml}
+                ${secondaryHtml}
+
+                <div class="mt-6">
+                    ${linksHtml}
+                </div>
             </div>
         </div>`;
     });

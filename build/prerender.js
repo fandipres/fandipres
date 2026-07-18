@@ -14,21 +14,22 @@ const sandbox = {};
 vm.createContext(sandbox);
 
 const SCRIPT_FILES = [
-    'assets/js/data/i18n.js',
-    'assets/js/data/academic.js',
-    'assets/js/data/books.js',
-    'assets/js/data/community_service.js',
+    'assets/js/i18n.js',
+    'assets/js/data/academic/academic.js',
+    'assets/js/data/academic/books.js',
+    'assets/js/data/academic/community-service.js',
     'assets/js/data/education.js',
     'assets/js/data/experience.js',
-    'assets/js/data/ipr.js',
-    'assets/js/data/profile.js',
+    'assets/js/data/academic/intellectual-property.js',
+    'assets/js/data/social.js',
     'assets/js/data/projects.js',
-    'assets/js/data/publications.js',
-    'assets/js/data/research.js',
-    'assets/js/data/talks.js',
-    'assets/js/data/teaching.js',
-    'assets/js/data/thesis.js',
-    'assets/js/data/tutoring.js',
+    'assets/js/data/academic/publications.js',
+    'assets/js/data/academic/research.js',
+    'assets/js/data/academic/talks.js',
+    'assets/js/data/academic/teaching.js',
+    'assets/js/data/academic/thesis.js',
+    'assets/js/data/academic/competition.js',
+    'assets/js/data/academic/tutoring.js',
     'assets/js/render-core.js'
 ];
 
@@ -58,18 +59,19 @@ new vm.Script(`
     this.talks = talks;
     this.teaching = teaching;
     this.thesis = thesis;
-    this.privateTeaching = privateTeaching;
+    this.competition = competition;
+    this.tutoring = tutoring;
 `).runInContext(sandbox);
 
 sandbox.currentLang = 'id'; // defensive: always prerender the Indonesian default
 
 const {
     experience, education, academic, projects, socialMedia,
-    teaching, thesis, privateTeaching, research, communityService,
+    teaching, thesis, competition, tutoring, research, communityService,
     publications, books, talks, ipr, siteTranslations,
     buildItemsHtml, buildDetailItemsHtml, buildAcademicHtml, buildSocialLinksHtml,
     buildProjectsHtml, buildProjectFiltersHtml, filterIprData, sortIprData,
-    buildHakiFiltersHtml, buildHakiTableHtml
+    buildHakiFiltersHtml, buildHakiTableHtml, buildTutoringHtml
 } = sandbox;
 
 const featuredProjects = [...projects].sort((a, b) => (a.id || 999) - (b.id || 999));
@@ -126,8 +128,8 @@ const PAGES = [
         ]
     },
     {
-        file: 'community_service/index.html',
-        url: `${SITE_URL}/community_service/`,
+        file: 'community-service/index.html',
+        url: `${SITE_URL}/community-service/`,
         priority: '0.8',
         fills: [
             { selector: '#community-list', html: buildDetailItemsHtml('community-list', communityService) },
@@ -153,8 +155,8 @@ const PAGES = [
         ]
     },
     {
-        file: 'ipr/index.html',
-        url: `${SITE_URL}/ipr/`,
+        file: 'intellectual-property/index.html',
+        url: `${SITE_URL}/intellectual-property/`,
         priority: '0.8',
         fills: [
             { selector: '#haki-filters', html: buildHakiFiltersHtml(ipr, 'all') },
@@ -191,11 +193,20 @@ const PAGES = [
         ]
     },
     {
+        file: 'competition/index.html',
+        url: `${SITE_URL}/competition/`,
+        priority: '0.8',
+        fills: [
+            { selector: '#competition-list', html: buildDetailItemsHtml('competition-list', competition) },
+            { selector: '#social-links-footer', html: buildSocialLinksHtml(socialMedia) }
+        ]
+    },
+    {
         file: 'tutoring/index.html',
         url: `${SITE_URL}/tutoring/`,
         priority: '0.8',
         fills: [
-            { selector: '#tutoring-list', html: buildDetailItemsHtml('tutoring-list', privateTeaching) },
+            { selector: '#tutoring-list', html: buildTutoringHtml(tutoring) },
             { selector: '#social-links-footer', html: buildSocialLinksHtml(socialMedia) }
         ]
     }

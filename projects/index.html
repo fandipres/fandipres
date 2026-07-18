@@ -61,11 +61,12 @@
                                 <div class="py-1">
                                     <a href="/teaching/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50" data-i18n="navbar.teaching">Pengajaran</a>
                                     <a href="/research/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50" data-i18n="navbar.research">Penelitian</a>
-                                    <a href="/community_service/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50" data-i18n="navbar.communityService">Pengabdian Masyarakat</a>
+                                    <a href="/community-service/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50" data-i18n="navbar.communityService">Pengabdian Masyarakat</a>
                                     <a href="/thesis/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50" data-i18n="navbar.thesis">Bimbingan Tugas Akhir</a>
+                                    <a href="/competition/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50" data-i18n="navbar.competition">Bimbingan Lomba</a>
                                     <a href="/publications/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50" data-i18n="navbar.publications">Publikasi</a>
-                                    <a href="/books/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50" data-i18n="navbar.books">Penulisan</a>
-                                    <a href="/ipr/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50" data-i18n="navbar.ipr">Hak Kekayaan Intelektual</a>
+                                    <a href="/books/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50" data-i18n="navbar.books">Buku</a>
+                                    <a href="/intellectual-property/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50" data-i18n="navbar.ipr">HaKI</a>
                                     <a href="/talks/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors border-b border-gray-800/50" data-i18n="navbar.talks">Pembicara</a>
                                     <a href="/tutoring/" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors" data-i18n="navbar.tutoring">Tutor Privat</a>
                                 </div>
@@ -145,9 +146,9 @@
     <main>
         <section class="bg-gray-900 py-16 fade-in-section">
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
-                <h1 class="text-4xl font-bold mb-10 border-b-2 border-gray-700 pb-4" data-i18n="page.projects">Proyek
+                <h1 class="text-4xl font-bold mb-6" data-i18n="page.projects">Proyek
                 </h1>
-                <div id="project-filters" class="flex flex-wrap items-center gap-3 mb-8 border-b-2 border-gray-800 pb-8"><button onclick="handleProjectFilterClick('All', 'projects-list')" class="px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 border bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.3)]" data-tag="All">
+                <div id="project-filters" class="flex flex-wrap items-center gap-3 mb-10"><button onclick="handleProjectFilterClick('All', 'projects-list')" class="px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 border bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.3)]" data-tag="All">
                     Semua
                 </button><button onclick="handleProjectFilterClick('Android', 'projects-list')" class="px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 border bg-transparent text-gray-300 border-gray-600 hover:border-white hover:text-white" data-tag="Android">
                     Android
@@ -160,20 +161,36 @@
                 </button></div>
 
                 <div id="projects-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
-
-            <div>
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-emerald-950 to-black">
+                
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="128" y="26" width="64" height="148" rx="12" fill="#0b2419" stroke="#2f8f63" stroke-width="1.5"></rect>
+                    <rect x="136" y="42" width="48" height="84" rx="4" fill="#123527"></rect>
+                    <circle cx="160" cy="138" r="7" fill="#2fbf85" opacity="0.55"></circle>
+                    <rect x="144" y="55" width="20" height="20" rx="5" fill="#2fbf85" opacity="0.8"></rect>
+                    <rect x="168" y="55" width="10" height="10" rx="3" fill="#2fbf85" opacity="0.4"></rect>
+                    <rect x="144" y="80" width="10" height="10" rx="3" fill="#2fbf85" opacity="0.4"></rect>
+                    <rect x="158" y="80" width="20" height="10" rx="3" fill="#2fbf85" opacity="0.55"></rect>
+                </svg>
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border text-emerald-400 bg-emerald-500/10 border-emerald-500/30">
+                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2" stroke-width="1.8"></rect><path stroke-width="1.6" stroke-linecap="round" d="M10 19h4"></path></svg>Android
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     Extra
                 </h3>
-            </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed flex-grow border-t border-gray-700/50 pt-4 mt-4">
-                Catat pengeluaran, pantau investasi, raih kebebasan finansial.
-            </p>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3">
+                    Catat pengeluaran, pantau investasi, raih kebebasan finansial.
+                </p>
 
-            <div class="mt-6">
                 
+
+                <div class="mt-6">
+                    
             <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
                 
                 <div class="relative group/link">
@@ -195,22 +212,38 @@
                     </span>
                 </div>
             </div>
+                </div>
             </div>
         </div>
-        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
-
-            <div>
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-amber-950 to-black">
+                
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="94" y="32" width="132" height="136" rx="6" fill="#241a0a" stroke="#8a6224" stroke-width="1.5"></rect>
+                    <rect x="110" y="52" width="76" height="10" rx="3" fill="#e8a13d" opacity="0.8"></rect>
+                    <rect x="110" y="72" width="100" height="6" rx="2" fill="#8a6224"></rect>
+                    <rect x="110" y="86" width="100" height="6" rx="2" fill="#8a6224"></rect>
+                    <rect x="110" y="100" width="64" height="6" rx="2" fill="#8a6224"></rect>
+                    <rect x="110" y="124" width="30" height="18" rx="4" fill="#e8a13d" opacity="0.3"></rect>
+                </svg>
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border text-amber-400 bg-amber-500/10 border-amber-500/30">
+                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M5 3.5h10l4 4v13a.5.5 0 01-.5.5h-13a.5.5 0 01-.5-.5v-17z"></path><path stroke-width="1.3" stroke-linecap="round" d="M8 10h8M8 14h8"></path></svg>Blog
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     Fandi's Blog
                 </h3>
-            </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed flex-grow border-t border-gray-700/50 pt-4 mt-4">
-                Tulisan pribadi, review, dan info random lainnya dariku untuk kalian para pembaca.
-            </p>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3">
+                    Tulisan pribadi, review, dan info random lainnya dariku untuk kalian para pembaca.
+                </p>
 
-            <div class="mt-6">
                 
+
+                <div class="mt-6">
+                    
             <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
                 
                 <div class="relative group/link">
@@ -232,22 +265,37 @@
                     </span>
                 </div>
             </div>
+                </div>
             </div>
         </div>
-        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
-
-            <div>
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-rose-950 to-black">
+                
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="160" cy="100" r="36" fill="#ef5da8" opacity="0.12"></circle>
+                    <circle cx="160" cy="100" r="25" fill="#ef5da8" opacity="0.85"></circle>
+                    <path d="M152 87l22 13-22 13z" fill="#170a11"></path>
+                    <rect x="40" y="168" width="28" height="4" rx="2" fill="#ef5da8" opacity="0.4"></rect>
+                    <rect x="74" y="168" width="48" height="4" rx="2" fill="#ef5da8" opacity="0.22"></rect>
+                </svg>
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border text-rose-400 bg-rose-500/10 border-rose-500/30">
+                    <svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 7.4v9.2a.7.7 0 001.07.6l7.2-4.6a.7.7 0 000-1.2l-7.2-4.6A.7.7 0 009 7.4z"></path></svg>Video
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     Gudank Review
                 </h3>
-            </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed flex-grow border-t border-gray-700/50 pt-4 mt-4">
-                Tukang review barang-barang di gudank.
-            </p>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3">
+                    Tukang review barang-barang di gudank.
+                </p>
 
-            <div class="mt-6">
                 
+
+                <div class="mt-6">
+                    
             <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
                 
                 <div class="relative group/link">
@@ -287,22 +335,38 @@
                     </span>
                 </div>
             </div>
+                </div>
             </div>
         </div>
-        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
-
-            <div>
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-amber-950 to-black">
+                
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="94" y="32" width="132" height="136" rx="6" fill="#241a0a" stroke="#8a6224" stroke-width="1.5"></rect>
+                    <rect x="110" y="52" width="76" height="10" rx="3" fill="#e8a13d" opacity="0.8"></rect>
+                    <rect x="110" y="72" width="100" height="6" rx="2" fill="#8a6224"></rect>
+                    <rect x="110" y="86" width="100" height="6" rx="2" fill="#8a6224"></rect>
+                    <rect x="110" y="100" width="64" height="6" rx="2" fill="#8a6224"></rect>
+                    <rect x="110" y="124" width="30" height="18" rx="4" fill="#e8a13d" opacity="0.3"></rect>
+                </svg>
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border text-amber-400 bg-amber-500/10 border-amber-500/30">
+                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M5 3.5h10l4 4v13a.5.5 0 01-.5.5h-13a.5.5 0 01-.5-.5v-17z"></path><path stroke-width="1.3" stroke-linecap="round" d="M8 10h8M8 14h8"></path></svg>Blog
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     Hobi Ngoding
                 </h3>
-            </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed flex-grow border-t border-gray-700/50 pt-4 mt-4">
-                Halo coders. Si paling bisa segalanya.
-            </p>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3">
+                    Halo coders. Si paling bisa segalanya.
+                </p>
 
-            <div class="mt-6">
-                
+                <div class="flex flex-wrap gap-1.5 mt-2"><span class="text-[9px] uppercase tracking-wide font-semibold text-gray-500 border border-gray-700 rounded px-1.5 py-0.5">Video</span></div>
+
+                <div class="mt-6">
+                    
             <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
                 
                 <div class="relative group/link">
@@ -351,22 +415,39 @@
                     </span>
                 </div>
             </div>
+                </div>
             </div>
         </div>
-        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
-
-            <div>
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-emerald-950 to-black">
+                
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="128" y="26" width="64" height="148" rx="12" fill="#0b2419" stroke="#2f8f63" stroke-width="1.5"></rect>
+                    <rect x="136" y="42" width="48" height="84" rx="4" fill="#123527"></rect>
+                    <circle cx="160" cy="138" r="7" fill="#2fbf85" opacity="0.55"></circle>
+                    <rect x="144" y="55" width="20" height="20" rx="5" fill="#2fbf85" opacity="0.8"></rect>
+                    <rect x="168" y="55" width="10" height="10" rx="3" fill="#2fbf85" opacity="0.4"></rect>
+                    <rect x="144" y="80" width="10" height="10" rx="3" fill="#2fbf85" opacity="0.4"></rect>
+                    <rect x="158" y="80" width="20" height="10" rx="3" fill="#2fbf85" opacity="0.55"></rect>
+                </svg>
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border text-emerald-400 bg-emerald-500/10 border-emerald-500/30">
+                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2" stroke-width="1.8"></rect><path stroke-width="1.6" stroke-linecap="round" d="M10 19h4"></path></svg>Android
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     Jurnalpedia
                 </h3>
-            </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed flex-grow border-t border-gray-700/50 pt-4 mt-4">
-                Semua yang perlu kamu tahu tentang dunia perjurnalan. Salam #PejuangJurnal.
-            </p>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3">
+                    Semua yang perlu kamu tahu tentang dunia perjurnalan. Salam #PejuangJurnal.
+                </p>
 
-            <div class="mt-6">
-                
+                <div class="flex flex-wrap gap-1.5 mt-2"><span class="text-[9px] uppercase tracking-wide font-semibold text-gray-500 border border-gray-700 rounded px-1.5 py-0.5">Blog</span><span class="text-[9px] uppercase tracking-wide font-semibold text-gray-500 border border-gray-700 rounded px-1.5 py-0.5">Video</span></div>
+
+                <div class="mt-6">
+                    
             <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
                 
                 <div class="relative group/link">
@@ -424,22 +505,41 @@
                     </span>
                 </div>
             </div>
+                </div>
             </div>
         </div>
-        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
-
-            <div>
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-blue-950 to-black">
+                
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="46" y="34" width="228" height="132" rx="8" fill="#0b1b32" stroke="#2c4d80" stroke-width="1.5"></rect>
+                    <rect x="46" y="34" width="228" height="24" rx="8" fill="#12294a"></rect>
+                    <circle cx="60" cy="46" r="3" fill="#4f8dff" opacity="0.55"></circle>
+                    <circle cx="71" cy="46" r="3" fill="#4f8dff" opacity="0.4"></circle>
+                    <circle cx="82" cy="46" r="3" fill="#4f8dff" opacity="0.25"></circle>
+                    <rect x="62" y="76" width="140" height="10" rx="3" fill="#3b6cb8" opacity="0.75"></rect>
+                    <rect x="62" y="94" width="188" height="7" rx="3" fill="#1f3a63"></rect>
+                    <rect x="62" y="108" width="168" height="7" rx="3" fill="#1f3a63"></rect>
+                    <rect x="62" y="130" width="66" height="22" rx="6" fill="#4f8dff" opacity="0.85"></rect>
+                </svg>
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border text-blue-400 bg-blue-500/10 border-blue-500/30">
+                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="1.8"></circle><path stroke-width="1.6" d="M3 12h18M12 3c2.4 2.6 3.6 5.7 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.7-3.6-9s1.2-6.4 3.6-9z"></path></svg>Web
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     Kapitalin
                 </h3>
-            </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed flex-grow border-t border-gray-700/50 pt-4 mt-4">
-                Alat web gratis untuk cek dan koreksi otomatis huruf kapital pada teks Bahasa Indonesia sesuai aturan EYD Edisi Kelima.
-            </p>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3">
+                    Alat web gratis untuk cek dan koreksi otomatis huruf kapital pada teks Bahasa Indonesia sesuai aturan EYD Edisi Kelima.
+                </p>
 
-            <div class="mt-6">
                 
+
+                <div class="mt-6">
+                    
             <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
                 
                 <div class="relative group/link">
@@ -461,22 +561,38 @@
                     </span>
                 </div>
             </div>
+                </div>
             </div>
         </div>
-        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
-
-            <div>
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-amber-950 to-black">
+                
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="94" y="32" width="132" height="136" rx="6" fill="#241a0a" stroke="#8a6224" stroke-width="1.5"></rect>
+                    <rect x="110" y="52" width="76" height="10" rx="3" fill="#e8a13d" opacity="0.8"></rect>
+                    <rect x="110" y="72" width="100" height="6" rx="2" fill="#8a6224"></rect>
+                    <rect x="110" y="86" width="100" height="6" rx="2" fill="#8a6224"></rect>
+                    <rect x="110" y="100" width="64" height="6" rx="2" fill="#8a6224"></rect>
+                    <rect x="110" y="124" width="30" height="18" rx="4" fill="#e8a13d" opacity="0.3"></rect>
+                </svg>
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border text-amber-400 bg-amber-500/10 border-amber-500/30">
+                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M5 3.5h10l4 4v13a.5.5 0 01-.5.5h-13a.5.5 0 01-.5-.5v-17z"></path><path stroke-width="1.3" stroke-linecap="round" d="M8 10h8M8 14h8"></path></svg>Blog
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     Lyricspedia
                 </h3>
-            </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed flex-grow border-t border-gray-700/50 pt-4 mt-4">
-                Jelajahi ribuan lirik lagu, mulai dari hits Indonesia dan Barat, hingga lirik lagu lokal daerahmu.
-            </p>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3">
+                    Jelajahi ribuan lirik lagu, mulai dari hits Indonesia dan Barat, hingga lirik lagu lokal daerahmu.
+                </p>
 
-            <div class="mt-6">
                 
+
+                <div class="mt-6">
+                    
             <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
                 
                 <div class="relative group/link">
@@ -489,22 +605,41 @@
                     </span>
                 </div>
             </div>
+                </div>
             </div>
         </div>
-        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
-
-            <div>
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-blue-950 to-black">
+                
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="46" y="34" width="228" height="132" rx="8" fill="#0b1b32" stroke="#2c4d80" stroke-width="1.5"></rect>
+                    <rect x="46" y="34" width="228" height="24" rx="8" fill="#12294a"></rect>
+                    <circle cx="60" cy="46" r="3" fill="#4f8dff" opacity="0.55"></circle>
+                    <circle cx="71" cy="46" r="3" fill="#4f8dff" opacity="0.4"></circle>
+                    <circle cx="82" cy="46" r="3" fill="#4f8dff" opacity="0.25"></circle>
+                    <rect x="62" y="76" width="140" height="10" rx="3" fill="#3b6cb8" opacity="0.75"></rect>
+                    <rect x="62" y="94" width="188" height="7" rx="3" fill="#1f3a63"></rect>
+                    <rect x="62" y="108" width="168" height="7" rx="3" fill="#1f3a63"></rect>
+                    <rect x="62" y="130" width="66" height="22" rx="6" fill="#4f8dff" opacity="0.85"></rect>
+                </svg>
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border text-blue-400 bg-blue-500/10 border-blue-500/30">
+                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="1.8"></circle><path stroke-width="1.6" d="M3 12h18M12 3c2.4 2.6 3.6 5.7 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.7-3.6-9s1.2-6.4 3.6-9z"></path></svg>Web
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     Monitoring
                 </h3>
-            </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed flex-grow border-t border-gray-700/50 pt-4 mt-4">
-                Monitoring adalah aplikasi web yang dibuat untuk memantau aktivitas di dalam ruangan lewat video real-time dari kamera menggunakan Detectron2.
-            </p>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3">
+                    Monitoring adalah aplikasi web yang dibuat untuk memantau aktivitas di dalam ruangan lewat video real-time dari kamera menggunakan Detectron2.
+                </p>
 
-            <div class="mt-6">
                 
+
+                <div class="mt-6">
+                    
             <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
                 
                 <div class="relative group/link">
@@ -517,22 +652,97 @@
                     </span>
                 </div>
             </div>
+                </div>
             </div>
         </div>
-        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-blue-950 to-black">
+                
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="46" y="34" width="228" height="132" rx="8" fill="#0b1b32" stroke="#2c4d80" stroke-width="1.5"></rect>
+                    <rect x="46" y="34" width="228" height="24" rx="8" fill="#12294a"></rect>
+                    <circle cx="60" cy="46" r="3" fill="#4f8dff" opacity="0.55"></circle>
+                    <circle cx="71" cy="46" r="3" fill="#4f8dff" opacity="0.4"></circle>
+                    <circle cx="82" cy="46" r="3" fill="#4f8dff" opacity="0.25"></circle>
+                    <rect x="62" y="76" width="140" height="10" rx="3" fill="#3b6cb8" opacity="0.75"></rect>
+                    <rect x="62" y="94" width="188" height="7" rx="3" fill="#1f3a63"></rect>
+                    <rect x="62" y="108" width="168" height="7" rx="3" fill="#1f3a63"></rect>
+                    <rect x="62" y="130" width="66" height="22" rx="6" fill="#4f8dff" opacity="0.85"></rect>
+                </svg>
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border text-blue-400 bg-blue-500/10 border-blue-500/30">
+                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="1.8"></circle><path stroke-width="1.6" d="M3 12h18M12 3c2.4 2.6 3.6 5.7 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.7-3.6-9s1.2-6.4 3.6-9z"></path></svg>Web
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
+                    SIMAK-IF
+                </h3>
 
-            <div>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3">
+                    Rekap capaian akademik mahasiswa Informatika: MBKM, kompetisi, dan sertifikasi kompetensi.
+                </p>
+
+                
+
+                <div class="mt-6">
+                    
+            <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
+                
+                <div class="relative group/link">
+                    <a href="https://csmikroskil.blogspot.com/" target="_blank" class="flex items-center justify-center w-9 h-9 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </a>
+
+                    <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-gray-900 border border-gray-700 text-[10px] font-bold text-white rounded opacity-0 group-hover/link:opacity-100 group-hover/link:-translate-y-1 transition-all pointer-events-none whitespace-nowrap z-20 shadow-xl shadow-black/50">
+                        Demo Mahasiswa
+                    </span>
+                </div>
+                <div class="relative group/link">
+                    <a href="https://script.google.com/macros/s/AKfycbydy_-RvqxTSt7-MRQ8e84QN13YKQDYskFG6g5FJNIPT6ZkF7lDuQPJSXKl2yvCkY7E-w/exec?page=admin" target="_blank" class="flex items-center justify-center w-9 h-9 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                    </a>
+
+                    <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-gray-900 border border-gray-700 text-[10px] font-bold text-white rounded opacity-0 group-hover/link:opacity-100 group-hover/link:-translate-y-1 transition-all pointer-events-none whitespace-nowrap z-20 shadow-xl shadow-black/50">
+                        Demo Admin
+                    </span>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-blue-950 to-black">
+                
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="46" y="34" width="228" height="132" rx="8" fill="#0b1b32" stroke="#2c4d80" stroke-width="1.5"></rect>
+                    <rect x="46" y="34" width="228" height="24" rx="8" fill="#12294a"></rect>
+                    <circle cx="60" cy="46" r="3" fill="#4f8dff" opacity="0.55"></circle>
+                    <circle cx="71" cy="46" r="3" fill="#4f8dff" opacity="0.4"></circle>
+                    <circle cx="82" cy="46" r="3" fill="#4f8dff" opacity="0.25"></circle>
+                    <rect x="62" y="76" width="140" height="10" rx="3" fill="#3b6cb8" opacity="0.75"></rect>
+                    <rect x="62" y="94" width="188" height="7" rx="3" fill="#1f3a63"></rect>
+                    <rect x="62" y="108" width="168" height="7" rx="3" fill="#1f3a63"></rect>
+                    <rect x="62" y="130" width="66" height="22" rx="6" fill="#4f8dff" opacity="0.85"></rect>
+                </svg>
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border text-blue-400 bg-blue-500/10 border-blue-500/30">
+                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="1.8"></circle><path stroke-width="1.6" d="M3 12h18M12 3c2.4 2.6 3.6 5.7 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.7-3.6-9s1.2-6.4 3.6-9z"></path></svg>Web
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     Special Day
                 </h3>
-            </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed flex-grow border-t border-gray-700/50 pt-4 mt-4">
-                Aplikasi hitung mundur untuk momen-momen spesialmu.
-            </p>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3">
+                    Aplikasi hitung mundur untuk momen-momen spesialmu.
+                </p>
 
-            <div class="mt-6">
                 
+
+                <div class="mt-6">
+                    
             <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
                 
                 <div class="relative group/link">
@@ -554,22 +764,41 @@
                     </span>
                 </div>
             </div>
+                </div>
             </div>
         </div>
-        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
-
-            <div>
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-blue-950 to-black">
+                
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="46" y="34" width="228" height="132" rx="8" fill="#0b1b32" stroke="#2c4d80" stroke-width="1.5"></rect>
+                    <rect x="46" y="34" width="228" height="24" rx="8" fill="#12294a"></rect>
+                    <circle cx="60" cy="46" r="3" fill="#4f8dff" opacity="0.55"></circle>
+                    <circle cx="71" cy="46" r="3" fill="#4f8dff" opacity="0.4"></circle>
+                    <circle cx="82" cy="46" r="3" fill="#4f8dff" opacity="0.25"></circle>
+                    <rect x="62" y="76" width="140" height="10" rx="3" fill="#3b6cb8" opacity="0.75"></rect>
+                    <rect x="62" y="94" width="188" height="7" rx="3" fill="#1f3a63"></rect>
+                    <rect x="62" y="108" width="168" height="7" rx="3" fill="#1f3a63"></rect>
+                    <rect x="62" y="130" width="66" height="22" rx="6" fill="#4f8dff" opacity="0.85"></rect>
+                </svg>
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border text-blue-400 bg-blue-500/10 border-blue-500/30">
+                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="1.8"></circle><path stroke-width="1.6" d="M3 12h18M12 3c2.4 2.6 3.6 5.7 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.7-3.6-9s1.2-6.4 3.6-9z"></path></svg>Web
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     To-Do List
                 </h3>
-            </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed flex-grow border-t border-gray-700/50 pt-4 mt-4">
-                Aplikasi web sederhana untuk mengelola daftar tugas personal. Dilengkapi otentikasi pengguna yang menjaga setiap daftar tugas tetap pribadi dan aman.
-            </p>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3">
+                    Aplikasi web sederhana untuk mengelola daftar tugas personal. Dilengkapi otentikasi pengguna yang menjaga setiap daftar tugas tetap pribadi dan aman.
+                </p>
 
-            <div class="mt-6">
                 
+
+                <div class="mt-6">
+                    
             <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
                 
                 <div class="relative group/link">
@@ -582,22 +811,38 @@
                     </span>
                 </div>
             </div>
+                </div>
             </div>
         </div>
-        <div class="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-lg text-left h-full flex flex-col hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
-
-            <div>
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
+            
+            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-amber-950 to-black">
+                
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="94" y="32" width="132" height="136" rx="6" fill="#241a0a" stroke="#8a6224" stroke-width="1.5"></rect>
+                    <rect x="110" y="52" width="76" height="10" rx="3" fill="#e8a13d" opacity="0.8"></rect>
+                    <rect x="110" y="72" width="100" height="6" rx="2" fill="#8a6224"></rect>
+                    <rect x="110" y="86" width="100" height="6" rx="2" fill="#8a6224"></rect>
+                    <rect x="110" y="100" width="64" height="6" rx="2" fill="#8a6224"></rect>
+                    <rect x="110" y="124" width="30" height="18" rx="4" fill="#e8a13d" opacity="0.3"></rect>
+                </svg>
+                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border text-amber-400 bg-amber-500/10 border-amber-500/30">
+                    <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M5 3.5h10l4 4v13a.5.5 0 01-.5.5h-13a.5.5 0 01-.5-.5v-17z"></path><path stroke-width="1.3" stroke-linecap="round" d="M8 10h8M8 14h8"></path></svg>Blog
+                </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
                 <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
                     Worshipedia
                 </h3>
-            </div>
 
-            <p class="text-gray-400 text-sm leading-relaxed flex-grow border-t border-gray-700/50 pt-4 mt-4">
-                Kumpulan lirik lagu rohani dan pujian Kristen untuk mengiringi ibadahmu.
-            </p>
+                <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3">
+                    Kumpulan lirik lagu rohani dan pujian Kristen untuk mengiringi ibadahmu.
+                </p>
 
-            <div class="mt-6">
                 
+
+                <div class="mt-6">
+                    
             <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
                 
                 <div class="relative group/link">
@@ -610,10 +855,11 @@
                     </span>
                 </div>
             </div>
+                </div>
             </div>
         </div></div>
 
-                <div class="mt-12 border-t border-gray-800 pt-8">
+                <div class="mt-12">
                     <a href="/" class="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300 flex items-center gap-2">
                         <span>←</span> <span data-i18n="buttons.back">Kembali</span>
                     </a>
@@ -655,13 +901,13 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
-    <script src="../assets/js/data/i18n.js"></script>
-    <script src="../assets/js/data/profile.js"></script>
+    <script src="../assets/js/i18n.js"></script>
+    <script src="../assets/js/data/social.js"></script>
     <script src="../assets/js/data/projects.js"></script>
     <script src="../assets/js/render-core.js"></script>
     <script src="../assets/js/scripts.js"></script>
     <script src="../assets/js/animations.js"></script>
-    <script src="../assets/js/projects.js"></script>
+    <script src="../assets/js/render-projects.js"></script>
 
 
 

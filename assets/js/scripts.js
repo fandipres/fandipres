@@ -22,6 +22,12 @@ function renderSocialLinks(containerId, data) {
     container.innerHTML = buildSocialLinksHtml(data);
 }
 
+function renderTutoring(containerId, data) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.innerHTML = buildTutoringHtml(data);
+}
+
 function initDynamicContent() {
     if (document.getElementById('pekerjaan-terbaru') && typeof experience !== 'undefined') {
         renderItems('pekerjaan-terbaru', experience, 2);
@@ -44,8 +50,11 @@ function initDynamicContent() {
     if (document.getElementById('thesis-list') && typeof thesis !== 'undefined') {
         renderDetailItems('thesis-list', thesis);
     }
-    if (document.getElementById('tutoring-list') && typeof privateTeaching !== 'undefined') {
-        renderDetailItems('tutoring-list', privateTeaching);
+    if (document.getElementById('competition-list') && typeof competition !== 'undefined') {
+        renderDetailItems('competition-list', competition);
+    }
+    if (document.getElementById('tutoring-list') && typeof tutoring !== 'undefined') {
+        renderTutoring('tutoring-list', tutoring);
     }
     if (document.getElementById('research-list') && typeof research !== 'undefined') {
         renderDetailItems('research-list', research);

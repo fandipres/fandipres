@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(node --check assets/js/data/projects.js)",
+      "Skill(artifact-design)",
+      "Skill(artifact-design:*)"
+    ]
+  }
+}

@@ -30,7 +30,19 @@
       "Bash(\"/c/Users/Fandi Presley S/AppData/Local/Programs/Python/Python311/python\" -c \"import yaml\")",
       "Bash(\"/c/Users/Fandi Presley S/AppData/Local/Programs/Python/Python311/python\" -m pip install --quiet pyyaml)",
       "Bash('/c/Users/Fandi Presley S/AppData/Local/Programs/Python/Python311/python' -c ' *)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://api.github.com/repos/fandipres/fandipres/branches/main/protection)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" https://api.github.com/repos/fandipres/fandipres/branches/main/protection)",
+      "Skill(artifact-design)",
+      "Skill(artifact-design:*)",
+      "Bash(node --check assets/js/render-core.js)",
+      "Bash(node --check assets/js/scripts.js)",
+      "Bash(node --check build/prerender.js)",
+      "Bash(node --check assets/js/data/teaching.js)",
+      "Bash(node --check assets/js/data/tutoring.js)",
+      "Bash(node --check assets/js/data/i18n.js)",
+      "Bash(node --check assets/js/i18n.js)",
+      "Bash(node --check assets/js/render-ipr.js)",
+      "Bash(node --check assets/js/render-projects.js)",
+      "Bash(node --check assets/js/data/projects.js)"
     ]
   }
 }

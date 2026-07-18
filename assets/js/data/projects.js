@@ -51,6 +51,15 @@ const projects = [
         tags: ["Web"]
     },
     {
+        title: { id: "SIMAK-IF", en: "" },
+        description: {
+            id: "Rekap capaian akademik mahasiswa Informatika: MBKM, kompetisi, dan sertifikasi kompetensi.",
+            en: "Academic achievement records for Informatics students: MBKM, competitions, and certifications."
+        },
+        links: [{ url: "https://csmikroskil.blogspot.com/", label: "Demo Mahasiswa" }, { url: "https://script.google.com/macros/s/AKfycbydy_-RvqxTSt7-MRQ8e84QN13YKQDYskFG6g5FJNIPT6ZkF7lDuQPJSXKl2yvCkY7E-w/exec?page=admin", label: "Demo Admin" }],
+        tags: ["Web"]
+    },
+    {
         title: { id: "Special Day", en: "" },
         description: { id: "Aplikasi hitung mundur untuk momen-momen spesialmu.", en: "A countdown app for your special moments." },
         links: [{ url: "https://fandipres.github.io/special-day", label: "Demo" }, { url: "https://github.com/fandipres/special-day", label: "GitHub" }],
