@@ -574,3 +574,125 @@ function buildHakiTableHtml(data) {
         </tr>`;
     }).join('');
 }
+
+function cvEntry(year, title, lines, meta) {
+    const linesHtml = (lines || [])
+        .filter(l => l && String(l).trim() !== '')
+        .map(l => `<p class="text-xs text-gray-600 mt-0.5">${l}</p>`)
+        .join('');
+    const metaHtml = meta ? ` <span class="text-xs font-normal text-gray-500">(${meta})</span>` : '';
+    return `
+    <div class="flex gap-4 break-inside-avoid py-2.5 border-b border-gray-100 last:border-0">
+        <div class="w-28 flex-shrink-0 text-xs text-gray-500 pt-0.5">${year || ''}</div>
+        <div class="flex-grow">
+            <p class="font-semibold text-gray-900 text-sm leading-snug">${title}${metaHtml}</p>
+            ${linesHtml}
+        </div>
+    </div>`;
+}
+
+function buildCvHtml() {
+    const heading = (key) => t(`navbar.${key}`);
+    const section = (key, entriesHtml) => entriesHtml ? `
+        <section class="mt-8 first:mt-0">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-gray-900 border-b-2 border-gray-900 pb-2 mb-1">${heading(key)}</h2>
+            <div>${entriesHtml}</div>
+        </section>` : '';
+    const catRole = (item) => [item.category ? getVal(item.category) : '', item.role ? getVal(item.role) : ''].filter(Boolean).join(' • ');
+
+    const eduHtml = (typeof education !== 'undefined' ? education : []).map(x =>
+        cvEntry(getVal(x.year), getVal(x.title), [getVal(x.subtitle), getVal(x.description)])
+    ).join('');
+
+    const expHtml = (typeof experience !== 'undefined' ? experience : []).map(x =>
+        cvEntry(getVal(x.year), getVal(x.title), [getVal(x.subtitle), getVal(x.description)])
+    ).join('');
+
+    const teachHtml = (() => {
+        const items = typeof teaching !== 'undefined' ? teaching : [];
+        const grouped = new Map();
+        items.forEach(x => {
+            const key = x.year || '';
+            if (!grouped.has(key)) grouped.set(key, []);
+            grouped.get(key).push(x);
+        });
+        const semesterOrder = { genap: 0, ganjil: 1 };
+        grouped.forEach(arr => arr.sort((a, b) => (semesterOrder[a.semester] ?? 2) - (semesterOrder[b.semester] ?? 2)));
+        const coursesLabel = t('cv.coursesLabel');
+        return Array.from(grouped.entries()).map(([year, arr]) => {
+            const courses = arr.map(x => getVal(x.title)).sort((a, b) => a.localeCompare(b)).join(', ');
+            return cvEntry(year, getVal(arr[0].subtitle), [`${coursesLabel}: ${courses}`]);
+        }).join('');
+    })();
+
+    const resHtml = (typeof research !== 'undefined' ? research : []).map(x =>
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x)])
+    ).join('');
+
+    const csHtml = (typeof communityService !== 'undefined' ? communityService : []).map(x =>
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x)])
+    ).join('');
+
+    const thesisHtml = (typeof thesis !== 'undefined' ? thesis : []).map(x =>
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x), (x.students && x.students.length) ? `Mahasiswa: ${x.students.join(', ')}` : ''])
+    ).join('');
+
+    const compHtml = (typeof competition !== 'undefined' ? competition : []).map(x =>
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x), x.achievement ? getVal(x.achievement) : '', (x.students && x.students.length) ? `Tim: ${x.students.join(', ')}` : ''])
+    ).join('');
+
+    const pubHtml = (typeof publications !== 'undefined' ? publications : []).map(x =>
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), [x.rank ? getVal(x.rank) : '', catRole(x)].filter(Boolean).join(' • ')])
+    ).join('');
+
+    const bookHtml = (typeof books !== 'undefined' ? books : []).map(x =>
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x)])
+    ).join('');
+
+    const iprHtml = (typeof ipr !== 'undefined' ? ipr : []).map(x =>
+        cvEntry(x.year, getVal(x.title), [x.type ? getVal(x.type) : x.category, [x.number, x.issuer].filter(Boolean).join(' • ')])
+    ).join('');
+
+    const talkHtml = (typeof talks !== 'undefined' ? talks : []).map(x =>
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x)])
+    ).join('');
+
+    const tutHtml = (typeof tutoring !== 'undefined' ? tutoring : []).map(x => {
+        const topics = (x.topics || []).map(tp => getVal(tp)).sort((a, b) => a.localeCompare(b)).join(', ');
+        return cvEntry(x.year, x.student, [`${t('tutoring.topicsLabel')}: ${topics}`]);
+    }).join('');
+
+    const projHtml = (typeof projects !== 'undefined' ? projects : []).map(x =>
+        cvEntry('', getVal(x.title), [getVal(x.description)], (x.tags || []).join(', '))
+    ).join('');
+
+    return `
+        <div class="pb-6 mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <img src="/assets/img/profile.jpg" alt="Fandi Presly Simamora" class="w-24 h-24 rounded-full object-cover border border-gray-300 flex-shrink-0">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900">Fandi Presly Simamora</h1>
+                <p class="text-gray-600 mt-1">${t('sections.position')}</p>
+                <p class="text-xs text-gray-500 mt-3 leading-relaxed">
+                    fandi.simamora@gmail.com &nbsp;&middot;&nbsp;
+                    <a href="https://orcid.org/0009-0005-5437-6622" class="underline hover:text-gray-900">ORCID</a> &nbsp;&middot;&nbsp;
+                    <a href="https://scholar.google.com/citations?user=TwIuVJYAAAAJ" class="underline hover:text-gray-900">Google Scholar</a> &nbsp;&middot;&nbsp;
+                    <a href="https://sinta.kemdiktisaintek.go.id/authors/profile/6857557" class="underline hover:text-gray-900">SINTA</a> &nbsp;&middot;&nbsp;
+                    <a href="https://www.researchgate.net/profile/Fandi-Simamora" class="underline hover:text-gray-900">ResearchGate</a>
+                </p>
+            </div>
+        </div>
+        ${section('education', eduHtml)}
+        ${section('experience', expHtml)}
+        ${section('teaching', teachHtml)}
+        ${section('research', resHtml)}
+        ${section('communityService', csHtml)}
+        ${section('thesis', thesisHtml)}
+        ${section('competition', compHtml)}
+        ${section('publications', pubHtml)}
+        ${section('books', bookHtml)}
+        ${section('ipr', iprHtml)}
+        ${section('talks', talkHtml)}
+        ${section('tutoring', tutHtml)}
+        ${section('projects', projHtml)}
+    `;
+}

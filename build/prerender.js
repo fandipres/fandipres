@@ -71,7 +71,7 @@ const {
     publications, books, talks, ipr, siteTranslations,
     buildItemsHtml, buildDetailItemsHtml, buildAcademicHtml, buildSocialLinksHtml,
     buildProjectsHtml, buildProjectFiltersHtml, filterIprData, sortIprData,
-    buildHakiFiltersHtml, buildHakiTableHtml, buildTutoringHtml
+    buildHakiFiltersHtml, buildHakiTableHtml, buildTutoringHtml, buildCvHtml
 } = sandbox;
 
 const featuredProjects = [...projects].sort((a, b) => (a.id || 999) - (b.id || 999));
@@ -208,6 +208,14 @@ const PAGES = [
         fills: [
             { selector: '#tutoring-list', html: buildTutoringHtml(tutoring) },
             { selector: '#social-links-footer', html: buildSocialLinksHtml(socialMedia) }
+        ]
+    },
+    {
+        file: 'cv/index.html',
+        url: `${SITE_URL}/cv/`,
+        priority: '0.7',
+        fills: [
+            { selector: '#cv-content', html: buildCvHtml() }
         ]
     }
 ];

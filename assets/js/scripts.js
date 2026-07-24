@@ -28,6 +28,12 @@ function renderTutoring(containerId, data) {
     container.innerHTML = buildTutoringHtml(data);
 }
 
+function renderCv(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.innerHTML = buildCvHtml();
+}
+
 function initDynamicContent() {
     if (document.getElementById('pekerjaan-terbaru') && typeof experience !== 'undefined') {
         renderItems('pekerjaan-terbaru', experience, 2);
@@ -76,6 +82,9 @@ function initDynamicContent() {
         if (document.getElementById('social-media')) {
             renderSocialLinks('social-media', socialMedia);
         }
+    }
+    if (document.getElementById('cv-content') && typeof buildCvHtml === 'function') {
+        renderCv('cv-content');
     }
     const yearSpan = document.getElementById('year');
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
