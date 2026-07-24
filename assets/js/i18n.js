@@ -15,13 +15,15 @@ const siteTranslations = {
         teaching: { id: "Pengajaran - Fandi Presly Simamora", en: "Teaching - Fandi Presly Simamora" },
         thesis: { id: "Bimbingan Tugas Akhir - Fandi Presly Simamora", en: "Thesis Supervision - Fandi Presly Simamora" },
         competition: { id: "Bimbingan Lomba - Fandi Presly Simamora", en: "Competition Mentoring - Fandi Presly Simamora" },
-        tutoring: { id: "Tutor Privat - Fandi Presly Simamora", en: "Private Tutoring - Fandi Presly Simamora" }
+        tutoring: { id: "Tutor Privat - Fandi Presly Simamora", en: "Private Tutoring - Fandi Presly Simamora" },
+        cv: { id: "Curriculum Vitae - Fandi Presly Simamora", en: "Curriculum Vitae - Fandi Presly Simamora" }
     },
     navbar: {
         academic: { id: "Aktivitas Akademik", en: "Academic Activities" },
         books: { id: "Buku", en: "Books" },
         communityService: { id: "Pengabdian Masyarakat", en: "Community Service" },
         contact: { id: "Kontak", en: "Contact" },
+        cv: { id: "CV", en: "CV" },
         education: { id: "Pendidikan", en: "Education" },
         experience: { id: "Pengalaman", en: "Experience" },
         ipr: { id: "HaKI", en: "Intellectual Property Rights" },
@@ -63,6 +65,7 @@ const siteTranslations = {
         position: { id: "Dosen di Universitas Mikroskil", en: "Lecturer at Mikroskil University" }
     },
     page: {
+        cv: { id: "Curriculum Vitae", en: "Curriculum Vitae" },
         books: { id: "Buku", en: "Book" },
         communityService: { id: "Pengabdian Masyarakat", en: "Community Service" },
         education: { id: "Pendidikan", en: "Education" },
@@ -100,6 +103,11 @@ const siteTranslations = {
     },
     tutoring: {
         topicsLabel: { id: "Materi", en: "Topics" }
+    },
+    cv: {
+        downloadPdf: { id: "Unduh PDF", en: "Download PDF" },
+        backToSite: { id: "Kembali ke Situs", en: "Back to Site" },
+        coursesLabel: { id: "Mata Kuliah", en: "Courses" }
     },
     ipr: {
         filters: {
