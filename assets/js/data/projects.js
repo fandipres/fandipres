@@ -1,5 +1,6 @@
 const projects = [
     {
+        id: 1,
         title: { id: "Extra", en: "" },
         description: { id: "Catat pengeluaran, pantau investasi, raih kebebasan finansial.", en: "Track spending, monitor investments, achieve financial freedom." },
         links: [{ url: "", label: "Android" }, { url: "https://extra.fandipres.my.id", label: "Website" }, ],
@@ -12,21 +13,20 @@ const projects = [
         tags: ["Blog"]
     },
     {
-        id: 3,
         title: { id: "Gudank Review", en: "" },
         description: { id: "Tukang review barang-barang di gudank.", en: "Reviewing stuff from the warehouse." },
         links: [{ url: "https://www.facebook.com/gudankreview", label: "Facebook" }, { url: "https://www.instagram.com/gudankreview", label: "Instagram" }, { url: "https://www.tiktok.com/@gudankreview", label: "Tiktok" }, { url: "https://www.youtube.com/@gudankreviewin", label: "YouTube" }],
         tags: ["Video"]
     },
     {
-        id: 1,
+        id: 2,
         title: { id: "Hobi Ngoding", en: "" },
         description: { id: "Halo coders. Si paling bisa segalanya.", en: "Hello coders. The ultimate jack-of-all-trades." },
         links: [{ url: "https://www.facebook.com/hobingodingcom", label: "Facebook" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }, { url: "https://www.hobingoding.com", label: "Website" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }],
         tags: ["Blog", "Video"]
     },
     {
-        id: 2,
+        id: 3,
         title: { id: "Jurnalpedia", en: "" },
         description: { id: "Semua yang perlu kamu tahu tentang dunia perjurnalan. Salam #PejuangJurnal.", en: "Everything you need to know about academic publishing. Cheers to all #ResearchWarriors." },
         links: [{ url: "https://play.google.com/store/apps/details?id=com.jurnalpedia.app", label: "Android" }, { url: "https://www.facebook.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://www.jurnalpedia.my.id", label: "Website" }, { url: "https://www.youtube.com/@jurnalpediaofc", label: "YouTube" }],
@@ -51,6 +51,7 @@ const projects = [
         tags: ["Web"]
     },
     {
+        id: 4,
         title: { id: "SIMAK-IF", en: "" },
         description: {
             id: "Rekap capaian akademik mahasiswa Informatika: MBKM, kompetisi, dan sertifikasi kompetensi.",

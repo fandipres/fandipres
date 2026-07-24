@@ -87,7 +87,7 @@ const PAGES = [
             { selector: '#pekerjaan-terbaru', html: buildItemsHtml('pekerjaan-terbaru', experience, 2) },
             { selector: '#pendidikan-terbaru', html: buildItemsHtml('pendidikan-terbaru', education, 2) },
             { selector: '#aktivitas-akademik-container', html: buildAcademicHtml(academic) },
-            { selector: '#proyek-terbaru', html: buildProjectsHtml(featuredProjects, 3) },
+            { selector: '#proyek-terbaru', html: buildProjectsHtml(featuredProjects, 4) },
             { selector: '#social-links-footer', html: buildSocialLinksHtml(socialMedia) }
         ]
     },

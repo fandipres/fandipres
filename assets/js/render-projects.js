@@ -51,7 +51,7 @@ window.updateProjectLanguage = function () {
     const homeContainer = document.getElementById('proyek-terbaru');
     if (homeContainer) {
         const featuredProjects = [...projects].sort((a, b) => (a.id || 999) - (b.id || 999));
-        renderProjects('proyek-terbaru', featuredProjects, 3);
+        renderProjects('proyek-terbaru', featuredProjects, 4);
     }
 };
 
