@@ -22,12 +22,6 @@ function renderSocialLinks(containerId, data) {
     container.innerHTML = buildSocialLinksHtml(data);
 }
 
-function renderTutoring(containerId, data) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    container.innerHTML = buildTutoringHtml(data);
-}
-
 function renderCv(containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -58,9 +52,6 @@ function initDynamicContent() {
     }
     if (document.getElementById('competition-list') && typeof competition !== 'undefined') {
         renderDetailItems('competition-list', competition);
-    }
-    if (document.getElementById('tutoring-list') && typeof tutoring !== 'undefined') {
-        renderTutoring('tutoring-list', tutoring);
     }
     if (document.getElementById('research-list') && typeof research !== 'undefined') {
         renderDetailItems('research-list', research);

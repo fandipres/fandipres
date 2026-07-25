@@ -173,7 +173,6 @@ function buildAcademicHtml(activities) {
         talks: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>`,
         thesis: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>`,
         competition: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a5 5 0 006 0m-9-4H4a2 2 0 01-2-2V8a2 2 0 012-2h2m12 7h2a2 2 0 002-2V8a2 2 0 00-2-2h-2m-10 0V4a1 1 0 011-1h6a1 1 0 011 1v2m-8 0h8m-8 0v5a4 4 0 004 4 4 4 0 004-4V5"></path></svg>`,
-        tutoring: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>`,
         ipr: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>`,
     };
 
@@ -202,49 +201,6 @@ function buildAcademicHtml(activities) {
             <p class="text-gray-400 text-sm leading-relaxed">${getVal(activity.description)}</p>
         </a>`;
     }
-    return html;
-}
-
-function buildTutoringHtml(data) {
-    const groupedMap = new Map();
-    data.forEach(item => {
-        const key = item.year;
-        if (!groupedMap.has(key)) {
-            groupedMap.set(key, []);
-        }
-        groupedMap.get(key).push(item);
-    });
-
-    let html = '';
-
-    groupedMap.forEach((itemsInGroup, year) => {
-        const itemsHtml = itemsInGroup.map(item => {
-            let topicsHtml = '';
-            if (item.topics && Array.isArray(item.topics) && item.topics.length > 0) {
-                const rows = item.topics.map(topic => `
-                    <li class="flex items-start gap-2.5 py-1.5">
-                        <svg class="w-4 h-4 mt-0.5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span class="text-sm text-gray-300">${getVal(topic)}</span>
-                    </li>
-                `).join('');
-                topicsHtml = `
-                    <p class="mt-3 text-xs font-semibold uppercase tracking-wider text-gray-500">${t('tutoring.topicsLabel')}</p>
-                    <ul class="mt-1">${rows}</ul>`;
-            }
-
-            return `<div class="mb-10 last:mb-0"><h3 class="text-xl font-semibold text-white">${item.student}</h3>${topicsHtml}</div>`;
-        }).join('');
-
-        html += `
-        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 group">
-            <div class="flex-shrink-0 sm:w-48 text-gray-500 font-medium text-sm pt-1 sticky top-24 self-start uppercase tracking-wider">${year}</div>
-            <div class="border-l-4 border-gray-800 pl-4 sm:pl-8 flex-grow transition-colors duration-300 group-hover:border-gray-700">
-                ${itemsHtml}
-            </div>
-        </div>`;
-    });
     return html;
 }
 
@@ -657,11 +613,6 @@ function buildCvHtml() {
         cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x)])
     ).join('');
 
-    const tutHtml = (typeof tutoring !== 'undefined' ? tutoring : []).map(x => {
-        const topics = (x.topics || []).map(tp => getVal(tp)).sort((a, b) => a.localeCompare(b)).join(', ');
-        return cvEntry(x.year, x.student, [`${t('tutoring.topicsLabel')}: ${topics}`]);
-    }).join('');
-
     const projHtml = (typeof projects !== 'undefined' ? projects : []).map(x =>
         cvEntry('', getVal(x.title), [getVal(x.description)], (x.tags || []).join(', '))
     ).join('');
@@ -692,7 +643,6 @@ function buildCvHtml() {
         ${section('books', bookHtml)}
         ${section('ipr', iprHtml)}
         ${section('talks', talkHtml)}
-        ${section('tutoring', tutHtml)}
         ${section('projects', projHtml)}
     `;
 }

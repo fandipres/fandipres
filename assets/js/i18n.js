@@ -15,7 +15,6 @@ const siteTranslations = {
         teaching: { id: "Pengajaran - Fandi Presly Simamora", en: "Teaching - Fandi Presly Simamora" },
         thesis: { id: "Bimbingan Tugas Akhir - Fandi Presly Simamora", en: "Thesis Supervision - Fandi Presly Simamora" },
         competition: { id: "Bimbingan Lomba - Fandi Presly Simamora", en: "Competition Mentoring - Fandi Presly Simamora" },
-        tutoring: { id: "Tutor Privat - Fandi Presly Simamora", en: "Private Tutoring - Fandi Presly Simamora" },
         cv: { id: "Curriculum Vitae - Fandi Presly Simamora", en: "Curriculum Vitae - Fandi Presly Simamora" }
     },
     navbar: {
@@ -33,8 +32,7 @@ const siteTranslations = {
         talks: { id: "Pembicara", en: "Talks" },
         teaching: { id: "Pengajaran", en: "Teaching" },
         thesis: { id: "Bimbingan Tugas Akhir", en: "Thesis Supervision" },
-        competition: { id: "Bimbingan Lomba", en: "Competition Mentoring" },
-        tutoring: { id: "Tutor Privat", en: "Private Tutoring" }
+        competition: { id: "Bimbingan Lomba", en: "Competition Mentoring" }
     },
     sections: {
         academic: {
@@ -77,8 +75,7 @@ const siteTranslations = {
         talks: { id: "Pembicara", en: "Talks" },
         teaching: { id: "Pengajaran", en: "Teaching" },
         thesis: { id: "Bimbingan Tugas Akhir", en: "Thesis Supervision" },
-        competition: { id: "Bimbingan Lomba", en: "Competition Mentoring" },
-        tutoring: { id: "Tutor Privat", en: "Private Tutoring" }
+        competition: { id: "Bimbingan Lomba", en: "Competition Mentoring" }
     },
     asset: {
         article: { id: "Artikel", en: "Article" },
@@ -100,9 +97,6 @@ const siteTranslations = {
             en: "The page you are looking for may have been moved or never existed."
         },
         backHome: { id: "Kembali ke Beranda", en: "Back to Home" }
-    },
-    tutoring: {
-        topicsLabel: { id: "Materi", en: "Topics" }
     },
     cv: {
         downloadPdf: { id: "Unduh PDF", en: "Download PDF" },

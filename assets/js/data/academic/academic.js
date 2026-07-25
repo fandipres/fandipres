@@ -35,8 +35,4 @@ const academic = {
         description: { id: "Berbagi wawasan dan pengalaman sebagai pembicara di berbagai forum.", en: "Sharing insights and experiences as a speaker at seminars and workshops." },
         link: "/talks",
     },
-    tutoring: {
-        description: { id: "Layanan mentoring dan pengajaran teknis secara privat/personal.", en: "Personalized technical mentoring and private teaching services." },
-        link: "/tutoring/"
-    },
 };

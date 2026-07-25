@@ -29,7 +29,6 @@ const SCRIPT_FILES = [
     'assets/js/data/academic/teaching.js',
     'assets/js/data/academic/thesis.js',
     'assets/js/data/academic/competition.js',
-    'assets/js/data/academic/tutoring.js',
     'assets/js/render-core.js'
 ];
 
@@ -60,18 +59,17 @@ new vm.Script(`
     this.teaching = teaching;
     this.thesis = thesis;
     this.competition = competition;
-    this.tutoring = tutoring;
 `).runInContext(sandbox);
 
 sandbox.currentLang = 'id'; // defensive: always prerender the Indonesian default
 
 const {
     experience, education, academic, projects, socialMedia,
-    teaching, thesis, competition, tutoring, research, communityService,
+    teaching, thesis, competition, research, communityService,
     publications, books, talks, ipr, siteTranslations,
     buildItemsHtml, buildDetailItemsHtml, buildAcademicHtml, buildSocialLinksHtml,
     buildProjectsHtml, buildProjectFiltersHtml, filterIprData, sortIprData,
-    buildHakiFiltersHtml, buildHakiTableHtml, buildTutoringHtml, buildCvHtml
+    buildHakiFiltersHtml, buildHakiTableHtml, buildCvHtml
 } = sandbox;
 
 const featuredProjects = [...projects].sort((a, b) => (a.id || 999) - (b.id || 999));
@@ -198,15 +196,6 @@ const PAGES = [
         priority: '0.8',
         fills: [
             { selector: '#competition-list', html: buildDetailItemsHtml('competition-list', competition) },
-            { selector: '#social-links-footer', html: buildSocialLinksHtml(socialMedia) }
-        ]
-    },
-    {
-        file: 'tutoring/index.html',
-        url: `${SITE_URL}/tutoring/`,
-        priority: '0.8',
-        fills: [
-            { selector: '#tutoring-list', html: buildTutoringHtml(tutoring) },
             { selector: '#social-links-footer', html: buildSocialLinksHtml(socialMedia) }
         ]
     },
