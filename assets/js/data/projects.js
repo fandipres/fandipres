@@ -3,7 +3,7 @@ const projects = [
         id: 1,
         title: { id: "Extra", en: "" },
         description: { id: "Catat pengeluaran, pantau investasi, raih kebebasan finansial.", en: "Track spending, monitor investments, achieve financial freedom." },
-        links: [{ url: "", label: "Android" }, { url: "https://extra.fandipres.my.id", label: "Website" }, ],
+        links: [{ url: "", label: "Android" }, { url: "https://extra.fandipres.my.id", label: "Website" },],
         tags: ["Android"]
     },
     {
@@ -52,12 +52,12 @@ const projects = [
     },
     {
         id: 4,
-        title: { id: "SIMAK-IF", en: "" },
+        title: { id: "SIMPRODI", en: "" },
         description: {
-            id: "Rekap capaian akademik mahasiswa Informatika: MBKM, kompetisi, dan sertifikasi kompetensi.",
-            en: "Academic achievement records for Informatics students: MBKM, competitions, and certifications."
+            id: "Portal akademik berbasis Google Apps Script: capaian, showcase, tes peminatan, BA.",
+            en: "Academic portal built on Google Apps Script: achievements, showcase, quiz, BA analytics."
         },
-        links: [{ url: "https://csmikroskil.blogspot.com/", label: "Demo Mahasiswa" }, { url: "https://script.google.com/macros/s/AKfycbydy_-RvqxTSt7-MRQ8e84QN13YKQDYskFG6g5FJNIPT6ZkF7lDuQPJSXKl2yvCkY7E-w/exec?page=admin", label: "Demo Admin" }],
+        links: [{ url: "https://simprodi.fandipres.my.id/", label: "Demo" }, { url: "https://github.com/fandipres/simprodi-public", label: "GitHub" }],
         tags: ["Web"]
     },
     {
