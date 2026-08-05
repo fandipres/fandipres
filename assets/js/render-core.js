@@ -298,14 +298,31 @@ function buildProjectsHtml(data, limit) {
             if (name.includes('ios') || name.includes('apple') || name.includes('app store') || name.includes('mac')) return `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.152 6.896c-.029-2.224 1.83-3.328 1.916-3.38-1.03-1.503-2.636-1.706-3.197-1.733-1.353-.136-2.645.795-3.342.795-.698 0-1.776-.777-2.909-.754-1.488.02-2.859.865-3.626 2.198-1.562 2.705-.399 6.702 1.121 8.895.742 1.07 1.625 2.261 2.775 2.222 1.107-.039 1.531-.711 2.872-.711 1.338 0 1.728.711 2.894.69 1.185-.02 1.948-1.087 2.684-2.161.85-1.24 1.201-2.441 1.218-2.505-.025-.01-2.352-.902-2.392-3.576zM10.938 2.607c.613-.742 1.025-1.772.912-2.8-.887.036-1.956.59-2.585 1.328-.56.654-1.05 1.705-.916 2.715.986.076 1.972-.505 2.589-1.243z"/></svg>`;
             if (name.includes('windows') || name.includes('pc')) return `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0V3.449zM10.949 1.947L24 0v11.4H10.949V1.947zM0 12.6h9.75v9.451L0 20.701V12.6zm10.949 0H24V24l-13.051-1.801V12.6z"/></svg>`;
             if (name.includes('store')) return `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>`;
-            if (name.includes('demo') || name.includes('preview')) return `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>`;
             if (name.includes('web') || name.includes('site')) return `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>`;
             return `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>`;
         };
 
+        const getLinkPriority = (labelName) => {
+            const name = labelName.toLowerCase();
+            if (name.includes('web') || name.includes('site')) return 0;
+            if (name.includes('android') || name.includes('ios') || name.includes('apple') || name.includes('app store') || name.includes('play store') || name.includes('playstore') || name.includes('windows') || name.includes('pc')) return 1;
+            if (name.includes('github')) return 2;
+            if (name.includes('store')) return 3;
+            if (name.includes('facebook')) return 4;
+            if (name.includes('instagram')) return 5;
+            if (name.includes('tiktok')) return 6;
+            if (name.includes('youtube')) return 7;
+            return 8;
+        };
+
         let linksHtml = '';
         if (item.links && item.links.length > 0) {
-            const linksInnerHtml = item.links.map(link => {
+            const sortedLinks = [...item.links].sort((a, b) => {
+                const labelA = typeof getVal === 'function' ? getVal(a.label) : a.label;
+                const labelB = typeof getVal === 'function' ? getVal(b.label) : b.label;
+                return getLinkPriority(labelA) - getLinkPriority(labelB);
+            });
+            const linksInnerHtml = sortedLinks.map(link => {
                 const labelText = typeof getVal === 'function' ? getVal(link.label) : link.label;
                 const iconSvg = getIcon(labelText);
 
@@ -333,13 +350,21 @@ function buildProjectsHtml(data, limit) {
         const primary = TYPE_META[primaryKey] ? primaryKey : null;
         const secondaryTags = primary ? tags.slice(1) : [];
 
-        const thumbHtml = primary ? `
+        const badgeHtml = primary
+            ? `<span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border ${TYPE_META[primary].badge}">${TYPE_META[primary].icon}${tags[0]}</span>`
+            : '';
+
+        const thumbHtml = item.image
+            ? `
+            <div class="relative aspect-[16/10] overflow-hidden bg-gray-900">
+                <img src="${item.image}" alt="${getVal(item.title)}" loading="lazy" class="w-full h-full object-cover">
+                ${badgeHtml}
+            </div>`
+            : (primary ? `
             <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${TYPE_META[primary].grad}">
                 ${TYPE_META[primary].thumb}
-                <span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border ${TYPE_META[primary].badge}">
-                    ${TYPE_META[primary].icon}${tags[0]}
-                </span>
-            </div>` : '';
+                ${badgeHtml}
+            </div>` : '');
 
         const secondaryHtml = secondaryTags.length > 0
             ? `<div class="flex flex-wrap gap-1.5 mt-2">${secondaryTags.map(t => `<span class="text-[9px] uppercase tracking-wide font-semibold text-gray-500 border border-gray-700 rounded px-1.5 py-0.5">${t}</span>`).join('')}</div>`

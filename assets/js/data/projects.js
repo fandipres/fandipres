@@ -3,13 +3,13 @@ const projects = [
         id: 1,
         title: { id: "Extra", en: "" },
         description: { id: "Catat pengeluaran, pantau investasi, raih kebebasan finansial.", en: "Track spending, monitor investments, achieve financial freedom." },
-        links: [{ url: "", label: "Android" }, { url: "https://extra.fandipres.my.id", label: "Website" },],
+        links: [{ url: "https://extra.fandipres.my.id", label: "Website" }, { url: "", label: "Android" }],
         tags: ["Android"]
     },
     {
         title: { id: "Fandi's Blog", en: "" },
         description: { id: "Tulisan pribadi, review, dan info random lainnya dariku untuk kalian para pembaca.", en: "Personal thoughts, reviews, and other random tidbits from me to you." },
-        links: [{ url: "https://lynk.id/fanblog", label: "Store" }, { url: "https://blog.fandipres.my.id", label: "Website" }],
+        links: [{ url: "https://blog.fandipres.my.id", label: "Website" }, { url: "https://lynk.id/fanblog", label: "Store" }],
         tags: ["Blog"]
     },
     {
@@ -22,20 +22,20 @@ const projects = [
         id: 2,
         title: { id: "Hobi Ngoding", en: "" },
         description: { id: "Halo coders. Si paling bisa segalanya.", en: "Hello coders. The ultimate jack-of-all-trades." },
-        links: [{ url: "https://www.facebook.com/hobingodingcom", label: "Facebook" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }, { url: "https://www.hobingoding.com", label: "Website" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }],
+        links: [{ url: "https://www.hobingoding.com", label: "Website" }, { url: "https://www.facebook.com/hobingodingcom", label: "Facebook" }, { url: "https://www.instagram.com/hobingodingcom", label: "Instagram" }, { url: "https://www.tiktok.com/@hobingodingcom", label: "Tiktok" }, { url: "https://www.youtube.com/@hobingodingcom", label: "YouTube" }],
         tags: ["Blog", "Video"]
     },
     {
         id: 3,
         title: { id: "Jurnalpedia", en: "" },
         description: { id: "Semua yang perlu kamu tahu tentang dunia perjurnalan. Salam #PejuangJurnal.", en: "Everything you need to know about academic publishing. Cheers to all #ResearchWarriors." },
-        links: [{ url: "https://play.google.com/store/apps/details?id=com.jurnalpedia.app", label: "Android" }, { url: "https://www.facebook.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://www.jurnalpedia.my.id", label: "Website" }, { url: "https://www.youtube.com/@jurnalpediaofc", label: "YouTube" }],
+        links: [{ url: "https://www.jurnalpedia.my.id", label: "Website" }, { url: "https://play.google.com/store/apps/details?id=com.jurnalpedia.app", label: "Android" }, { url: "https://www.facebook.com/jurnalpediaofc", label: "Facebook" }, { url: "https://www.instagram.com/jurnalpediaofc", label: "Instagram" }, { url: "https://www.tiktok.com/@jurnalpediaofc", label: "Tiktok" }, { url: "https://www.youtube.com/@jurnalpediaofc", label: "YouTube" }],
         tags: ["Android", "Blog", "Video"]
     },
     {
         title: { id: "Kapitalin", en: "" },
         description: { id: "Alat web gratis untuk cek dan koreksi otomatis huruf kapital pada teks Bahasa Indonesia sesuai aturan EYD Edisi Kelima.", en: "Free web tool to automatically check and correct capitalization in Indonesian text based on the latest EYD rules." },
-        links: [{ url: "https://fandipres.github.io/kapitalin", label: "Demo" }, { url: "https://github.com/fandipres/kapitalin", label: "GitHub" }],
+        links: [{ url: "https://fandipres.github.io/kapitalin", label: "Website" }, { url: "https://github.com/fandipres/kapitalin", label: "GitHub" }],
         tags: ["Web"]
     },
     {
@@ -57,13 +57,13 @@ const projects = [
             id: "Portal akademik berbasis Google Apps Script: capaian, showcase, tes peminatan, BA.",
             en: "Academic portal built on Google Apps Script: achievements, showcase, quiz, BA analytics."
         },
-        links: [{ url: "https://simprodi.fandipres.my.id/", label: "Demo" }, { url: "https://github.com/fandipres/simprodi-public", label: "GitHub" }],
+        links: [{ url: "https://simprodi.fandipres.my.id/", label: "Website" }, { url: "https://github.com/fandipres/simprodi-public", label: "GitHub" }],
         tags: ["Web"]
     },
     {
         title: { id: "Special Day", en: "" },
         description: { id: "Aplikasi hitung mundur untuk momen-momen spesialmu.", en: "A countdown app for your special moments." },
-        links: [{ url: "https://fandipres.github.io/special-day", label: "Demo" }, { url: "https://github.com/fandipres/special-day", label: "GitHub" }],
+        links: [{ url: "https://fandipres.github.io/special-day", label: "Website" }, { url: "https://github.com/fandipres/special-day", label: "GitHub" }],
         tags: ["Web"]
     },
     {
