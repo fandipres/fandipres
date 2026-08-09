@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#04060a"/>
+
+  <!-- video frame -->
+  <rect x="380" y="130" width="840" height="470" rx="16" fill="#0e131c" stroke="#263041" stroke-width="2"/>
+
+  <!-- play button -->
+  <circle cx="800" cy="365" r="72" fill="#122036" stroke="#3b82f6" stroke-width="2.5"/>
+  <polygon points="778,328 778,402 838,365" fill="#3b82f6"/>
+
+  <!-- progress bar -->
+  <rect x="420" y="548" width="760" height="8" rx="4" fill="#263041"/>
+  <rect x="420" y="548" width="290" height="8" rx="4" fill="#3b82f6"/>
+
+  <!-- distribution dots (multi-platform, no brand marks) -->
+  <circle cx="740" cy="660" r="11" fill="#3b82f6"/>
+  <circle cx="780" cy="660" r="11" fill="none" stroke="#39424f" stroke-width="2"/>
+  <circle cx="820" cy="660" r="11" fill="none" stroke="#39424f" stroke-width="2"/>
+  <circle cx="860" cy="660" r="11" fill="none" stroke="#39424f" stroke-width="2"/>
+</svg>
