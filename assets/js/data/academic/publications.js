@@ -5,8 +5,8 @@ const publications = [
         subtitle: { id: "Building of Informatics, Technology and Science", en: "" },
         rank: { id: "Sinta 3", en: "" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
-        role: { id: "Penulis Pertama", en: "First Author" },
-        description: { id: `Luaran dari Penelitian "Analisis Sentimen Terhadap Respons Publik Selama Demonstrasi Dewan Perwakilan Rakyat Republik Indonesia Menggunakan Metode Topic Modeling dan Aspect-Based Sentiment Analysis".`, en: `Research Output "Sentiment Analysis of Public Response During the Indonesian House of Representatives (DPR RI) Demonstrations Using Topic Modeling and Aspect-Based Sentiment Analysis".` },
+        team: ["Fandi Presly Simamora", "Juliana Damayanti Manurung"],
+        description: { id: "", en: "" },
         assets: {
             article: ""
         }
@@ -17,8 +17,8 @@ const publications = [
         subtitle: { id: "BERNAS: Jurnal Pengabdian Kepada Masyarakat", en: "" },
         rank: { id: "Sinta 4", en: "" },
         category: { id: "Pengabdian Penugasan", en: "Assigned Community Service" },
-        role: { id: "Penulis Pertama", en: "First Author" },
-        description: { id: `Luaran dari Pengabdian kepada Masyarakat "Pembekalan Guru SMK dalam Menghadapi Tantangan Industri Masa Depan Melalui Pelatihan Berpikir Komputasional, Analisis Data, dan Literasi Kecerdasan Artifisial".`, en: `Community Service Output "Empowering Vocational Teachers for Future Industrial Challenges through Computational Thinking, Data Analysis, and AI Literacy Training".` },
+        team: ["Fandi Presly Simamora", "Juliana Damayanti Manurung", "Apriyanto Halim"],
+        description: { id: "", en: "" },
         assets: {
             article: "https://ejournal.unma.ac.id/index.php/bernas/article/view/17373"
         }
@@ -29,8 +29,8 @@ const publications = [
         subtitle: { id: "BERNAS: Jurnal Pengabdian Kepada Masyarakat", en: "" },
         rank: { id: "Sinta 4", en: "" },
         category: { id: "Pengabdian Berbasis Kemitraan", en: "Partnership-based Community Service" },
-        role: { id: "Penulis Ketiga", en: "Third Author" },
-        description: { id: `Luaran dari Pengabdian kepada Masyarakat "Transformasi Peran Guru dalam Mendorong Partisipasi Siswa melalui Integrasi Mentimeter untuk Mendukung Active Learning".`, en: `Community Service Output "Transforming Teacher Roles to Boost Student Participation via Mentimeter Integration for Supporting Active Learning".` },
+        team: ["Juliana Damayanti Manurung", "Gunawan", "Fandi Presly Simamora", "Hita", "Ivan Dika Lesmana"],
+        description: { id: "", en: "" },
         assets: {
             article: "https://ejournal.unma.ac.id/index.php/bernas/article/view/17324"
         }
@@ -41,8 +41,8 @@ const publications = [
         subtitle: { id: "Journal of Novel Engineering Science and Technology", en: "" },
         rank: { id: "Sinta 2", en: "" },
         category: { id: "Penelitian Dosen Pemula", en: "Novice Lecturer Research Grant" },
-        role: { id: "Penulis Pertama", en: "First Author" },
-        description: { id: `Luaran dari Penelitian "Transformasi Digital Pertanian dengan Model Prediksi Cuaca Berbasis BiLSTM untuk Optimalisasi Masa Tanam Padi di Era Industri 4.0".`, en: `Research Output "Agricultural Digital Transformation via BiLSTM-Based Weather Prediction Models for Optimizing Rice Planting Seasons in the Industry 4.0 Era".` },
+        team: ["Fandi Presly Simamora", "Khairul Hawani Rambe", "Sophya Hadini Marpaung"],
+        description: { id: "", en: "" },
         assets: {
             article: "https://journal.iistr.org/index.php/JNEST/article/view/1340"
         }
@@ -53,8 +53,8 @@ const publications = [
         subtitle: { id: "Engineering Science Letter", en: "" },
         rank: { id: "Sinta 2", en: "" },
         category: { id: "Penelitian Dosen Pemula", en: "Novice Lecturer Research Grant" },
-        role: { id: "Penulis Ketiga", en: "Third Author" },
-        description: { id: `Luaran dari Penelitian "Harga Beras di Era Big Data: Prediksi Berbasis Bi-LSTM dan Analisis SHAP untuk Stabilitas Harga Pangan Nasional".`, en: `Research Output "Rice Prices in the Big Data Era: Bi-LSTM-Based Prediction and SHAP Analysis for National Food Price Stability".` },
+        team: ["Juliana Damayanti Manurung", "Nadya Sikana", "Fandi Presly Simamora", "Zoni Zikro Manurung"],
+        description: { id: "", en: "" },
         assets: {
             article: "https://journal.iistr.org/index.php/ESL/article/view/1360"
         }
@@ -65,8 +65,8 @@ const publications = [
         subtitle: { id: "Indonesian Journal of Artificial Intelligence and Data Mining", en: "" },
         rank: { id: "Sinta 3", en: "" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
-        role: { id: "Penulis Keempat", en: "Fourth Author" },
-        description: { id: `Luaran dari Penelitian "Optimasi Random Forest Menggunakan RFE untuk Klasifikasi Stunting pada RSU Mitra Medika".`, en: `Research Output "Random Forest Optimization Using RFE for Stunting Classification at RSU Mitra Medika".` },
+        team: ["Sophya Hadini Marpaung", "Frans Mikael Sinaga", "Khairul Hawani Rambe", "Fandi Presly Simamora", "Kelvin"],
+        description: { id: "", en: "" },
         assets: {
             article: "https://ejournal.uin-suska.ac.id/index.php/IJAIDM/article/view/35295"
         }
@@ -77,8 +77,8 @@ const publications = [
         subtitle: { id: "Jambura Journal of Mathematics", en: "" },
         rank: { id: "Sinta 3", en: "" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
-        role: { id: "Penulis Pertama", en: "First Author" },
-        description: { id: `Luaran dari Penelitian "Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham".`, en: `Research Output "Hyperparameter Tuning of BiLSTM Using Bayesian Optimization for Stock Price Prediction".` },
+        team: ["Fandi Presly Simamora", "Ronsen Purba", "Muhammad Fermi Pasha"],
+        description: { id: "", en: "" },
         assets: {
             article: "https://ejurnal.ung.ac.id/index.php/jjom/article/view/27166/0"
         }

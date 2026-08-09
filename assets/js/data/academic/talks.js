@@ -4,7 +4,6 @@ const talks = [
         title: { id: "Workshop Mikroskil e-Xploration: Python", en: "" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         category: { id: "Event Internal", en: "Internal Event" },
-        role: { id: "Narasumber", en: "Speaker" },
         description: { id: "", en: "" },
         assets: {
             documentation: "",
@@ -16,7 +15,6 @@ const talks = [
         title: { id: "Coaching Clinic PKM", en: "" },
         subtitle: { id: "Mikroskil Student Union", en: "" },
         category: { id: "Event Internal", en: "Internal Event" },
-        role: { id: "Narasumber", en: "Speaker" },
         description: { id: "", en: "" },
         assets: {
             documentation: "",
@@ -28,7 +26,6 @@ const talks = [
         title: { id: "Workshop Introduction to Game Development", en: "" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         category: { id: "Event Internal", en: "Internal Event" },
-        role: { id: "Narasumber", en: "Speaker" },
         description: { id: "", en: "" },
         assets: {
             documentation: "",

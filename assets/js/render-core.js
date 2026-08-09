@@ -1,3 +1,19 @@
+function buildAssetsHtml(item) {
+    if (!item.assets) return '';
+    const assetLinks = [];
+    for (const key of Object.keys(siteTranslations.asset)) {
+        const link = item.assets[key];
+        const label = t(`asset.${key}`);
+        if (link === "") {
+            assetLinks.push({ label: label, html: `<span class="text-gray-600 cursor-default text-sm font-medium">${label}</span>` });
+        } else if (link) {
+            assetLinks.push({ label: label, html: `<a href="${link}" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300 flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>${label}</a>` });
+        }
+    }
+    assetLinks.sort((a, b) => a.label.localeCompare(b.label));
+    return assetLinks.length > 0 ? `<div class="mt-3 flex items-center gap-4">${assetLinks.map(l => l.html).join('')}</div>` : '';
+}
+
 function buildItemsHtml(containerId, data, limit) {
     const itemsToRender = limit ? data.slice(0, limit) : data;
     let html = '';
@@ -8,9 +24,10 @@ function buildItemsHtml(containerId, data, limit) {
             ? `<p class="mt-1 text-base text-blue-300 font-medium tracking-wide">${subtitle}</p>`
             : '';
 
-        const educationContainers = new Set(['education-list', 'pendidikan-terbaru']);
-        const isEducation = educationContainers.has(containerId);
-        const descClass = isEducation ? "text-gray-400 italic" : "text-gray-400";
+        const descText = getVal(item.description);
+        const descriptionHtml = item.link
+            ? `<a href="${item.link}" target="_blank" class="mt-2 block text-gray-500 hover:text-blue-400 text-sm leading-relaxed transition-colors duration-300">${descText}</a>`
+            : `<p class="mt-2 text-gray-500 text-sm leading-relaxed">${descText}</p>`;
 
         html += `
             <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 group">
@@ -20,7 +37,8 @@ function buildItemsHtml(containerId, data, limit) {
                 <div class="border-l-4 border-gray-800 pl-4 sm:pl-8 flex-grow transition-colors duration-300 hover:border-gray-700">
                     <h3 class="text-xl font-bold text-white">${getVal(item.title)}</h3>
                     ${subtitleHtml}
-                    <p class="mt-2 ${descClass} text-sm leading-relaxed border-t border-gray-800/50 pt-2">${getVal(item.description)}</p>
+                    ${descriptionHtml}
+                    ${buildAssetsHtml(item)}
                 </div>
             </div>`;
     });
@@ -63,27 +81,18 @@ function buildDetailItemsHtml(containerId, data) {
 
             const tags = [];
             if (item.category) tags.push(getVal(item.category));
-            if (item.role) tags.push(getVal(item.role));
             const tagsHtml = tags.length > 0 ? `<p class="mt-1 text-sm text-gray-500">${tags.join(' • ')}</p>` : '';
 
             let studentsHtml = '';
-            if (item.students && Array.isArray(item.students) && item.students.length > 0) {
+            if (item.team && item.team.length > 0) {
                 let studentList = [];
-                item.students.forEach(name => {
+                item.team.forEach(name => {
                     const txt = getVal(name);
                     const parts = txt.split(',').map(s => s.trim()).filter(s => s);
                     studentList.push(...parts);
                 });
 
-                const chips = studentList.map(name => `
-                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-300 border border-gray-700/50 hover:bg-gray-700 transition-colors duration-200 cursor-default">
-                        <svg class="w-3 h-3 mr-1.5 opacity-60" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                        </svg>
-                        ${name}
-                    </span>
-                `).join('');
-                studentsHtml = `<div class="mt-3 flex flex-wrap gap-2 items-center border-t border-gray-800/50 pt-2">${chips}</div>`;
+                studentsHtml = `<p class="mt-1 text-sm text-gray-500">${t('labels.team')}: ${studentList.join(', ')}</p>`;
             }
 
             const rawDesc = getVal(item.description);
@@ -97,55 +106,21 @@ function buildDetailItemsHtml(containerId, data) {
                     const parts = txt.split(',').map(s => s.trim()).filter(s => s);
                     classList.push(...parts);
                 });
-
-                const chips = classList.map(clsName => `
-                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-300 border border-gray-700/50 hover:bg-gray-700 transition-colors duration-200 cursor-default">
-                        <svg class="w-3 h-3 mr-1.5 opacity-60" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
-                        </svg>
-                        ${clsName}
-                    </span>
-                `).join('');
-
-                detailsListHtml = `<div class="mt-3 flex flex-wrap gap-2 items-center border-t border-gray-800/50 pt-2">${chips}</div>`;
+                detailsListHtml = `<p class="mt-1 text-sm text-gray-500">${t('labels.classes')}: ${classList.join(', ')}</p>`;
             }
             else if (containerId === 'pengajaran-lengkap' && rawDesc && !item.classes) {
                 const classes = rawDesc.split(',').map(s => s.trim().replace(/\.$/, '')).filter(s => s);
-                const chips = classes.map(cls => `
-                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-300 border border-gray-700/50 hover:bg-gray-700 transition-colors duration-200 cursor-default">
-                        <svg class="w-3 h-3 mr-1.5 opacity-60" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
-                        </svg>
-                        ${cls}
-                    </span>
-                `).join('');
-                detailsListHtml = `<div class="mt-3 flex flex-wrap gap-2 items-center border-t border-gray-800/50 pt-2">${chips}</div>`;
+                detailsListHtml = `<p class="mt-1 text-sm text-gray-500">${t('labels.classes')}: ${classes.join(', ')}</p>`;
             }
             else if (rawDesc) {
-                descriptionHtml = `<p class="mt-3 text-gray-400 text-sm leading-relaxed">${rawDesc}</p>`;
+                descriptionHtml = `<p class="mt-3 text-gray-500 text-sm leading-relaxed">${rawDesc}</p>`;
             }
 
             if ((item.classes || (containerId !== 'pengajaran-lengkap')) && rawDesc) {
-                descriptionHtml = `<p class="mt-3 text-gray-400 text-sm leading-relaxed">${rawDesc}</p>`;
+                descriptionHtml = `<p class="mt-3 text-gray-500 text-sm leading-relaxed">${rawDesc}</p>`;
             }
 
-            let assetsHtml = '';
-            if (item.assets) {
-                const assetLinks = [];
-                for (const [key, labelObj] of Object.entries(siteTranslations.asset)) {
-                    const link = item.assets[key];
-                    const label = t(`asset.${key}`);
-                    if (link === "") {
-                        assetLinks.push({ label: label, html: `<span class="text-gray-600 cursor-default text-xs uppercase tracking-wide font-semibold">${label}</span>` });
-                    } else if (link) {
-                        assetLinks.push({ label: label, html: `<a href="${link}" target="_blank" class="text-blue-400 hover:text-blue-300 text-xs uppercase tracking-wide font-semibold hover:underline flex items-center gap-1"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>${label}</a>` });
-                    }
-                }
-                assetLinks.sort((a, b) => a.label.localeCompare(b.label));
-                if (assetLinks.length > 0) {
-                    assetsHtml = `<div class="mt-4 flex items-center gap-4 border-t border-gray-800 pt-3">${assetLinks.map(l => l.html).join('')}</div>`;
-                }
-            }
+            const assetsHtml = buildAssetsHtml(item);
 
             return `<div class="mb-10 last:mb-0 group/item">${titleHtml}${subtitleHtml}${tagsHtml}${descriptionHtml}${studentsHtml}${detailsListHtml}${assetsHtml}</div>`;
         }).join('');
@@ -207,7 +182,7 @@ function buildAcademicHtml(activities) {
 function buildSocialLinksHtml(data) {
     let html = '';
     data.forEach(link => {
-        html += `<a href="${link.url}" target="_blank" title="${link.name}" class="text-gray-400 hover:text-white transition-transform duration-300 transform hover:scale-110">${link.icon}</a>`;
+        html += `<a href="${link.url}" target="_blank" title="${link.name}" aria-label="${link.name}" class="text-gray-400 hover:text-white transition-transform duration-300 transform hover:scale-110">${link.icon}</a>`;
     });
     return html;
 }
@@ -222,67 +197,7 @@ function buildProjectsHtml(data, limit) {
         return `<p class="col-span-full text-center text-gray-500 italic py-10">${emptyMsg}</p>`;
     }
 
-    const TYPE_META = {
-        web: {
-            badge: 'text-blue-400 bg-blue-500/10 border-blue-500/30',
-            grad: 'from-blue-950 to-black',
-            icon: `<svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-width="1.8"/><path stroke-width="1.6" d="M3 12h18M12 3c2.4 2.6 3.6 5.7 3.6 9s-1.2 6.4-3.6 9c-2.4-2.6-3.6-5.7-3.6-9s1.2-6.4 3.6-9z"/></svg>`,
-            thumb: `
-                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="46" y="34" width="228" height="132" rx="8" fill="#0b1b32" stroke="#2c4d80" stroke-width="1.5"/>
-                    <rect x="46" y="34" width="228" height="24" rx="8" fill="#12294a"/>
-                    <circle cx="60" cy="46" r="3" fill="#4f8dff" opacity="0.55"/>
-                    <circle cx="71" cy="46" r="3" fill="#4f8dff" opacity="0.4"/>
-                    <circle cx="82" cy="46" r="3" fill="#4f8dff" opacity="0.25"/>
-                    <rect x="62" y="76" width="140" height="10" rx="3" fill="#3b6cb8" opacity="0.75"/>
-                    <rect x="62" y="94" width="188" height="7" rx="3" fill="#1f3a63"/>
-                    <rect x="62" y="108" width="168" height="7" rx="3" fill="#1f3a63"/>
-                    <rect x="62" y="130" width="66" height="22" rx="6" fill="#4f8dff" opacity="0.85"/>
-                </svg>`
-        },
-        android: {
-            badge: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
-            grad: 'from-emerald-950 to-black',
-            icon: `<svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2" stroke-width="1.8"/><path stroke-width="1.6" stroke-linecap="round" d="M10 19h4"/></svg>`,
-            thumb: `
-                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="128" y="26" width="64" height="148" rx="12" fill="#0b2419" stroke="#2f8f63" stroke-width="1.5"/>
-                    <rect x="136" y="42" width="48" height="84" rx="4" fill="#123527"/>
-                    <circle cx="160" cy="138" r="7" fill="#2fbf85" opacity="0.55"/>
-                    <rect x="144" y="55" width="20" height="20" rx="5" fill="#2fbf85" opacity="0.8"/>
-                    <rect x="168" y="55" width="10" height="10" rx="3" fill="#2fbf85" opacity="0.4"/>
-                    <rect x="144" y="80" width="10" height="10" rx="3" fill="#2fbf85" opacity="0.4"/>
-                    <rect x="158" y="80" width="20" height="10" rx="3" fill="#2fbf85" opacity="0.55"/>
-                </svg>`
-        },
-        video: {
-            badge: 'text-rose-400 bg-rose-500/10 border-rose-500/30',
-            grad: 'from-rose-950 to-black',
-            icon: `<svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M9 7.4v9.2a.7.7 0 001.07.6l7.2-4.6a.7.7 0 000-1.2l-7.2-4.6A.7.7 0 009 7.4z"/></svg>`,
-            thumb: `
-                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="160" cy="100" r="36" fill="#ef5da8" opacity="0.12"/>
-                    <circle cx="160" cy="100" r="25" fill="#ef5da8" opacity="0.85"/>
-                    <path d="M152 87l22 13-22 13z" fill="#170a11"/>
-                    <rect x="40" y="168" width="28" height="4" rx="2" fill="#ef5da8" opacity="0.4"/>
-                    <rect x="74" y="168" width="48" height="4" rx="2" fill="#ef5da8" opacity="0.22"/>
-                </svg>`
-        },
-        blog: {
-            badge: 'text-amber-400 bg-amber-500/10 border-amber-500/30',
-            grad: 'from-amber-950 to-black',
-            icon: `<svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.6" d="M5 3.5h10l4 4v13a.5.5 0 01-.5.5h-13a.5.5 0 01-.5-.5v-17z"/><path stroke-width="1.3" stroke-linecap="round" d="M8 10h8M8 14h8"/></svg>`,
-            thumb: `
-                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="94" y="32" width="132" height="136" rx="6" fill="#241a0a" stroke="#8a6224" stroke-width="1.5"/>
-                    <rect x="110" y="52" width="76" height="10" rx="3" fill="#e8a13d" opacity="0.8"/>
-                    <rect x="110" y="72" width="100" height="6" rx="2" fill="#8a6224"/>
-                    <rect x="110" y="86" width="100" height="6" rx="2" fill="#8a6224"/>
-                    <rect x="110" y="100" width="64" height="6" rx="2" fill="#8a6224"/>
-                    <rect x="110" y="124" width="30" height="18" rx="4" fill="#e8a13d" opacity="0.3"/>
-                </svg>`
-        }
-    };
+    const THUMBNAIL_TEMPLATES = new Set(['web', 'android', 'content', 'blog']);
 
     let html = '';
     itemsToRender.forEach(item => {
@@ -292,6 +207,7 @@ function buildProjectsHtml(data, limit) {
             if (name.includes('facebook')) return `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>`;
             if (name.includes('instagram')) return `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>`;
             if (name.includes('youtube')) return `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`;
+            if (name.includes('threads')) return `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.781 3.629 2.695 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.106-4.798-.31-.73-.873-1.331-1.634-1.777-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.75-2.964-.065-1.19.408-2.285 1.33-3.082.885-.765 2.13-1.22 3.606-1.317a13.5 13.5 0 0 1 3.02.142c-.135-.807-.404-1.44-.807-1.887-.545-.605-1.395-.915-2.528-.921-1.968.014-2.965.628-3.462 1.144l-1.679-1.29c.964-1.036 2.485-1.813 4.978-1.813h.05c3.24.017 5.36 1.49 5.89 4.147.192.958.22 1.968.084 2.917-.13.898-.417 1.686-.85 2.34 1.1.63 1.958 1.548 2.478 2.674.73 1.575.914 4.198-1.284 6.294-1.837 1.75-4.104 2.538-7.35 2.56z"/></svg>`;
             if (name.includes('tiktok')) return `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>`;
             if (name.includes('github')) return `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>`;
             if (name.includes('android') || name.includes('playstore') || name.includes('play store')) return `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0004.5511-.4482.9997-.9993.9997zm-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997zm11.4045-6.02l1.9973-3.4592c.0416-.073.0135-.1647-.0584-.2071-.0723-.0416-.1655-.0135-.2071.0588l-2.0289 3.513c-1.5833-.7221-3.4116-1.125-5.3853-1.125s-3.8016.4029-5.3853 1.125l-2.0289-3.513c-.0416-.0723-.1352-.1004-.2071-.0588-.0723.042-.1004.1341-.0584.2071l1.9973 3.4592C2.6889 11.1627.3429 14.8692 0 19.3146h24c-.3429-4.4454-2.6889-8.1519-6.523-9.9932z"/></svg>`;
@@ -310,9 +226,10 @@ function buildProjectsHtml(data, limit) {
             if (name.includes('store')) return 3;
             if (name.includes('facebook')) return 4;
             if (name.includes('instagram')) return 5;
-            if (name.includes('tiktok')) return 6;
-            if (name.includes('youtube')) return 7;
-            return 8;
+            if (name.includes('threads')) return 6;
+            if (name.includes('tiktok')) return 7;
+            if (name.includes('youtube')) return 8;
+            return 9;
         };
 
         let linksHtml = '';
@@ -326,49 +243,32 @@ function buildProjectsHtml(data, limit) {
                 const labelText = typeof getVal === 'function' ? getVal(link.label) : link.label;
                 const iconSvg = getIcon(labelText);
 
-                return `
-                <div class="relative group/link">
-                    <a href="${link.url}" target="_blank"
-                        class="flex items-center justify-center w-9 h-9 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300">
-                        ${iconSvg}
-                    </a>
-
-                    <span class="absolute -top-10 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-gray-900 border border-gray-700 text-[10px] font-bold text-white rounded opacity-0 group-hover/link:opacity-100 group-hover/link:-translate-y-1 transition-all pointer-events-none whitespace-nowrap z-20 shadow-xl shadow-black/50">
-                        ${labelText}
-                    </span>
-                </div>`;
+                return `<a href="${link.url}" target="_blank" title="${labelText}" aria-label="${labelText}" class="flex items-center justify-center w-8 h-8 text-gray-500 hover:text-white transition-colors duration-300">${iconSvg}</a>`;
             }).join('');
 
-            linksHtml = `
-            <div class="inline-flex items-center p-1 bg-gray-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl shadow-inner">
-                ${linksInnerHtml}
-            </div>`;
+            linksHtml = `<div class="flex items-center gap-2">${linksInnerHtml}</div>`;
         }
 
         const tags = Array.isArray(item.tags) ? item.tags : [];
         const primaryKey = tags.length > 0 ? tags[0].toLowerCase() : '';
-        const primary = TYPE_META[primaryKey] ? primaryKey : null;
-        const secondaryTags = primary ? tags.slice(1) : [];
+        const primary = THUMBNAIL_TEMPLATES.has(primaryKey) ? primaryKey : null;
 
-        const badgeHtml = primary
-            ? `<span class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border ${TYPE_META[primary].badge}">${TYPE_META[primary].icon}${tags[0]}</span>`
+        const allTags = [...tags].sort((a, b) => a.localeCompare(b));
+        const tagsOverlayHtml = allTags.length > 0
+            ? `<div class="absolute bottom-3 left-3 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-white/90 bg-black/50 backdrop-blur-sm">${allTags.join(' · ')}</div>`
             : '';
 
         const thumbHtml = item.image
             ? `
-            <div class="relative aspect-[16/10] overflow-hidden bg-gray-900">
-                <img src="${item.image}" alt="${getVal(item.title)}" loading="lazy" class="w-full h-full object-cover">
-                ${badgeHtml}
+            <div class="relative aspect-video overflow-hidden bg-gray-900">
+                <img src="${item.image}" alt="${getVal(item.title)}" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                ${tagsOverlayHtml}
             </div>`
             : (primary ? `
-            <div class="relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${TYPE_META[primary].grad}">
-                ${TYPE_META[primary].thumb}
-                ${badgeHtml}
+            <div class="relative aspect-video overflow-hidden bg-gray-900">
+                <img src="/assets/img/thumbnail-templates/${primary}.svg" alt="${getVal(item.title)}" loading="lazy" class="w-full h-full object-cover">
+                ${tagsOverlayHtml}
             </div>` : '');
-
-        const secondaryHtml = secondaryTags.length > 0
-            ? `<div class="flex flex-wrap gap-1.5 mt-2">${secondaryTags.map(t => `<span class="text-[9px] uppercase tracking-wide font-semibold text-gray-500 border border-gray-700 rounded px-1.5 py-0.5">${t}</span>`).join('')}</div>`
-            : '';
 
         html += `
         <div class="bg-gray-800 border border-gray-700 rounded-2xl shadow-lg text-left h-full flex flex-col overflow-hidden hover:border-gray-500 hover:shadow-2xl hover:shadow-black/40 transition-all duration-300 group">
@@ -379,10 +279,8 @@ function buildProjectsHtml(data, limit) {
                 </h3>
 
                 <p class="text-gray-400 text-sm leading-relaxed flex-grow mt-3${primary ? '' : ' border-t border-gray-700/50 pt-4'}">
-                    ${getVal(item.description)}
+                    ${getVal(item.description.short)}
                 </p>
-
-                ${secondaryHtml}
 
                 <div class="mt-6">
                     ${linksHtml}
@@ -424,7 +322,7 @@ function filterIprData(data, activeFilter, searchTerm) {
     let results = [...data];
 
     if (activeFilter !== 'all') {
-        results = results.filter(item => item.category === activeFilter);
+        results = results.filter(item => item.filterKey === activeFilter);
     }
 
     if (searchTerm && searchTerm.trim() !== '') {
@@ -461,7 +359,7 @@ function sortIprData(data, sortState) {
 
 function buildHakiFiltersHtml(data, activeFilter) {
     const categories = new Set(['all']);
-    data.forEach(item => { if (item.category) categories.add(item.category); });
+    data.forEach(item => { if (item.filterKey) categories.add(item.filterKey); });
 
     return Array.from(categories).map(cat => {
         let label = cat;
@@ -507,10 +405,10 @@ function buildHakiTableHtml(data) {
         const hasLink = item.link && item.link !== '#';
         const titleText = getVal(item.title);
         const descText = getVal(item.description);
-        const typeText = item.type ? getVal(item.type) : item.category;
+        const typeText = item.type ? getVal(item.type) : item.filterKey;
 
         const titleHtml = hasLink
-            ? `<a href="${item.link}" target="_blank" class="text-white font-bold text-lg mb-1 hover:text-blue-400 transition-colors inline-flex items-center gap-2 group-hover:underline decoration-blue-500/50 underline-offset-4">
+            ? `<a href="${item.link}" target="_blank" class="text-white font-bold text-lg mb-1 hover:text-blue-400 transition-colors inline-flex items-center gap-2">
                  ${titleText}
                  <svg class="w-4 h-4 text-gray-500 opacity-50 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                </a>`
@@ -579,7 +477,7 @@ function buildCvHtml() {
             <h2 class="text-sm font-bold uppercase tracking-widest text-gray-900 border-b-2 border-gray-900 pb-2 mb-1">${heading(key)}</h2>
             <div>${entriesHtml}</div>
         </section>` : '';
-    const catRole = (item) => [item.category ? getVal(item.category) : '', item.role ? getVal(item.role) : ''].filter(Boolean).join(' • ');
+    const catRole = (item) => item.category ? getVal(item.category) : '';
 
     const eduHtml = (typeof education !== 'undefined' ? education : []).map(x =>
         cvEntry(getVal(x.year), getVal(x.title), [getVal(x.subtitle), getVal(x.description)])
@@ -607,31 +505,31 @@ function buildCvHtml() {
     })();
 
     const resHtml = (typeof research !== 'undefined' ? research : []).map(x =>
-        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x)])
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x), (x.team && x.team.length) ? `${t('labels.team')}: ${x.team.join(', ')}` : ''])
     ).join('');
 
     const csHtml = (typeof communityService !== 'undefined' ? communityService : []).map(x =>
-        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x)])
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x), (x.team && x.team.length) ? `${t('labels.team')}: ${x.team.join(', ')}` : ''])
     ).join('');
 
     const thesisHtml = (typeof thesis !== 'undefined' ? thesis : []).map(x =>
-        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x), (x.students && x.students.length) ? `Mahasiswa: ${x.students.join(', ')}` : ''])
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x), (x.team && x.team.length) ? `${t('labels.team')}: ${x.team.join(', ')}` : ''])
     ).join('');
 
     const compHtml = (typeof competition !== 'undefined' ? competition : []).map(x =>
-        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x), x.achievement ? getVal(x.achievement) : '', (x.students && x.students.length) ? `Tim: ${x.students.join(', ')}` : ''])
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x), x.achievement ? getVal(x.achievement) : '', (x.team && x.team.length) ? `${t('labels.team')}: ${x.team.join(', ')}` : ''])
     ).join('');
 
     const pubHtml = (typeof publications !== 'undefined' ? publications : []).map(x =>
-        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), [x.rank ? getVal(x.rank) : '', catRole(x)].filter(Boolean).join(' • ')])
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), [x.rank ? getVal(x.rank) : '', catRole(x)].filter(Boolean).join(' • '), (x.team && x.team.length) ? `${t('labels.team')}: ${x.team.join(', ')}` : ''])
     ).join('');
 
     const bookHtml = (typeof books !== 'undefined' ? books : []).map(x =>
-        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x)])
+        cvEntry(x.year, getVal(x.title), [getVal(x.subtitle), catRole(x), (x.team && x.team.length) ? `${t('labels.team')}: ${x.team.join(', ')}` : ''])
     ).join('');
 
     const iprHtml = (typeof ipr !== 'undefined' ? ipr : []).map(x =>
-        cvEntry(x.year, getVal(x.title), [x.type ? getVal(x.type) : x.category, [x.number, x.issuer].filter(Boolean).join(' • ')])
+        cvEntry(x.year, getVal(x.title), [x.type ? getVal(x.type) : x.filterKey, [x.number, x.issuer].filter(Boolean).join(' • ')])
     ).join('');
 
     const talkHtml = (typeof talks !== 'undefined' ? talks : []).map(x =>
@@ -639,7 +537,7 @@ function buildCvHtml() {
     ).join('');
 
     const projHtml = (typeof projects !== 'undefined' ? projects : []).map(x =>
-        cvEntry('', getVal(x.title), [getVal(x.description)], (x.tags || []).join(', '))
+        cvEntry('', getVal(x.title), [getVal(x.description.long || x.description.short)], (x.tags || []).join(', '))
     ).join('');
 
     return `

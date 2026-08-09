@@ -13,10 +13,11 @@ const competition = [
             id: "Program Kreativitas Mahasiswa (PKM-KC)",
             en: "Student Creativity Program (PKM-KC)"
         },
-        role: { id: "Pembimbing Utama", en: "Lead Supervisor" },
-        achievement: { id: "Tidak Lolos Pendanaan", en: "Not Selected for Funding" },
+        achievement: { id: "", en: "" },
         description: { id: "", en: "" },
-        students: ["Amanda Grace Patricia Sinurat", "Astriva Novaria Hutabalian", "Ferdinanta Ginting", "Mariana Kristi Sintauli Lumbantobing", "Vio Azuhri"],
-        assets: {}
+        team: ["Amanda Grace Patricia Sinurat", "Astriva Novaria Hutabalian", "Ferdinanta Ginting", "Mariana Kristi Sintauli Lumbantobing", "Vio Azuhri"],
+        assets: {
+            documentation: ""
+        }
     }
 ];

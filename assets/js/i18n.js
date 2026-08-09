@@ -103,6 +103,10 @@ const siteTranslations = {
         backToSite: { id: "Kembali ke Situs", en: "Back to Site" },
         coursesLabel: { id: "Mata Kuliah", en: "Courses" }
     },
+    labels: {
+        team: { id: "Tim", en: "Team" },
+        classes: { id: "Kelas", en: "Classes" }
+    },
     ipr: {
         filters: {
             all: { id: "Semua", en: "All" },
@@ -147,6 +151,9 @@ function t(keyPath) {
 function setLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('site_lang', lang);
+    if (typeof document !== 'undefined' && document.documentElement) {
+        document.documentElement.lang = lang;
+    }
     updateToggleButtons();
     updateStaticPageElements();
     initDynamicContent();

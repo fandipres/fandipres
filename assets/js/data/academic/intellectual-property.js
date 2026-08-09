@@ -1,7 +1,7 @@
 const ipr = [
     {
         year: "2025", // 12-15
-        category: "copyright",
+        filterKey: "copyright",
         type: { id: "Buku", en: "Book" },
         title: {
             id: "Pengenalan Dasar Informatika dan Peranannya di Era Digital",
@@ -17,7 +17,7 @@ const ipr = [
     },
     {
         year: "2025", // 12-14
-        category: "copyright",
+        filterKey: "copyright",
         type: { id: "Program Komputer", en: "Computer Program" },
         title: {
             id: "Model Prediksi Curah Hujan untuk Mengoptimalisasi Masa Tanam Padi Menggunakan BiLSTM",
@@ -33,7 +33,7 @@ const ipr = [
     },
     {
         year: "2025", // 09-17
-        category: "copyright",
+        filterKey: "copyright",
         type: { id: "Buku", en: "Book" },
         title: {
             id: "Logika Digital & Algoritma Dunia Nyata: Menyelami Inti Ilmu Komputer",

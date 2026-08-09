@@ -4,7 +4,7 @@ const research = [
         title: { id: "Pendekatan Hibrida Topic Modeling dan IndoBERT untuk Klasifikasi Emosi Publik pada Isu Keterlibatan Indonesia di Board of Peace", en: "Hybrid Approach of Topic Modeling and IndoBERT for Public Emotion Classification on Indonesia's Involvement Issue in the Board of Peace" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
-        role: { id: "Ketua Peneliti", en: "Lead Researcher" },
+        team: ["Fandi Presly Simamora", "Juliana Damayanti Manurung", "Hita", "Elly"],
         description: { id: "", en: "" },
         assets: {
             dataset: "https://www.kaggle.com/datasets/fandipres/indonesian-tweets-on-board-of-peace",
@@ -15,7 +15,7 @@ const research = [
         title: { id: "Analisis Sentimen Terhadap Respons Publik Selama Demonstrasi Dewan Perwakilan Rakyat Republik Indonesia Menggunakan Metode Topic Modeling dan Aspect-Based Sentiment Analysis", en: "Sentiment Analysis of Public Response During the Indonesian House of Representatives (DPR RI) Demonstrations Using Topic Modeling and Aspect-Based Sentiment Analysis" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
-        role: { id: "Ketua Peneliti", en: "Lead Researcher" },
+        team: ["Fandi Presly Simamora", "Juliana Damayanti Manurung"],
         description: { id: "", en: "" },
         assets: {
             dataset: "https://www.kaggle.com/datasets/fandipres/dpr-demonstration-sentiment-dataset-august-2025",
@@ -26,7 +26,7 @@ const research = [
         title: { id: "Transformasi Digital Pertanian dengan Model Prediksi Cuaca Berbasis BiLSTM untuk Optimalisasi Masa Tanam Padi di Era Industri 4.0", en: "Agricultural Digital Transformation via BiLSTM-Based Weather Prediction Models for Optimizing Rice Planting Seasons in the Industry 4.0 Era" },
         subtitle: { id: "Kementerian Pendidikan Tinggi, Sains, dan Teknologi Republik Indonesia", en: "Ministry of Higher Education, Science, and Technology" },
         category: { id: "Penelitian Dosen Pemula", en: "Novice Lecturer Research Grant" },
-        role: { id: "Ketua Peneliti", en: "Lead Researcher" },
+        team: ["Fandi Presly Simamora", "Khairul Hawani Rambe"],
         description: { id: "", en: "" },
         assets: {
             dataset: "",
@@ -37,7 +37,7 @@ const research = [
         title: { id: "Optimasi Random Forest Menggunakan RFE untuk Klasifikasi Stunting pada RSU Mitra Medika", en: "Random Forest Optimization Using RFE for Stunting Classification at RSU Mitra Medika" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
-        role: { id: "Anggota Peneliti", en: "Co-Researcher" },
+        team: ["Sophya Hadini Marpaung", "Frans Mikael Sinaga", "Khairul Hawani Rambe", "Fandi Presly Simamora"],
         description: { id: "", en: "" },
         assets: {
             dataset: "",
@@ -48,7 +48,7 @@ const research = [
         title: { id: "Penentuan Konfigurasi Hyperparameter BiLSTM Menggunakan Bayesian Optimization untuk Prediksi Harga Saham", en: "Hyperparameter Tuning of BiLSTM Using Bayesian Optimization for Stock Price Prediction" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
-        role: { id: "Ketua Peneliti", en: "Lead Researcher" },
+        team: ["Fandi Presly Simamora"],
         description: { id: "", en: "" },
         assets: {
             dataset: "",
@@ -59,7 +59,7 @@ const research = [
         title: { id: "Pengembangan Aplikasi Pemantauan Aktivitas pada Ruangan Menggunakan Algoritma Improved Mask R CNN Berbasis Web", en: "Web Based Activity Monitoring Applications Development Using Improved Mask R CNN Algorithm" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
-        role: { id: "Ketua Peneliti", en: "Lead Researcher" },
+        team: ["Fandi Presly Simamora", "Ebnu Mulkan Arsie", "Mhd. Dwi Al Fiqri"],
         description: { id: "", en: "" },
         assets: {
             dataset: "",
