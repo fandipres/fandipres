@@ -42,7 +42,9 @@
       "Bash(node --check assets/js/i18n.js)",
       "Bash(node --check assets/js/render-ipr.js)",
       "Bash(node --check assets/js/render-projects.js)",
-      "Bash(node --check assets/js/data/projects.js)"
+      "Bash(node --check assets/js/data/projects.js)",
+      "Bash(sha1sum index.html projects/index.html cv/index.html sitemap.xml)",
+      "Bash(sha1sum cv/index.html sitemap.xml)"
     ]
   }
 }

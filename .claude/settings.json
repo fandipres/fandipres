@@ -4,7 +4,23 @@
       "Bash(node -e ' *)",
       "Bash(node --check assets/js/data/projects.js)",
       "Skill(artifact-design)",
-      "Skill(artifact-design:*)"
+      "Skill(artifact-design:*)",
+      "Bash(netstat -ano)",
+      "Bash(powershell -Command \"Stop-Process -Id 20796 -Force\")",
+      "Bash(taskkill //PID 20796 //F)",
+      "Bash(rm -f output/*.png)",
+      "Bash(node server.js)",
+      "Bash(rm -f output/*.png server.log)",
+      "Bash(powershell -Command \"Stop-Process -Id 17508 -Force\")",
+      "Bash(taskkill //PID 17508 //F)",
+      "Bash(curl -s -o /tmp/out_single.png -w 'HTTP %{http_code}\\\\n' -X POST http://localhost:3400/generate -F type=content -F image=@__TRACKED_VAR__)",
+      "PowerShell(Stop-Process -Id 1692 -Force)",
+      "Bash(curl -s -o /tmp/out_single.png -w 'single: HTTP %{http_code}\\\\n' -X POST http://localhost:3400/generate -F type=content -F image=@__TRACKED_VAR__)",
+      "Bash(curl -s -o /tmp/out_triple.png -w 'triple: HTTP %{http_code}\\\\n' -X POST http://localhost:3400/generate -F type=content -F image=@__TRACKED_VAR__ -F image2=@__TRACKED_VAR__ -F image3=@__TRACKED_VAR__)",
+      "Bash(curl -s -o /tmp/out_android.png -w 'android: HTTP %{http_code}\\\\n' -X POST http://localhost:3400/generate -F type=android -F image=@__TRACKED_VAR__ -F image2=@__TRACKED_VAR__)",
+      "Bash(cp /tmp/out_single.png \"/d/Project Personal/mockup-generator/output/_test_single.png\")",
+      "Bash(cp /tmp/out_triple.png \"/d/Project Personal/mockup-generator/output/_test_triple.png\")",
+      "Bash(cp /tmp/out_android.png \"/d/Project Personal/mockup-generator/output/_test_android.png\")"
     ]
   }
 }

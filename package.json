@@ -4,12 +4,16 @@
   "version": "1.0.0",
   "description": "Build tooling for fandipres.my.id - prerenders JS-driven content into static HTML for SEO.",
   "scripts": {
-    "build": "node build/prerender.js"
+    "build": "node build/prerender.js",
+    "optimize-images": "node build/optimize-project-images.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0"
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.3"
   }
 }
