@@ -460,9 +460,10 @@ function cvEntry(year, title, lines, meta) {
         .map(l => `<p class="text-xs text-gray-600 mt-0.5">${l}</p>`)
         .join('');
     const metaHtml = meta ? ` <span class="text-xs font-normal text-gray-500">(${meta})</span>` : '';
+    const yearHtml = year ? `<div class="w-28 flex-shrink-0 text-xs text-gray-500 pt-0.5">${year}</div>` : '';
     return `
     <div class="flex gap-4 break-inside-avoid py-2.5 border-b border-gray-100 last:border-0">
-        <div class="w-28 flex-shrink-0 text-xs text-gray-500 pt-0.5">${year || ''}</div>
+        ${yearHtml}
         <div class="flex-grow">
             <p class="font-semibold text-gray-900 text-sm leading-snug">${title}${metaHtml}</p>
             ${linesHtml}
