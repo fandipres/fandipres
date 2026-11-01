@@ -1,87 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://fandipres.my.id/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/experience/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/experience/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/experience/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/experience/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/experience/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/experience/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/experience/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/experience/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/education/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/education/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/education/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/education/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/education/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/education/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/education/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/education/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/teaching/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/teaching/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/teaching/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/teaching/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/teaching/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/teaching/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/teaching/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/teaching/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/research/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/research/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/research/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/research/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/research/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/research/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/research/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/research/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/community-service/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/community-service/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/community-service/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/community-service/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/community-service/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/community-service/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/community-service/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/community-service/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/publications/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/publications/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/publications/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/publications/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/publications/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/publications/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/publications/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/publications/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/books/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/books/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/books/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/books/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/books/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/books/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/books/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/books/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/intellectual-property/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/intellectual-property/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/intellectual-property/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/intellectual-property/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/intellectual-property/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/intellectual-property/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/intellectual-property/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/intellectual-property/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/talks/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/talks/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/talks/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/talks/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/talks/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/talks/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/talks/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/talks/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/projects/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/projects/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/projects/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/projects/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/projects/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/projects/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/projects/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/projects/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/thesis/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/thesis/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/thesis/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/thesis/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/thesis/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/thesis/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/thesis/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/thesis/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/competition/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/competition/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/competition/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/competition/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/competition/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/competition/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/competition/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/competition/"/>
     </url>
     <url>
         <loc>https://fandipres.my.id/cv/</loc>
-        <lastmod>2026-09-09</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/cv/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/cv/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/cv/"/>
+    </url>
+    <url>
+        <loc>https://fandipres.my.id/en/cv/</loc>
+        <lastmod>2026-11-01</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://fandipres.my.id/cv/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://fandipres.my.id/en/cv/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fandipres.my.id/cv/"/>
     </url>
 </urlset>

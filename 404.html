@@ -6,21 +6,22 @@
     <meta name="description" content="Halaman yang Anda cari tidak ditemukan.">
     <meta name="robots" content="noindex, follow">
 
-    <link rel="icon" href="/assets/img/profile.jpg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RCMTX81EN5"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RCMTX81EN5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-RCMTX81EN5');
     </script>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/animations.css">
-</head>
+
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="stylesheet" href="/assets/css/tailwind.css">
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/animations.css"><link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png"></head>
 
 <body class="bg-black text-white antialiased">
     <nav class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800 transition-all duration-300">
@@ -44,8 +45,7 @@
             <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <p class="text-8xl font-bold text-blue-500">404</p>
                 <h1 class="mt-4 text-3xl font-bold text-white" data-i18n="notFound.title">Halaman Tidak Ditemukan</h1>
-                <p class="mt-2 text-gray-400 max-w-md mx-auto" data-i18n="notFound.description">Halaman yang Anda cari
-                    mungkin sudah dipindahkan atau tidak pernah ada.</p>
+                <p class="mt-2 text-gray-400 max-w-md mx-auto" data-i18n="notFound.description">Halaman yang Anda cari mungkin sudah dipindahkan atau tidak pernah ada.</p>
                 <div class="mt-8 flex flex-wrap justify-center gap-4">
                     <a href="/" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105" data-i18n="notFound.backHome">Kembali ke Beranda</a>
                 </div>
@@ -64,7 +64,5 @@
     <script src="/assets/js/render-core.js"></script>
     <script src="/assets/js/animations.js"></script>
     <script src="/assets/js/scripts.js"></script>
-
-
 
 </body></html>
