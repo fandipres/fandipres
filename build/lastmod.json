@@ -1,0 +1,114 @@
+{
+  "index.html": {
+    "hash": "67a4f75ed81f8a75b7e8bbfb7607aa73b3881c4b03c280393402802e7a1039de",
+    "lastmod": "2026-11-01"
+  },
+  "en/index.html": {
+    "hash": "41c5e0c08cb8aa7a0f042c1c5005c8f04314bfd6d6cf2bc80ae4197a8a6fda65",
+    "lastmod": "2026-11-01"
+  },
+  "experience/index.html": {
+    "hash": "c6324fb462634e2031470781a0ee73aa31a706e34b71cd9a1bc46a72c9f27951",
+    "lastmod": "2026-11-01"
+  },
+  "en/experience/index.html": {
+    "hash": "ae759cbff6d39f785dbc65155a767e034e0ffa3f4877db9b62d757fd94ee5ba4",
+    "lastmod": "2026-11-01"
+  },
+  "education/index.html": {
+    "hash": "ecf8ffd20ddbcb343843fecd45a33ef037698b0ca1f2681a03137b9b40a3498a",
+    "lastmod": "2026-11-01"
+  },
+  "en/education/index.html": {
+    "hash": "8d48859ffb8e4f80ac2d6cfebc43a23723170f6919e9fa5d27f766ef6d0c93aa",
+    "lastmod": "2026-11-01"
+  },
+  "teaching/index.html": {
+    "hash": "2b2d2110a0b3b6df04b6449fc1b4bdcb86d1eca319fe7f7ce06236d327559bd4",
+    "lastmod": "2026-11-01"
+  },
+  "en/teaching/index.html": {
+    "hash": "5e1eac255704f9c20b40ec7b17e3ce4c311fa76b968699c8eb0292f9855b3ed4",
+    "lastmod": "2026-11-01"
+  },
+  "research/index.html": {
+    "hash": "abeefdab3864f3e8169bc7880af2db56964e07fc35d9970976bdd15cb2907829",
+    "lastmod": "2026-11-01"
+  },
+  "en/research/index.html": {
+    "hash": "f606c45c793489906b38db488f10c3c8996181ab13a7a5a56a9dfef974bd5da1",
+    "lastmod": "2026-11-01"
+  },
+  "community-service/index.html": {
+    "hash": "5e9cbd2ccf92216c090b678f9c82028bde7ae7aeb7bc8fcc9e4c1e342dd6afa9",
+    "lastmod": "2026-11-01"
+  },
+  "en/community-service/index.html": {
+    "hash": "8f98fa516e1cb1af1530fc4d16646d65f7ab593da3560ffe7223e0064c9cfa9c",
+    "lastmod": "2026-11-01"
+  },
+  "publications/index.html": {
+    "hash": "19d06fbfd5347d0090fd40433fe9b7f30badb8117abe2881104ef6ba95d35d17",
+    "lastmod": "2026-11-01"
+  },
+  "en/publications/index.html": {
+    "hash": "3db47804076061c6fc2dedcfef13a91494ef496aa2e2f2853d6d825453beb965",
+    "lastmod": "2026-11-01"
+  },
+  "books/index.html": {
+    "hash": "d05f39cbac0d7d11248ee7a7d2e884669cf7277b81fcc0b42b18d7f8f66c51d9",
+    "lastmod": "2026-11-01"
+  },
+  "en/books/index.html": {
+    "hash": "8c6d0afb67363d649edf0eaff241d8911ef82664ca8944716af4e88bac0353d6",
+    "lastmod": "2026-11-01"
+  },
+  "intellectual-property/index.html": {
+    "hash": "41deb0622771d066a169ea3b1ddf50e5ca3050b90415a191eac7fb559be660ca",
+    "lastmod": "2026-11-01"
+  },
+  "en/intellectual-property/index.html": {
+    "hash": "836bf537ce425495515cf33fd1890a8c5f7a8f473813a3221b1182d548bb3187",
+    "lastmod": "2026-11-01"
+  },
+  "talks/index.html": {
+    "hash": "5213880c53c28b68a7b48c145c42a4d997b780976459d0ec63cd930833bc61fa",
+    "lastmod": "2026-11-01"
+  },
+  "en/talks/index.html": {
+    "hash": "69a0eefdd51de96485043e1dc21410bf443590017439b79d6d1120b480bbcb09",
+    "lastmod": "2026-11-01"
+  },
+  "projects/index.html": {
+    "hash": "41b92fae57f1e3d744c46009e60552e299e85e137e3e19108fecfa2423452f8a",
+    "lastmod": "2026-11-01"
+  },
+  "en/projects/index.html": {
+    "hash": "42975cf7d2d71d45ef3a7f9f347212f9adc0f6dd1189fe69f802caa944036237",
+    "lastmod": "2026-11-01"
+  },
+  "thesis/index.html": {
+    "hash": "2c58de1abe144d78a1cc1e0c3a252a4ca5a00f5e2b3b4dd0062c929ea1c3b905",
+    "lastmod": "2026-11-01"
+  },
+  "en/thesis/index.html": {
+    "hash": "9f61c2c2b8b145c35fceff4ccf609eabb243d42f968800520303afd0437ee94d",
+    "lastmod": "2026-11-01"
+  },
+  "competition/index.html": {
+    "hash": "5ad28ddd8f838611ee5c84a741f0314e5e18f06965a983fac3fcc4652c4f9de7",
+    "lastmod": "2026-11-01"
+  },
+  "en/competition/index.html": {
+    "hash": "72b71662d2514e47740ae0ea0aea3453ad8373ebae71f7e4b54191ad3b143c3e",
+    "lastmod": "2026-11-01"
+  },
+  "cv/index.html": {
+    "hash": "c5872143f70bc74537cd1443d8cb2e42373c93fd72bac855dcadc96fe30e1708",
+    "lastmod": "2026-11-01"
+  },
+  "en/cv/index.html": {
+    "hash": "bbc3c3c2d8a5746db9a16e1f4ea3c2893524fd2ae3df7c370d13cfb0c70797ed",
+    "lastmod": "2026-11-01"
+  }
+}

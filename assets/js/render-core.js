@@ -1,17 +1,27 @@
-function buildAssetsHtml(item) {
-    if (!item.assets) return '';
+const LINK_ICON_SVG = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>';
+const ACTION_LINK_CLASS = 'text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300 flex items-center gap-1';
+
+function buildAssetsHtml(item, extraLinks) {
+    const extras = extraLinks || [];
+    if (!item.assets && extras.length === 0) return '';
     const assetLinks = [];
     for (const key of Object.keys(siteTranslations.asset)) {
-        const link = item.assets[key];
+        const link = item.assets ? item.assets[key] : undefined;
         const label = t(`asset.${key}`);
         if (link === "") {
             assetLinks.push({ label: label, html: `<span class="text-gray-600 cursor-default text-sm font-medium">${label}</span>` });
         } else if (link) {
-            assetLinks.push({ label: label, html: `<a href="${link}" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300 flex items-center gap-1"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>${label}</a>` });
+            assetLinks.push({ label: label, html: `<a href="${link}" target="_blank" rel="noopener" class="${ACTION_LINK_CLASS}">${LINK_ICON_SVG}${label}</a>` });
         }
     }
     assetLinks.sort((a, b) => a.label.localeCompare(b.label));
-    return assetLinks.length > 0 ? `<div class="mt-3 flex items-center gap-4">${assetLinks.map(l => l.html).join('')}</div>` : '';
+    const allLinks = [...assetLinks.map(l => l.html), ...extras];
+    return allLinks.length > 0 ? `<div class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">${allLinks.join('')}</div>` : '';
+}
+
+function buildCiteButtonHtml(item) {
+    if (!item.id) return '';
+    return `<button type="button" data-cite-id="${item.id}" class="${ACTION_LINK_CLASS}"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8M8 11h8m-8 4h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"></path></svg>${t('cite.button')}</button>`;
 }
 
 function buildItemsHtml(containerId, data, limit) {
@@ -120,9 +130,15 @@ function buildDetailItemsHtml(containerId, data) {
                 descriptionHtml = `<p class="mt-3 text-gray-500 text-sm leading-relaxed">${rawDesc}</p>`;
             }
 
-            const assetsHtml = buildAssetsHtml(item);
+            const extraLinks = [];
+            if (containerId === 'publication-list') {
+                const citeHtml = buildCiteButtonHtml(item);
+                if (citeHtml) extraLinks.push(citeHtml);
+            }
+            const assetsHtml = buildAssetsHtml(item, extraLinks);
+            const anchorAttr = item.id ? ` id="${item.id}"` : '';
 
-            return `<div class="mb-10 last:mb-0 group/item">${titleHtml}${subtitleHtml}${tagsHtml}${descriptionHtml}${studentsHtml}${detailsListHtml}${assetsHtml}</div>`;
+            return `<div${anchorAttr} class="mb-10 last:mb-0 group/item scroll-mt-24">${titleHtml}${subtitleHtml}${tagsHtml}${descriptionHtml}${studentsHtml}${detailsListHtml}${assetsHtml}</div>`;
         }).join('');
 
         html += `
@@ -138,6 +154,7 @@ function buildDetailItemsHtml(containerId, data) {
 
 function buildAcademicHtml(activities) {
     let html = '';
+    const counts = computeAcademicCounts();
 
     const icons = {
         teaching: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg>`,
@@ -169,8 +186,11 @@ function buildAcademicHtml(activities) {
                 <div class="flex-shrink-0 p-2 bg-blue-900/30 rounded-lg text-blue-400 group-hover:text-white group-hover:bg-blue-600 transition-colors">
                     ${icon}
                 </div>
-                <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
-                    ${titleText}</h3>
+                <div class="min-w-0">
+                    <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors leading-tight">
+                        ${titleText}</h3>
+                    ${buildCountLineHtml(key, counts)}
+                </div>
             </div>
 
             <p class="text-gray-400 text-sm leading-relaxed">${getVal(activity.description)}</p>
@@ -261,12 +281,12 @@ function buildProjectsHtml(data, limit) {
         const thumbHtml = item.image
             ? `
             <div class="relative aspect-video overflow-hidden bg-gray-900">
-                <img src="${item.image}" alt="${getVal(item.title)}" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img src="${item.image}" alt="${getVal(item.title)}" width="800" height="450" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                 ${tagsOverlayHtml}
             </div>`
             : (primary ? `
             <div class="relative aspect-video overflow-hidden bg-gray-900">
-                <img src="/assets/img/thumbnail-templates/${primary}.svg" alt="${getVal(item.title)}" loading="lazy" class="w-full h-full object-cover">
+                <img src="/assets/img/thumbnail-templates/${primary}.svg" alt="${getVal(item.title)}" width="800" height="450" loading="lazy" class="w-full h-full object-cover">
                 ${tagsOverlayHtml}
             </div>` : '');
 
@@ -569,4 +589,105 @@ function buildCvHtml() {
         ${section('talks', talkHtml)}
         ${section('projects', projHtml)}
     `;
+}
+
+
+// ---------------------------------------------------------------------------
+// Home page: count line under the title of each academic activity card, derived from the data files
+// ---------------------------------------------------------------------------
+// Total number of classes taught, read from the "(N Kelas)" notes in teaching[].classes[].id.
+function countTeachingClasses(items) {
+    return items.reduce((total, item) => {
+        const text = (item.classes || []).map(c => c.id).join(', ');
+        return total + [...text.matchAll(/\((\d+) Kelas\)/g)].reduce((sum, m) => sum + parseInt(m[1], 10), 0);
+    }, 0);
+}
+
+function computeAcademicCounts() {
+    const size = (get) => { try { return get(); } catch (e) { return null; } };
+    return {
+        teaching: size(() => countTeachingClasses(teaching)),
+        research: size(() => research.length),
+        communityService: size(() => communityService.length),
+        thesis: size(() => thesis.length),
+        competition: size(() => competition.length),
+        publications: size(() => publications.length),
+        books: size(() => books.length),
+        ipr: size(() => ipr.length),
+        talks: size(() => talks.length)
+    };
+}
+
+function buildCountLineHtml(key, counts) {
+    const value = counts[key];
+    const unit = siteTranslations.counts && siteTranslations.counts[key];
+    if (value === null || value === undefined || !unit) return '';
+    const label = (currentLang === 'en' && value === 1 && unit.enOne) ? unit.enOne : getVal(unit);
+    return `<p class="mt-1 text-xs tracking-wide text-gray-500 group-hover:text-gray-400 transition-colors"><span class="font-semibold text-blue-300">${value}</span> ${label}</p>`;
+}
+
+function escapeHtml(text) {
+    return String(text).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// ---------------------------------------------------------------------------
+// Citations (APA 7 and BibTeX), generated from the publication data
+// ---------------------------------------------------------------------------
+function parseAuthorName(name) {
+    const tokens = String(name).trim().split(/\s+/).filter(Boolean);
+    if (tokens.length === 0) return { family: '', given: [] };
+    // "Br" is a Batak clan marker that belongs with the family name (e.g. "Br Sibarani").
+    const familyCount = (tokens.length > 2 && /^br\.?$/i.test(tokens[tokens.length - 2])) ? 2 : 1;
+    return {
+        family: tokens.slice(-familyCount).join(' '),
+        given: tokens.slice(0, tokens.length - familyCount)
+    };
+}
+
+function formatAuthorApa(name) {
+    const { family, given } = parseAuthorName(name);
+    if (given.length === 0) return family;
+    return `${family}, ${given.map(g => g.charAt(0).toUpperCase() + '.').join(' ')}`;
+}
+
+function publicationLink(item) {
+    const assets = item.assets || {};
+    return assets.doi || assets.article || '';
+}
+
+function buildApaCitation(item) {
+    const authors = (item.team || []).map(formatAuthorApa);
+    const authorText = authors.length <= 1
+        ? (authors[0] || '')
+        : `${authors.slice(0, -1).join(', ')}, & ${authors[authors.length - 1]}`;
+    const title = item.title.id;
+    const titleText = /[.?!]$/.test(title) ? title : `${title}.`;
+    const parts = [
+        authorText ? `${authorText} (${item.year}).` : `(${item.year}).`,
+        titleText,
+        item.subtitle && item.subtitle.id ? `${item.subtitle.id}.` : '',
+        publicationLink(item)
+    ];
+    return parts.filter(Boolean).join(' ');
+}
+
+function buildBibtex(item) {
+    const escape = (text) => String(text).replace(/([&%$#_])/g, '\$1');
+    const team = item.team || [];
+    const authors = team.map(name => {
+        const { family, given } = parseAuthorName(name);
+        return given.length ? `${family}, ${given.join(' ')}` : family;
+    });
+    const firstFamily = team.length ? parseAuthorName(team[0]).family.toLowerCase().replace(/[^a-z0-9]/g, '') : 'anon';
+    const firstWord = ((item.title.id.match(/[A-Za-z]{4,}/) || ['pub'])[0]).toLowerCase();
+    const assets = item.assets || {};
+    const fields = [
+        ['author', authors.join(' and ')],
+        ['title', escape(item.title.id)],
+        ['journal', escape(item.subtitle && item.subtitle.id ? item.subtitle.id : '')],
+        ['year', item.year],
+        ['doi', assets.doi ? assets.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//, '') : ''],
+        ['url', assets.article || '']
+    ].filter(([, value]) => value);
+    return `@article{${firstFamily}${item.year}${firstWord},\n${fields.map(([k, v]) => `  ${k} = {${v}}`).join(',\n')}\n}`;
 }

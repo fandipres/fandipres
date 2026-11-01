@@ -85,6 +85,17 @@ function initDynamicContent() {
     if (typeof window.updateProjectLanguage === 'function') {
         window.updateProjectLanguage();
     }
+    localizeInternalLinks();
+}
+
+// Content rendered at runtime links to Indonesian URLs; point those at /en/ on English pages.
+function localizeInternalLinks() {
+    if (currentLang !== 'en') return;
+    document.querySelectorAll('a[href^="/"]').forEach(link => {
+        const href = link.getAttribute('href');
+        const localized = localizeHref(href, 'en');
+        if (localized !== href) link.setAttribute('href', localized);
+    });
 }
 
 function setupMobileMenu() {
@@ -114,28 +125,35 @@ function setActiveNavLink() {
     });
 }
 
+// URL of the same page in the other language: /x/ <-> /en/x/.
+function counterpartLangUrl(targetLang) {
+    const { pathname, search, hash } = window.location;
+    const isEn = pathname === '/en' || pathname.startsWith('/en/');
+    let path = isEn ? (pathname.replace(/^\/en/, '') || '/') : pathname;
+    if (targetLang === 'en') path = '/en' + path;
+    return path + search + hash;
+}
+
+function switchLanguage(targetLang) {
+    try { localStorage.setItem('site_lang', targetLang); } catch (e) { /* storage unavailable */ }
+    window.location.href = counterpartLangUrl(targetLang);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     setupMobileMenu();
     setActiveNavLink();
     setLanguage(currentLang);
 
+    const toggleLanguage = (e) => {
+        e.preventDefault();
+        switchLanguage(currentLang === 'id' ? 'en' : 'id');
+    };
+
     const langBtn = document.getElementById('lang-toggle');
-    if (langBtn) {
-        langBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const newLang = currentLang === 'id' ? 'en' : 'id';
-            setLanguage(newLang);
-        });
-    }
+    if (langBtn) langBtn.addEventListener('click', toggleLanguage);
 
     const langBtnMobile = document.getElementById('lang-toggle-mobile');
-    if (langBtnMobile) {
-        langBtnMobile.addEventListener('click', (e) => {
-            e.preventDefault();
-            const newLang = currentLang === 'id' ? 'en' : 'id';
-            setLanguage(newLang);
-        });
-    }
+    if (langBtnMobile) langBtnMobile.addEventListener('click', toggleLanguage);
 });
 
 function copyNidn(btn, text) {

@@ -1,5 +1,21 @@
 const teaching = [
     {
+        year: "2026 - 2027",
+        semester: "ganjil",
+        title: { id: "Pengembangan Aplikasi Mobile Front-End", en: "Front End Mobile Applications Development" },
+        subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Class)" }],
+    },
+    {
+        year: "2026 - 2027",
+        semester: "ganjil",
+        title: { id: "Pengembangan Karakter: Kepemimpinan", en: "Character Development: Leadership" },
+        subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
+        description: { id: "", en: "" },
+        classes: [{ id: "Teknik Informatika (2 Kelas)", en: "Informatics Engineering (2 Classes)" }],
+    },
+    {
         year: "2025 - 2026",
         semester: "genap",
         title: { id: "Pengembangan Aplikasi Gim", en: "Game Application Development" },
@@ -10,7 +26,7 @@ const teaching = [
     {
         year: "2025 - 2026",
         semester: "ganjil",
-        title: { id: "Pengembangan Karakter: Kepemimpinan", en: " Character Development: Leadership" },
+        title: { id: "Pengembangan Karakter: Kepemimpinan", en: "Character Development: Leadership" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         description: { id: "", en: "" },
         classes: [{ id: "Sistem Informasi (2 Kelas), Teknik Informatika (2 Kelas)", en: "Information Systems (2 Classes), Informatics Engineering (2 Classes)" }],
@@ -29,7 +45,7 @@ const teaching = [
         title: { id: "Pengembangan Web Back-End", en: "Back End Web Development" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         description: { id: "", en: "" },
-        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Class)" }],
     },
     {
         year: "2024 - 2025",
@@ -37,7 +53,7 @@ const teaching = [
         title: { id: "Perancangan dan Pemrograman Berorientasi Objek", en: "Object Oriented Design and Programming" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         description: { id: "", en: "" },
-        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Class)" }],
     },
     {
         year: "2023 - 2024",
@@ -53,7 +69,7 @@ const teaching = [
         title: { id: "Pengembangan Aplikasi Mobile Front-End", en: "Front End Mobile Applications Development" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         description: { id: "", en: "" },
-        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Class)" }],
     },
     {
         year: "2023 - 2024",
@@ -77,7 +93,7 @@ const teaching = [
         title: { id: "Pengembangan Aplikasi Mobile Back-End", en: "Back End Mobile Applications Development" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         description: { id: "", en: "" },
-        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Class)" }],
     },
     {
         year: "2022 - 2023",
@@ -85,6 +101,6 @@ const teaching = [
         title: { id: "Wawasan Informatika", en: "Informatics Insight" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         description: { id: "", en: "" },
-        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Classes)" }],
+        classes: [{ id: "Teknik Informatika (1 Kelas)", en: "Informatics Engineering (1 Class)" }],
     }
 ];

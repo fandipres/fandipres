@@ -1,4 +1,22 @@
-let currentLang = (typeof localStorage !== 'undefined') ? (localStorage.getItem('site_lang') || 'id') : 'id';
+// The language is decided by the URL: /en/... is English, everything else is Indonesian.
+function detectLangFromPath() {
+    if (typeof location === 'undefined') return 'id';
+    return (location.pathname === '/en' || location.pathname.startsWith('/en/')) ? 'en' : 'id';
+}
+
+let currentLang = detectLangFromPath();
+
+// Visitors who explicitly chose English earlier are sent to the English copy of the page.
+// Crawlers have no stored preference, so they always see the URL they requested.
+(function redirectToPreferredLanguage() {
+    if (typeof location === 'undefined' || typeof localStorage === 'undefined') return;
+    try {
+        const isFile = /\.[a-z0-9]{2,5}$/i.test(location.pathname);
+        if (currentLang === 'id' && !isFile && localStorage.getItem('site_lang') === 'en') {
+            location.replace('/en' + location.pathname + location.search + location.hash);
+        }
+    } catch (e) { /* storage unavailable: stay on the requested page */ }
+})();
 
 const siteTranslations = {
     pageTitles: {
@@ -82,6 +100,7 @@ const siteTranslations = {
         book: { id: "Buku", en: "Book" },
         dataset: { id: "Dataset", en: "Dataset" },
         documentation: { id: "Dokumentasi", en: "Documentation" },
+        doi: { id: "DOI", en: "DOI" },
         file: { id: "File", en: "File" },
         slides: { id: "Slide", en: "Slides" }
     },
@@ -102,6 +121,27 @@ const siteTranslations = {
         downloadPdf: { id: "Unduh PDF", en: "Download PDF" },
         backToSite: { id: "Kembali ke Situs", en: "Back to Site" },
         coursesLabel: { id: "Mata Kuliah", en: "Courses" }
+    },
+    cite: {
+        button: { id: "Kutip", en: "Cite" },
+        title: { id: "Kutip publikasi", en: "Cite this publication" },
+        apa: { id: "APA", en: "APA" },
+        bibtex: { id: "BibTeX", en: "BibTeX" },
+        copy: { id: "Salin", en: "Copy" },
+        copied: { id: "Tersalin", en: "Copied" },
+        close: { id: "Tutup", en: "Close" }
+    },
+    // Unit shown in the count badge on each academic activity card; enOne is the English singular.
+    counts: {
+        teaching: { id: "kelas", en: "classes", enOne: "class" },
+        research: { id: "penelitian", en: "research projects", enOne: "research project" },
+        communityService: { id: "kegiatan", en: "activities", enOne: "activity" },
+        thesis: { id: "skripsi", en: "theses", enOne: "thesis" },
+        competition: { id: "lomba", en: "competitions", enOne: "competition" },
+        publications: { id: "publikasi", en: "publications", enOne: "publication" },
+        books: { id: "buku", en: "books", enOne: "book" },
+        ipr: { id: "HaKI", en: "IP rights", enOne: "IP right" },
+        talks: { id: "acara", en: "talks", enOne: "talk" }
     },
     labels: {
         team: { id: "Tim", en: "Team" },
@@ -150,7 +190,6 @@ function t(keyPath) {
 
 function setLanguage(lang) {
     currentLang = lang;
-    localStorage.setItem('site_lang', lang);
     if (typeof document !== 'undefined' && document.documentElement) {
         document.documentElement.lang = lang;
     }
@@ -161,6 +200,17 @@ function setLanguage(lang) {
     if (typeof window.updateIPRLanguage === 'function') {
         window.updateIPRLanguage();
     }
+}
+
+// Prefixes site-internal absolute links with /en when rendering English pages.
+function localizeHref(href, lang) {
+    lang = lang || currentLang;
+    if (lang !== 'en' || typeof href !== 'string') return href;
+    if (!href.startsWith('/') || href.startsWith('//')) return href;
+    if (href === '/en' || href.startsWith('/en/') || href.startsWith('/assets/')) return href;
+    const pathOnly = href.split('#')[0].split('?')[0];
+    if (/\.[a-z0-9]{2,5}$/i.test(pathOnly)) return href;
+    return '/en' + href;
 }
 
 function updateToggleButtons() {
