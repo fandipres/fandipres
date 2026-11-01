@@ -1,2 +1,8 @@
 node_modules/
 notes/
+
+# Local tooling and OS files
+.claude/
+*.log
+.DS_Store
+Thumbs.db

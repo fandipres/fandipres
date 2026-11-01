@@ -5,9 +5,16 @@ on:
     branches: [main]
     paths-ignore:
       - 'README.md'
+      - 'CLAUDE.md'
+      - '.claude/**'
 
 permissions:
   contents: write
+
+# One build at a time, so two quick pushes cannot race each other when pushing generated files.
+concurrency:
+  group: prerender
+  cancel-in-progress: false
 
 jobs:
   prerender:
@@ -21,21 +28,32 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Run prerender build
+      # Lints the data files, prerenders both languages, regenerates sitemap.xml and the compiled Tailwind CSS.
+      - name: Run build
         run: npm run build
 
       - name: Commit and push generated content
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html */index.html 404.html sitemap.xml
+          git add index.html '*/index.html' en 404.html sitemap.xml assets/css/tailwind.css build/lastmod.json
           if git diff --cached --quiet; then
             echo "No content changes to commit."
-          else
-            git commit -m "chore: prerender content [skip ci]"
-            git push
+            exit 0
           fi
+          git commit -m "chore: prerender content [skip ci]"
+          # Someone may have pushed while this job was running. Rebase onto their work and, on a
+          # conflict in a generated file, keep the freshly generated version (the next run rebuilds anyway).
+          for attempt in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push && exit 0
+            echo "Push attempt $attempt failed, retrying..."
+            git rebase --abort 2>/dev/null || true
+            sleep 3
+          done
+          echo "Could not push generated content after 3 attempts." >&2
+          exit 1
