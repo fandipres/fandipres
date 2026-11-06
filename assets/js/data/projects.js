@@ -10,16 +10,6 @@ const projects = [
         tags: ["Android"]
     },
     {
-        title: "Fandi's Blog",
-        description: {
-            short: { id: "Blog pribadi berisi tulisan, review, dan cerita ringan seputar keseharian.", en: "A personal blog featuring writing, reviews, and light everyday stories." },
-            long: { id: "Fandi's Blog memuat tulisan pribadi, review buku dan produk sehari-hari, serta cerita ringan seputar keseharian yang ditulis dengan gaya santai untuk para pembaca setia.", en: "Fandi's Blog features personal writing, everyday book and product reviews, and light casual stories written for its loyal readers over the years." }
-        },
-        links: [{ url: "https://blog.fandipres.my.id", label: "Website" }, { url: "https://lynk.id/fanblog", label: "Store" }],
-        image: "/assets/img/projects/fandis-blog.webp",
-        tags: ["Blog"]
-    },
-    {
         title: "Gudank Review",
         description: {
             short: { id: "Kanal media sosial berisi review produk-produk gudang secara santai dan apa adanya.", en: "A social channel reviewing warehouse products in a casual, no-frills style." },
