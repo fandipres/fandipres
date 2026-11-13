@@ -7,6 +7,7 @@ const projects = [
             long: { id: "Extra membantu mencatat pengeluaran harian, memantau perkembangan portofolio investasi, dan menyusun rencana keuangan pribadi menuju kebebasan finansial jangka panjang.", en: "Extra helps you log daily expenses, track the growth of your investment portfolio, and build a personal financial plan toward long-term financial freedom." }
         },
         links: [{ url: "https://extra.fandipres.my.id", label: "Website" }, { url: "", label: "Android" }],
+        image: "/assets/img/projects/extra.webp",
         tags: ["Android"]
     },
     {
@@ -20,7 +21,6 @@ const projects = [
         tags: ["Content"]
     },
     {
-        id: 2,
         title: "Hobi Ngoding",
         description: {
             short: { id: "Konten edukasi pemrograman untuk pemula lewat tulisan blog dan video ringan.", en: "Beginner-friendly coding content through blog posts and light videos." },
@@ -31,7 +31,7 @@ const projects = [
         tags: ["Blog", "Content"]
     },
     {
-        id: 3,
+        id: 2,
         title: "Jurnalpedia",
         description: {
             short: { id: "Platform edukasi seputar publikasi ilmiah untuk mahasiswa dan peneliti.", en: "An education platform on academic publishing for students and researchers." },
@@ -72,16 +72,6 @@ const projects = [
         tags: ["Blog"]
     },
     {
-        title: "Mockup Generator",
-        description: {
-            short: { id: "Alat otomatis untuk membuat mockup thumbnail proyek dengan frame browser, phone, dan tablet.", en: "An automatic tool for generating on-brand thumbnail mockups with browser, phone, and tablet frames." },
-            long: { id: "Mockup Generator adalah alat Node.js yang membuat mockup thumbnail proyek secara otomatis dan konsisten lewat frame browser, phone, dan tablet, dilengkapi web UI serta CLI tanpa perlu desain manual.", en: "Mockup Generator is a Node.js tool that automatically creates consistent, on-brand thumbnail mockups using browser, phone, and tablet frames, complete with both a web UI and a CLI so no manual design work is needed." }
-        },
-        links: [{ url: "https://github.com/fandipres/mockup-generator", label: "GitHub" }],
-        image: "/assets/img/projects/mockup-generator.webp",
-        tags: ["Web"]
-    },
-    {
         title: "Monitoring",
         description: {
             short: { id: "Aplikasi web untuk memantau aktivitas di dalam ruangan lewat video real-time.", en: "A web app that monitors indoor activity through real-time camera video." },
@@ -90,6 +80,17 @@ const projects = [
         links: [{ url: "https://github.com/fandipres/monitoring", label: "GitHub" }],
         image: "/assets/img/projects/monitoring.webp",
         tags: ["Web"]
+    },
+    {
+        id: 3,
+        title: "Sekampung",
+        description: {
+            short: { id: "Aplikasi kekerabatan dan budaya suku untuk mempelajari marga, tarombo, dan partuturan, dimulai dari Batak Toba.", en: "A kinship and cultural heritage app for learning clan names, family trees, and kinship terms, starting with Batak Toba." },
+            long: { id: "Sekampung membantu mengenali marga, menyusun tarombo, mencari panggilan yang tepat untuk setiap kerabat (partuturan), dan memeriksa hubungan dua marga menurut adat. Berjalan tanpa internet dan tanpa akun, data keluarga tetap di HP, dan dimulai dari modul Batak Toba.", en: "Sekampung helps you explore clan names, build a family tree (tarombo), find the right kinship term for every relative (partuturan), and check the relationship between two clans according to custom. It works offline with no account, keeps family data on your phone, and starts with the Batak Toba module." }
+        },
+        links: [{ url: "https://fandipres.github.io/sekampung-bio/", label: "Website" }],
+        image: "/assets/img/projects/sekampung.webp",
+        tags: ["Android"]
     },
     {
         id: 4,

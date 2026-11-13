@@ -281,7 +281,7 @@ function buildProjectsHtml(data, limit) {
         const thumbHtml = item.image
             ? `
             <div class="relative aspect-video overflow-hidden bg-gray-900">
-                <img src="${item.image}" alt="${getVal(item.title)}" width="800" height="450" loading="lazy" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                <img src="${item.image}" alt="${getVal(item.title)}" width="800" height="450" loading="lazy" class="w-full h-full object-cover">
                 ${tagsOverlayHtml}
             </div>`
             : (primary ? `
