@@ -379,7 +379,18 @@ function renderPage($, page, lang) {
 }
 
 // --- 5. Run: write pages, track per-page lastmod, regenerate sitemap.
-const lastmodManifest = fs.existsSync(LASTMOD_FILE) ? JSON.parse(fs.readFileSync(LASTMOD_FILE, 'utf8')) : {};
+// The manifest is only a cache of page hashes. If it is unreadable (e.g. merge conflict markers were
+// committed), start over: every page gets today's lastmod once and the file is rewritten below.
+function readLastmodManifest() {
+    if (!fs.existsSync(LASTMOD_FILE)) return {};
+    try {
+        return JSON.parse(fs.readFileSync(LASTMOD_FILE, 'utf8'));
+    } catch (err) {
+        console.warn(`Warning: ${path.relative(ROOT, LASTMOD_FILE)} is not valid JSON (${err.message}); regenerating it.`);
+        return {};
+    }
+}
+const lastmodManifest = readLastmodManifest();
 const nextManifest = {};
 const sitemapEntries = [];
 
