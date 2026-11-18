@@ -1,5 +1,7 @@
 node_modules/
 notes/
+# Draf dan data dataset Kaggle: hanya lokal. Berisi teks media sosial, jangan di-commit atau diterbitkan.
+kaggle-datasets/
 
 # Local tooling and OS files
 .claude/
