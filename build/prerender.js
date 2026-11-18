@@ -119,7 +119,8 @@ const ACADEMIC_PROFILE_LINKS = [
     'https://orcid.org/0009-0005-5437-6622',
     'https://www.researchgate.net/profile/Fandi-Simamora',
     'https://scholar.google.com/citations?user=TwIuVJYAAAAJ',
-    'https://sinta.kemdiktisaintek.go.id/authors/profile/6857557'
+    'https://sinta.kemdiktisaintek.go.id/authors/profile/6857557',
+    'https://ieeexplore.ieee.org/author/980787798443241'
 ];
 
 const LOCAL_ICONS = [
@@ -130,6 +131,15 @@ const LOCAL_ICONS = [
 ];
 
 const toAbsoluteAsset = (url) => url.replace(/^(\.\.\/)+assets\//, '/assets/').replace(/^assets\//, '/assets/');
+
+// The header badges are hand-written in every template and listed alphabetically; IEEE goes before ORCID.
+const IEEE_PROFILE_URL = 'https://ieeexplore.ieee.org/author/980787798443241';
+function ensureIeeeBadge($) {
+    const orcid = $('a.bg-gray-800[href*="orcid.org"]').first();
+    if (!orcid.length) return;
+    $(`a.bg-gray-800[href="${IEEE_PROFILE_URL}"]`).remove();
+    orcid.before(`<a href="${IEEE_PROFILE_URL}" target="_blank" rel="noopener" class="bg-gray-800 border border-gray-700 rounded px-3 py-1.5 text-sky-400 hover:text-white hover:bg-sky-600 hover:border-sky-500 transition-all flex items-center gap-2"><img src="/assets/img/icons/ieee.svg" class="w-3.5 h-3.5 opacity-80" alt="IEEE" width="14" height="14"><span>IEEE</span></a>`);
+}
 
 function normalizeHead($) {
     const localStyles = [];
@@ -354,6 +364,7 @@ function renderPage($, page, lang) {
 
     $('link[rel="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"]').remove();
     normalizeHead($);
+    ensureIeeeBadge($);
     if (!page.noindex) applySeoHead($, page, lang);
     applyIcons($);
 

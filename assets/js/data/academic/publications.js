@@ -1,8 +1,38 @@
 const publications = [
     {
+        id: "lda-bertopic-fiscal-policy-2026",
+        year: "2026",
+        type: "conference",
+        title: { id: "Comparative Analysis of LDA and BERTopic for Topic Modeling of Indonesian Fiscal Policy Discourse on X", en: "" },
+        subtitle: { id: "ICORIS 2026", en: "" },
+        rank: { id: "Konferensi Internasional", en: "International Conference" },
+        category: { id: "Penelitian Mandiri", en: "Independent Research" },
+        team: ["Juliana Damayanti Manurung", "Fandi Presly Simamora"],
+        description: { id: "", en: "" },
+        assets: {
+            article: "https://ieeexplore.ieee.org/document/11769059",
+            doi: "https://doi.org/10.1109/ICORIS71889.2026.11769059"
+        }
+    },
+    {
+        id: "attention-bilstm-huber-rainfall-2026",
+        year: "2026",
+        type: "conference",
+        title: { id: "A Feature-Level Attention BiLSTM Network with Huber Loss for Daily Rainfall Forecasting and Rice Planting Calendar Estimation", en: "" },
+        subtitle: { id: "ICORIS 2026", en: "" },
+        rank: { id: "Konferensi Internasional", en: "International Conference" },
+        category: { id: "Penelitian Mandiri", en: "Independent Research" },
+        team: ["Fandi Presly Simamora", "Juliana Damayanti Manurung"],
+        description: { id: "", en: "" },
+        assets: {
+            article: "https://ieeexplore.ieee.org/document/11768273",
+            doi: "https://doi.org/10.1109/ICORIS71889.2026.11768273"
+        }
+    },
+    {
         id: "pembekalan-guru-ai-jmm-2026",
         year: "2026",
-        title: { id: "Pembekalan Guru Dengan Teknologi Masa Depan: Kecerdasan Artifisial", en: "Equipping Teachers with Future Technologies: Artificial Intelligence" },
+        title: { id: "Pembekalan Guru dengan Teknologi Masa Depan: Kecerdasan Artifisial", en: "Equipping Teachers with Future Technologies: Artificial Intelligence" },
         subtitle: { id: "Jurnal Masyarakat Mandiri", en: "" },
         rank: { id: "Sinta 3", en: "" },
         category: { id: "Pengabdian Penugasan", en: "Assigned Community Service" },
@@ -11,19 +41,6 @@ const publications = [
         assets: {
             article: "https://journal.ummat.ac.id/index.php/jmm/article/view/40565",
             doi: "https://doi.org/10.31764/jmm.v10i4.40565"
-        }
-    },
-    {
-        id: "absa-lda-svm-2026",
-        year: "2026",
-        title: { id: "Aspect-Based Sentiment Analysis of Public Response During Parliamentary Protests Using Hybrid LDA-SVM", en: "" },
-        subtitle: { id: "Building of Informatics, Technology and Science", en: "" },
-        rank: { id: "Sinta 3", en: "" },
-        category: { id: "Penelitian Mandiri", en: "Independent Research" },
-        team: ["Fandi Presly Simamora", "Juliana Damayanti Manurung"],
-        description: { id: "", en: "" },
-        assets: {
-            article: ""
         }
     },
     {

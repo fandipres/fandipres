@@ -569,6 +569,7 @@ function buildCvHtml() {
                 <p class="text-gray-600 mt-1">${t('sections.position')}</p>
                 <p class="text-xs text-gray-500 mt-3 leading-relaxed">
                     fandi.simamora@gmail.com &nbsp;&middot;&nbsp;
+                    <a href="https://ieeexplore.ieee.org/author/980787798443241" class="underline hover:text-gray-900">IEEE Xplore</a> &nbsp;&middot;&nbsp;
                     <a href="https://orcid.org/0009-0005-5437-6622" class="underline hover:text-gray-900">ORCID</a> &nbsp;&middot;&nbsp;
                     <a href="https://scholar.google.com/citations?user=TwIuVJYAAAAJ" class="underline hover:text-gray-900">Google Scholar</a> &nbsp;&middot;&nbsp;
                     <a href="https://sinta.kemdiktisaintek.go.id/authors/profile/6857557" class="underline hover:text-gray-900">SINTA</a> &nbsp;&middot;&nbsp;
@@ -684,10 +685,10 @@ function buildBibtex(item) {
     const fields = [
         ['author', authors.join(' and ')],
         ['title', escape(item.title.id)],
-        ['journal', escape(item.subtitle && item.subtitle.id ? item.subtitle.id : '')],
+        [item.type === 'conference' ? 'booktitle' : 'journal', escape(item.subtitle && item.subtitle.id ? item.subtitle.id : '')],
         ['year', item.year],
         ['doi', assets.doi ? assets.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//, '') : ''],
         ['url', assets.article || '']
     ].filter(([, value]) => value);
-    return `@article{${firstFamily}${item.year}${firstWord},\n${fields.map(([k, v]) => `  ${k} = {${v}}`).join(',\n')}\n}`;
+    return `@${item.type === 'conference' ? 'inproceedings' : 'article'}{${firstFamily}${item.year}${firstWord},\n${fields.map(([k, v]) => `  ${k} = {${v}}`).join(',\n')}\n}`;
 }

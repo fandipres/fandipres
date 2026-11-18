@@ -1,114 +1,114 @@
 {
   "index.html": {
-    "hash": "4102f6d761a2f676fdcd605167696b34a4a168b13daa5967a3787ae1ae78eb9a",
-    "lastmod": "2026-11-13"
+    "hash": "1f84b46b4312d794f6cfc8c76a5cd468b997f8dcced830b9ddb5ba75366278a8",
+    "lastmod": "2026-11-18"
   },
   "en/index.html": {
-    "hash": "725a33cd6d53a40aae805ade86e8ca208c07ba6860de85d86edc6f1ebeeb3ddc",
-    "lastmod": "2026-11-13"
+    "hash": "26ddfccafc03a37f8c4b6e6298d78e9d890ce776d97b59ca8bf1691ec9f4b3f1",
+    "lastmod": "2026-11-18"
   },
   "experience/index.html": {
-    "hash": "c6324fb462634e2031470781a0ee73aa31a706e34b71cd9a1bc46a72c9f27951",
-    "lastmod": "2026-11-01"
+    "hash": "aaf4aa2ebab1199b86c3b1ec865631abd5bc6f8ce91929f42ddeb6e92b7a4550",
+    "lastmod": "2026-11-18"
   },
   "en/experience/index.html": {
-    "hash": "ae759cbff6d39f785dbc65155a767e034e0ffa3f4877db9b62d757fd94ee5ba4",
-    "lastmod": "2026-11-01"
+    "hash": "56b0c6477f0165ec837eaad1727f4e2c87d5f533497459d740f8e17a0ca60915",
+    "lastmod": "2026-11-18"
   },
   "education/index.html": {
-    "hash": "ecf8ffd20ddbcb343843fecd45a33ef037698b0ca1f2681a03137b9b40a3498a",
-    "lastmod": "2026-11-01"
+    "hash": "b0303d30029f52b223fa9386a73893991424b83d4478abd38327dd4c217781f9",
+    "lastmod": "2026-11-18"
   },
   "en/education/index.html": {
-    "hash": "8d48859ffb8e4f80ac2d6cfebc43a23723170f6919e9fa5d27f766ef6d0c93aa",
-    "lastmod": "2026-11-01"
+    "hash": "28fcea39b425f2124d92c9c1c23ac6809ac9f7c3ba2a70dc946f47179d28e7df",
+    "lastmod": "2026-11-18"
   },
   "teaching/index.html": {
-    "hash": "2b2d2110a0b3b6df04b6449fc1b4bdcb86d1eca319fe7f7ce06236d327559bd4",
-    "lastmod": "2026-11-01"
+    "hash": "4ae59cefe7ada6d0b8b2a80153847e93756f56d325324551d83eda85f84e34ac",
+    "lastmod": "2026-11-18"
   },
   "en/teaching/index.html": {
-    "hash": "5e1eac255704f9c20b40ec7b17e3ce4c311fa76b968699c8eb0292f9855b3ed4",
-    "lastmod": "2026-11-01"
+    "hash": "48fe5188638598ca7ffec0b6a57da64f916086cf2ef6847fd81ae01a1133bd9d",
+    "lastmod": "2026-11-18"
   },
   "research/index.html": {
-    "hash": "abeefdab3864f3e8169bc7880af2db56964e07fc35d9970976bdd15cb2907829",
-    "lastmod": "2026-11-01"
+    "hash": "88dced7e17353c0c9ca17f5743058d79c010c54fd341c012c4d26b3eafcea1e6",
+    "lastmod": "2026-11-18"
   },
   "en/research/index.html": {
-    "hash": "f606c45c793489906b38db488f10c3c8996181ab13a7a5a56a9dfef974bd5da1",
-    "lastmod": "2026-11-01"
+    "hash": "aabe8637abacc4d98d8cc1b9511f8b2eb1fcfae78dec72a22f7342f505a2c2fa",
+    "lastmod": "2026-11-18"
   },
   "community-service/index.html": {
-    "hash": "5e9cbd2ccf92216c090b678f9c82028bde7ae7aeb7bc8fcc9e4c1e342dd6afa9",
-    "lastmod": "2026-11-01"
+    "hash": "6ad579eddfe7456e00f127529d3c0e62f7572d4152814be424b6e3cc72120fa0",
+    "lastmod": "2026-11-18"
   },
   "en/community-service/index.html": {
-    "hash": "8f98fa516e1cb1af1530fc4d16646d65f7ab593da3560ffe7223e0064c9cfa9c",
-    "lastmod": "2026-11-01"
+    "hash": "0abfa17d6babab3e67bd22ebb33532f3da51491ca26af30a497ce9a75bbbb7eb",
+    "lastmod": "2026-11-18"
   },
   "publications/index.html": {
-    "hash": "19d06fbfd5347d0090fd40433fe9b7f30badb8117abe2881104ef6ba95d35d17",
-    "lastmod": "2026-11-01"
+    "hash": "e042713c96db6be0b2b81e75a67a3f53e82f2e63165d250bf4d5dfe5a5739678",
+    "lastmod": "2026-11-18"
   },
   "en/publications/index.html": {
-    "hash": "3db47804076061c6fc2dedcfef13a91494ef496aa2e2f2853d6d825453beb965",
-    "lastmod": "2026-11-01"
+    "hash": "2d00615383ed26d6880e1ed068671e83599a23ee5dcc42eaf6e3c274d1805198",
+    "lastmod": "2026-11-18"
   },
   "books/index.html": {
-    "hash": "d05f39cbac0d7d11248ee7a7d2e884669cf7277b81fcc0b42b18d7f8f66c51d9",
-    "lastmod": "2026-11-01"
+    "hash": "81cceccfcd165e99bb34f483bcc2dabbe71f1cbc1ca9fa970acc7ce504f58c8f",
+    "lastmod": "2026-11-18"
   },
   "en/books/index.html": {
-    "hash": "8c6d0afb67363d649edf0eaff241d8911ef82664ca8944716af4e88bac0353d6",
-    "lastmod": "2026-11-01"
+    "hash": "f45b86a299f8c0eb7e3583345f8f2931678e65092c2f63cf41558185f8426ab8",
+    "lastmod": "2026-11-18"
   },
   "intellectual-property/index.html": {
-    "hash": "41deb0622771d066a169ea3b1ddf50e5ca3050b90415a191eac7fb559be660ca",
-    "lastmod": "2026-11-01"
+    "hash": "3d984846c1a20d85a262d577edbc63b23f9f0a49f62fcfadbb13c33ca3fcb1b4",
+    "lastmod": "2026-11-18"
   },
   "en/intellectual-property/index.html": {
-    "hash": "836bf537ce425495515cf33fd1890a8c5f7a8f473813a3221b1182d548bb3187",
-    "lastmod": "2026-11-01"
+    "hash": "472cde1ffb5d70df3ddf1d21b9f32dacc376f5ad3e31686135c726fb67d38c09",
+    "lastmod": "2026-11-18"
   },
   "talks/index.html": {
-    "hash": "5213880c53c28b68a7b48c145c42a4d997b780976459d0ec63cd930833bc61fa",
-    "lastmod": "2026-11-01"
+    "hash": "d5095947794d04e481f883ba1cb1f7fd08837bf0a59e2b9f64fb769fdae6691a",
+    "lastmod": "2026-11-18"
   },
   "en/talks/index.html": {
-    "hash": "69a0eefdd51de96485043e1dc21410bf443590017439b79d6d1120b480bbcb09",
-    "lastmod": "2026-11-01"
+    "hash": "4db243751ecf3a46bd245dc097a58a5a7b29788d74c638d25e9236f1d0e8ef68",
+    "lastmod": "2026-11-18"
   },
   "projects/index.html": {
-    "hash": "f1ee02a14595ec5e2367217cf658be34717b6c0a2d99ce3f98ad7dbb175fc2a4",
-    "lastmod": "2026-11-13"
+    "hash": "5d6f1e61b2eebc99780cc4912f943e15c2d9985c7bf702bc716cd355955731cf",
+    "lastmod": "2026-11-18"
   },
   "en/projects/index.html": {
-    "hash": "1c45d1e792512f7cd06eaba8d72f78c389b28b8c0cfda56894b0f674d4d5f226",
-    "lastmod": "2026-11-13"
+    "hash": "c149f566df64d89d7ed3e6a7a3d06c7f18aa2be398f9cee9423db8509d571ca8",
+    "lastmod": "2026-11-18"
   },
   "thesis/index.html": {
-    "hash": "2c58de1abe144d78a1cc1e0c3a252a4ca5a00f5e2b3b4dd0062c929ea1c3b905",
-    "lastmod": "2026-11-01"
+    "hash": "50d18113cae658ade35b60b9af4c76fe4d0ab8a6d39f09df076b0608e524c58b",
+    "lastmod": "2026-11-18"
   },
   "en/thesis/index.html": {
-    "hash": "9f61c2c2b8b145c35fceff4ccf609eabb243d42f968800520303afd0437ee94d",
-    "lastmod": "2026-11-01"
+    "hash": "b3f624bf2c8fbf394ee2e81057f0e73442112245677c95dc4b0bb217417b0dff",
+    "lastmod": "2026-11-18"
   },
   "competition/index.html": {
-    "hash": "5ad28ddd8f838611ee5c84a741f0314e5e18f06965a983fac3fcc4652c4f9de7",
-    "lastmod": "2026-11-01"
+    "hash": "9f4ad28b44704de9a3ff0666dc18421dfe0041c0ad9e788564155bb9f31130c7",
+    "lastmod": "2026-11-18"
   },
   "en/competition/index.html": {
-    "hash": "72b71662d2514e47740ae0ea0aea3453ad8373ebae71f7e4b54191ad3b143c3e",
-    "lastmod": "2026-11-01"
+    "hash": "46ee9e58fa9739184c435d8e5fb7f2a91133de6b4e467447f24925ac160190ab",
+    "lastmod": "2026-11-18"
   },
   "cv/index.html": {
-    "hash": "48498d8a612b6ad88b886f2fb4b40a43c62eb2d0f81d42d0f352303bc785a44b",
-    "lastmod": "2026-11-13"
+    "hash": "8215ea05ed0960f5b6fbed47adc2e950f308d35f23b9d96de95a456d059d3302",
+    "lastmod": "2026-11-18"
   },
   "en/cv/index.html": {
-    "hash": "2af95eece1b31f405c1519b09fe25a9ab66d73ff1b990108ced000154dcc7b50",
-    "lastmod": "2026-11-13"
+    "hash": "6f9ada79142f9236905379c336b1338735135a3a02f8ddde0cf91bc0034e59a5",
+    "lastmod": "2026-11-18"
   }
 }
