@@ -6,7 +6,9 @@ const research = [
         category: { id: "Penelitian Mandiri", en: "Independent Research" },
         team: ["Juliana Damayanti Manurung", "Fandi Presly Simamora"],
         description: { id: "", en: "" },
-        assets: {}
+        assets: {
+            dataset: "",
+        }
     },
     {
         year: "2026",
