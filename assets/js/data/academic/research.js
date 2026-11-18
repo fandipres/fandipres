@@ -1,6 +1,26 @@
 const research = [
     {
         year: "2026",
+        title: { id: "Comparative Analysis of LDA and BERTopic for Topic Modeling of Indonesian Fiscal Policy Discourse on X", en: "" },
+        subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
+        category: { id: "Penelitian Mandiri", en: "Independent Research" },
+        team: ["Juliana Damayanti Manurung", "Fandi Presly Simamora"],
+        description: { id: "", en: "" },
+        assets: {}
+    },
+    {
+        year: "2026",
+        title: { id: "A Feature-Level Attention BiLSTM Network with Huber Loss for Daily Rainfall Forecasting and Rice Planting Calendar Estimation", en: "" },
+        subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
+        category: { id: "Penelitian Mandiri", en: "Independent Research" },
+        team: ["Fandi Presly Simamora", "Juliana Damayanti Manurung"],
+        description: { id: "", en: "" },
+        assets: {
+            dataset: "https://www.kaggle.com/datasets/fandipres/north-sumatra-daily-weather-2016-to-2025",
+        }
+    },
+    {
+        year: "2026",
         title: { id: "Pendekatan Hibrida Topic Modeling dan IndoBERT untuk Klasifikasi Emosi Publik pada Isu Keterlibatan Indonesia di Board of Peace", en: "Hybrid Approach of Topic Modeling and IndoBERT for Public Emotion Classification on Indonesia's Involvement Issue in the Board of Peace" },
         subtitle: { id: "Universitas Mikroskil", en: "Mikroskil University" },
         category: { id: "Penelitian Mandiri", en: "Independent Research" },

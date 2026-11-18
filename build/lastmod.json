@@ -1,10 +1,10 @@
 {
   "index.html": {
-    "hash": "1f84b46b4312d794f6cfc8c76a5cd468b997f8dcced830b9ddb5ba75366278a8",
+    "hash": "b6cebdbc170963ab886e60af3ed714bf6311f79956f2be91df56dc704f3ac11e",
     "lastmod": "2026-11-18"
   },
   "en/index.html": {
-    "hash": "26ddfccafc03a37f8c4b6e6298d78e9d890ce776d97b59ca8bf1691ec9f4b3f1",
+    "hash": "8ddd920981a726e5f81d4daa43034a60d845a17aeb52e7c659210584af1738bf",
     "lastmod": "2026-11-18"
   },
   "experience/index.html": {
@@ -32,11 +32,11 @@
     "lastmod": "2026-11-18"
   },
   "research/index.html": {
-    "hash": "88dced7e17353c0c9ca17f5743058d79c010c54fd341c012c4d26b3eafcea1e6",
+    "hash": "afd321e40a16a9f3141c8c4f17c974cafe923b0205eab710617e18ae9f0816c7",
     "lastmod": "2026-11-18"
   },
   "en/research/index.html": {
-    "hash": "aabe8637abacc4d98d8cc1b9511f8b2eb1fcfae78dec72a22f7342f505a2c2fa",
+    "hash": "7c1889385552baaaa2ac36d920e2f726bece368df5dbbeeaa878a02b3ef677a6",
     "lastmod": "2026-11-18"
   },
   "community-service/index.html": {
@@ -48,11 +48,11 @@
     "lastmod": "2026-11-18"
   },
   "publications/index.html": {
-    "hash": "e042713c96db6be0b2b81e75a67a3f53e82f2e63165d250bf4d5dfe5a5739678",
+    "hash": "964254f51e8b5091fbc7ba31d16e692d0530290323a438cfaaccff9e234cfcd2",
     "lastmod": "2026-11-18"
   },
   "en/publications/index.html": {
-    "hash": "2d00615383ed26d6880e1ed068671e83599a23ee5dcc42eaf6e3c274d1805198",
+    "hash": "f2e1acaf9e967d31b355bcaa1a74544eefef28d6d471612bf3edbe6294383494",
     "lastmod": "2026-11-18"
   },
   "books/index.html": {
@@ -104,11 +104,11 @@
     "lastmod": "2026-11-18"
   },
   "cv/index.html": {
-    "hash": "8215ea05ed0960f5b6fbed47adc2e950f308d35f23b9d96de95a456d059d3302",
+    "hash": "a0a6f7c34637fae06b804e096d13b1d8f7b49767f5328d1cb896b793b301a22b",
     "lastmod": "2026-11-18"
   },
   "en/cv/index.html": {
-    "hash": "6f9ada79142f9236905379c336b1338735135a3a02f8ddde0cf91bc0034e59a5",
+    "hash": "84e05860205b6118e052e26fe957d6d5d788a10d714facd14d5e985fedf67b51",
     "lastmod": "2026-11-18"
   }
 }
